@@ -24,17 +24,21 @@ class Comment extends Controller
 
         $data        = $this->request->param('','','htmlspecialchars');
         $url         = url('article/article/article?articleId=' . $data['article_id']);
+        //文章评论数
         $commentsNum = $blogArticle->where('article_id', $data['article_id'])->value('comments_num');
 
+        //验证器
         $validate = $this->validate($data ,'AddComment');
-
         if ($validate !== true) {
             $this->error($validate, $url);
         }
+        //Session
         $data['user_id'] = Session::get('userId','user');
-        $saveRes = $articleComments->allowField(true)->save($data);
+        //过滤保存返回受影响的行数
+        $affected_rows = $articleComments->allowField(true)->save($data);
 
-        if ($saveRes > 0) {
+        if ($affected_rows > 0) {
+            //评论数+1
             $blogArticle->where('article_id', $data['article_id'])->update(['comments_num' => ++$commentsNum]);
             $this->success('评论成功',$url);
         } else {
@@ -42,6 +46,7 @@ class Comment extends Controller
         }
     }
 
+    //编辑评论内容
     public function editComment($commentId = '') {
 
         $comment = ArticleComments::get($commentId);
@@ -56,29 +61,33 @@ class Comment extends Controller
         return $this->fetch();
     }
 
+    //更新评论内容
     public function updateComment() {
 
-       $data = $this->request->param('','','htmlspecialchars');
-
-       $validate = $this->validate($data,'UpdateComment');
-       if ($validate !== true) {
+        $data = $this->request->param('','','htmlspecialchars');
+        //验证器
+        $validate = $this->validate($data,'UpdateComment');
+        if ($validate !== true) {
            $this->error($validate);
-       }
+        }
 
-       $articleComment = ArticleComments::get($data['comment_id']);
-       if ($articleComment === null) {
+        //获取结果集
+        $articleComment = ArticleComments::get($data['comment_id']);
+        if ($articleComment === null) {
            $this->error('修改失败');
-       }
+        }
 
-       $articleComment->comments_content = $data['comments_content'];
-       $articleId = $articleComment->article_id;
-       $res       = $articleComment->allowField(true)->save();
+        //更新数据
+        $articleComment->comments_content = $data['comments_content'];
+        $articleId     = $articleComment->article_id;
+        //返回受影响的行数
+        $affected_rows = $articleComment->allowField(true)->save();
 
-       if ($res > 0) {
+        if ($affected_rows > 0) {
            $this->success('修改成功',url('article/article/article?articleId='.$articleId));
-       } else {
+        } else {
            $this->error('修改失败');
-       }
+        }
     }
 
 }

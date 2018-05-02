@@ -8,6 +8,7 @@
 
 namespace app\article\controller;
 
+use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
 use think\Controller;
@@ -17,22 +18,31 @@ class Reply extends Controller
 {
     public function addReply(){
 
+        //实例化对象
         $blogArticle   = new BlogArticle();
         $commentsReply = new CommentsReply();
-
+        //获取提交的数据(htmlspecialchars过滤函数)
         $data          = $this->request->param('','','htmlspecialchars');
+        //文章评论总数
         $commentsNum   = $blogArticle->where('article_id',$data['article_id'])->value('comments_num');
+        //跳转URL
         $url           = url('article/article/article?articleId='.$data['article_id']);
-
+        //验证结果
         $validate      = $this->validate($data,'AddReply');
 
+        //判断验证结果
         if ($validate !== true) {
             $this->error($validate,$url);
         }
 
+        //获取Session信息
         $data['user_id'] = Session::get('userId', 'user');
-        $saveRes = $commentsReply->allowField(true)->save($data);
-        if ($saveRes > 0) {
+        //保存入数据库
+        $affected_rows   = $commentsReply->allowField(true)->save($data);
+
+        //判断受影响的行数
+        if ($affected_rows > 0) {
+            //更新文章评论总数
             $blogArticle->where('article_id',$data['article_id'])->update(['comments_num' => ++$commentsNum]);
             $this->success('回复成功',$url);
         } else {
@@ -42,8 +52,59 @@ class Reply extends Controller
 
     }
 
+    //编辑回复内容
     public function editReply($replyId) {
-        echo 'reply';
-        echo $replyId;
+
+        //获取评论结果集
+        $reply = CommentsReply::get($replyId);
+
+        //判断是否为空
+        if ($reply === null) {
+            $this->error('回复不存在');
+        }
+
+        //传输给模板
+        $this->assign('reply_content', $reply->reply_content);
+        $this->assign('reply_id', $reply->reply_id);
+
+        return $this->fetch();
+    }
+
+    //更新回复内容
+    public function updateReply() {
+
+        //获取提交的数据(htmlspecialchars过滤函数)
+        $data  = $this->request->param('', '', 'htmlspecialchars');
+
+        //验证器
+        $validate = $this->validate($data, 'UpdateReply');
+        if ($validate !== true) {
+            $this->error($validate);
+        }
+
+        //获取回复ID对应的结果集
+        $reply = CommentsReply::get($data['reply_id']);
+
+        //判断是否为空
+        if ($reply === null) {
+            $this->error('修改失败');
+        }
+
+        //获取文章ID
+        $articleId = ArticleComments::get([$reply->comment_id])->article_id;
+
+        //判断内容是否一致
+        if ($reply->reply_content == $data['reply_content']) {
+            $this->success('修改成功',url('article/article/article?articleId='.$articleId));
+        } else {
+            //更新
+            $reply->reply_content = $data['reply_content'];
+            $affected_rows  = $reply->allowField(true)->save();
+            if ($affected_rows > 0) {
+                $this->success('修改成功',url('article/article/article?articleId='.$articleId));
+            } else {
+                $this->error('修改失败');
+            }
+        }
     }
 }
