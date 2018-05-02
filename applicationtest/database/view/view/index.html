@@ -1,0 +1,10 @@
+
+{literal}
+{$name}
+{/literal}<br>
+{$Think.server.server_name}<br>
+{$Think.APP_PA}<br>
+<!--多函数调用-->
+{$name|strtoupper|substr=0,3}<br>
+这是MD5加密{$name|md5}<br>
+{$time|date='Y-m-d',###}<br>

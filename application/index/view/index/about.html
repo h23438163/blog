@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>关于我</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />  
+<link href="/static/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/js/jquery-321.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+</head>
+<body>
+<div class="main">
+
+	<div class="header">
+		<div class="header_resize">
+			<div class="logo">
+				<h1 id="animate_logo">
+					<img src="/static//images/logo.jpg" width="48" height="50" alt="logo" />
+					我的<span>博客</span>
+					<small>关于我</small>
+				</h1>
+			</div>
+			<div class="menu_nav">
+				<ul>
+					<li><a href={:url('index/index/showarticle')}>博客</a></li>
+					<li class="active"><a href={:url('index/index/showAbout')}>关于我</a></li>
+					<li><a href="/contact.php">留言本</a></li>
+					<li><a href="/resume/login.php">简历</a></li>
+				</ul>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+
+	<div class="hbg">&nbsp;</div>
+
+	<div class="content">
+		<div class="content_resize">
+			<div class="mainbar">
+				<div class="article">
+					<h2>关于这个网站</h2><div class="clr"></div>
+					<p>网站从2018年1月1号开始制作到3月15日制作完成，使用PHP+MYSQL，服务器是购买的阿里云虚拟机。实际代码应该只有2个星期左右，大部分时间都用在了思考布局和排版上。<br>
+					网站模板是从<a href='http://www.cssmoban.com/cssthemes/4352.shtml' target='_blank'>模板之家</a>、<a href='http://sc.chinaz.com/moban/150723284630.htm#down' target='_blank'>简历模板</a>下载，然后自己根据网站风格新增复数页面
+					、模块(model)、控制器(controller)、设计数据库表将其完成
+					<h3>网站功能</h3>
+					<ul>
+						<li>发布博客文章</li>
+						<li>博客文章的评论和对评论的回复</li>
+						<li>留言本(保存留言人IP地址并显示城市地区)</li>
+						<li>留言点赞功能(每个IP只能对每个留言点赞或者踩1次)</li>
+						<li>右侧搜索栏可以选择站内搜索或者百度搜索</li>
+					</ul>
+					<h3>网站代码</h3>
+					<ul>
+						<li>网站后台完全由PHP编写,未使用框架(thinkPHP,zendframework)</li>
+						<li>模块(model)全部由面向对象编程,控制器(controller)由面向过程编程</li>
+						<li>网站前端使用一些H5的标签、CSS3的样式和Jquery库</li>
+						<li>网站防护只有基础的防护,如:预处理防注入、简单的验证码防止灌水</li>
+					</ul>
+					</p>
+				</div>
+				<div class="article">
+					<h2>关于我</h2><div class="clr"></div>
+					<p>自学PHP、Mysql、Javascript,具体信息请查阅<strong><a href="/resume/login.php">简历</a></strong></p>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="searchform">
+					<form id="formsearch" name="formsearch" method="get" action="/search.php">
+						<span id='select'>
+							<select>
+								<option value='blog'>站内</option>
+								<option value='baidu'>百度</option>
+							</select>
+						</span>
+						<span>
+						<input name="article_tag" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
+						</span>
+						<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+					</form>
+				</div>
+				<!--菜单栏-->
+				<div class="gadget">
+					<!--天气预报-->
+					<iframe width="310px" scrolling="no" height="25px" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&a=getcode&id=40&h=25&w=310"></iframe>
+					<!--天气预报END-->
+					<h2 class="star"><span>菜单栏</h2><div class="clr"></div>
+					<ul class="sb_menu">
+						<li><a href="https://poi.io/#/" target="_blank">POI浏览器</a></li>
+						<!--
+						<li><a href="#">Style Demo</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Archives</a></li>
+						<li><a href="#" title="Website Templates">Web Templates</a></li>
+						-->
+						<li><a href="#">源码下载</a></li>
+					</ul>
+				</div>
+				<!--div class="gadget">
+					<h2 class="star"><span>Sponsors</span></h2><div class="clr"></div>
+					<ul class="ex_menu">
+						<li><a href="#" title="Website Templates">DreamTemplate</a><br />Over 6,000+ Premium Web Templates</li>
+						<li><a href="#">TemplateSOLD</a><br />Premium WordPress &amp; Joomla Themes</li>
+						<li><a href="#" title="Affordable Hosting">ImHosted.com</a><br />Affordable Web Hosting Provider</li>
+						<li><a href="#" title="Stock Icons">MyVectorStore</a><br />Royalty Free Stock Icons</li>
+						<li><a href="#" title="Website Builder">Evrsoft</a><br />Website Builder Software &amp; Tools</li>
+						<li><a href="#" title="CSS Templates">CSS Hub</a><br />Premium CSS Templates</li>
+					</ul>
+				</div-->
+			</div>
+		<div class="clr"></div>
+		</div>
+	</div>
+	
+	<!--<div class="fbg">
+		<div class="fbg_resize">
+			<div class="col c1">
+				<h2><span>Image Gallery</span></h2>
+				<a href="#"><img src="images/pix1.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix2.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix3.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix4.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix5.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix6.jpg" width="58" height="58" alt="pix" /></a>
+			</div>
+			<div class="col c2">
+				<h2><span>Lorem Ipsum</span></h2>
+				<p>Lorem ipsum dolor<br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
+			</div>
+			<div class="col c3">
+				<h2><span>About</span></h2>
+				<img src="images/white.jpg" width="56" height="56" alt="pix" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. llorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum. <a href="#">Learn more...</a></p>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>-->
+	<div class="footer">
+		<div class="footer_resize">
+		<ul class="fmenu">
+			<li><a href={:url('index/index/showarticle')}>博客</a></li>
+			<li class="active"><a href={:url('index/index/showAbout')}>关于我</a></li>
+			<li><a href="/contact.php">留言本</a></li>
+			<li><a href="/resume/login.php">简历</a></li>
+		</ul>
+		<div class="clr"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
