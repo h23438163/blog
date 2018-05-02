@@ -1,0 +1,1564 @@
+---------------------------------------------------------------
+[ 2018-04-18T11:29:15+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.188942s][吞吐率：5.29req/s] [内存消耗：1,021.09kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:29:24+08:00 ] 127.0.0.1 GET /index/index
+[ info ] tp5.com/index/index [运行时间：0.020128s][吞吐率：49.68req/s] [内存消耗：1,021.09kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:29:54+08:00 ] 127.0.0.1 GET /index/index
+[ info ] tp5.com/index/index [运行时间：0.019978s][吞吐率：50.06req/s] [内存消耗：1,021.66kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:30:03+08:00 ] 127.0.0.1 GET /index/admin
+[ info ] tp5.com/index/admin [运行时间：0.283813s][吞吐率：3.52req/s] [内存消耗：1,063.26kb] [文件加载：29]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'admin',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:30:17+08:00 ] 127.0.0.1 GET /index/admin
+[ info ] tp5.com/index/admin [运行时间：0.024760s][吞吐率：40.39req/s] [内存消耗：1,063.26kb] [文件加载：29]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'admin',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:30:29+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.019961s][吞吐率：50.10req/s] [内存消耗：1,021.47kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:30:40+08:00 ] 127.0.0.1 GET /index/index/index
+[ info ] tp5.com/index/index/index [运行时间：0.020328s][吞吐率：49.19req/s] [内存消耗：1,021.47kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:35:55+08:00 ] 127.0.0.1 GET /index/index/admin/%E8%B4%BA%E6%B6%B5
+[ info ] tp5.com/index/index/admin/%E8%B4%BA%E6%B6%B5 [运行时间：0.087624s][吞吐率：11.41req/s] [内存消耗：1,052.56kb] [文件加载：28]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:admin[E:\AppServ\www\thinkphp\library\think\App.php:431]
+---------------------------------------------------------------
+[ 2018-04-18T11:36:08+08:00 ] 127.0.0.1 GET /index/index/admin/admin/%E8%B4%BA%E6%B6%B5
+[ info ] tp5.com/index/index/admin/admin/%E8%B4%BA%E6%B6%B5 [运行时间：0.077050s][吞吐率：12.98req/s] [内存消耗：1,022.10kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+  'admin' => '贺涵',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:37:29+08:00 ] 127.0.0.1 GET /index/index/admin/admin/hehan
+[ info ] tp5.com/index/index/admin/admin/hehan [运行时间：0.020130s][吞吐率：49.68req/s] [内存消耗：1,022.12kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'hehan',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:38:01+08:00 ] 127.0.0.1 GET /index/index/admin/admin
+[ info ] tp5.com/index/index/admin/admin [运行时间：0.024939s][吞吐率：40.10req/s] [内存消耗：1,021.71kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:38:05+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.020344s][吞吐率：49.15req/s] [内存消耗：1,021.75kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:38:16+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.020286s][吞吐率：49.29req/s] [内存消耗：1,021.75kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T11:38:18+08:00 ] 127.0.0.1 GET /index/index/admin/admin/hehan
+[ info ] tp5.com/index/index/admin/admin/hehan [运行时间：0.020113s][吞吐率：49.72req/s] [内存消耗：1,022.40kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; pgv_si=s6460250112',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'hehan',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:35:42+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.486607s][吞吐率：2.06req/s] [内存消耗：1,021.31kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:38:48+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.131907s][吞吐率：7.58req/s] [内存消耗：1,299.58kb] [文件加载：32]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:39:17+08:00 ] 127.0.0.1 GET /index/index2
+[ info ] tp5.com/index/index2 [运行时间：0.116049s][吞吐率：8.62req/s] [内存消耗：1,063.19kb] [文件加载：29]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index2',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:39:31+08:00 ] 127.0.0.1 GET /index/admin
+[ info ] tp5.com/index/admin [运行时间：0.023354s][吞吐率：42.82req/s] [内存消耗：1,063.23kb] [文件加载：29]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'admin',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T18:39:44+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.024009s][吞吐率：41.65req/s] [内存消耗：1,299.83kb] [文件加载：32]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T21:14:28+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.243926s][吞吐率：4.10req/s] [内存消耗：1,345.50kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:19]
+---------------------------------------------------------------
+[ 2018-04-18T21:14:44+08:00 ] 127.0.0.1 GET /index/index/index
+[ info ] tp5.com/index/index/index [运行时间：0.026016s][吞吐率：38.44req/s] [内存消耗：1,300.25kb] [文件加载：32]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T21:15:14+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.028546s][吞吐率：35.03req/s] [内存消耗：1,345.65kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:19]
+---------------------------------------------------------------
+[ 2018-04-18T21:16:10+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.028585s][吞吐率：34.98req/s] [内存消耗：1,345.66kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:19]
+---------------------------------------------------------------
+[ 2018-04-18T21:17:03+08:00 ] 127.0.0.1 GET /index/index/admin/hehan/123
+[ info ] tp5.com/index/index/admin/hehan/123 [运行时间：0.074417s][吞吐率：13.44req/s] [内存消耗：1,345.84kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'hehan' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:19]
+---------------------------------------------------------------
+[ 2018-04-18T21:18:06+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.028447s][吞吐率：35.15req/s] [内存消耗：1,345.68kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2018-04-18T21:26:22+08:00 ] 127.0.0.1 GET /index/index/admin/hehan/123
+[ info ] tp5.com/index/index/admin/hehan/123 [运行时间：0.876064s][吞吐率：1.14req/s] [内存消耗：1,345.92kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'hehan' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2018-04-18T21:51:20+08:00 ] 127.0.0.1 GET /index/index/admin/hehan/123
+[ info ] tp5.com/index/index/admin/hehan/123 [运行时间：0.030551s][吞吐率：32.73req/s] [内存消耗：1,345.88kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'hehan' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:20]
+---------------------------------------------------------------
+[ 2018-04-18T21:52:53+08:00 ] 127.0.0.1 GET /index/index/index/hehan/123
+[ info ] tp5.com/index/index/index/hehan/123 [运行时间：0.053066s][吞吐率：18.84req/s] [内存消耗：1,300.46kb] [文件加载：32]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'hehan' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T21:53:07+08:00 ] 127.0.0.1 GET /index/index/index/hehan/123
+[ info ] tp5.com/index/index/index/hehan/123 [运行时间：0.026314s][吞吐率：38.00req/s] [内存消耗：1,346.21kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'hehan' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:05:36+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.816054s][吞吐率：1.23req/s] [内存消耗：1,345.44kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:34:56+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.030872s][吞吐率：32.39req/s] [内存消耗：1,345.52kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: repuest[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:36:46+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.026160s][吞吐率：38.23req/s] [内存消耗：1,349.52kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined method think\Request::repuest()[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:37:39+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.030451s][吞吐率：32.84req/s] [内存消耗：1,352.45kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to protected think\Request::__construct() from context 'app\index\controller\Index'[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:38:06+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.026110s][吞吐率：38.30req/s] [内存消耗：1,351.98kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to protected think\Request::__construct() from context 'app\index\controller\Index'[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:38:24+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.026081s][吞吐率：38.34req/s] [内存消耗：1,352.30kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to protected think\Request::__construct() from context 'app\index\controller\Index'[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:41:00+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.021232s][吞吐率：47.10req/s] [内存消耗：1,021.64kb] [文件加载：26]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:41:15+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.022547s][吞吐率：44.35req/s] [内存消耗：1,067.06kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:21]
+---------------------------------------------------------------
+[ 2018-04-18T22:44:39+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.024967s][吞吐率：40.05req/s] [内存消耗：1,070.81kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Class 'app\index\controller\Repuest' not found[E:\AppServ\www\application\index\controller\Index.php:21]
+---------------------------------------------------------------
+[ 2018-04-18T22:45:13+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.021933s][吞吐率：45.59req/s] [内存消耗：1,073.42kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to protected think\Request::__construct() from context 'app\index\controller\Index'[E:\AppServ\www\application\index\controller\Index.php:21]
+---------------------------------------------------------------
+[ 2018-04-18T22:46:01+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.021599s][吞吐率：46.30req/s] [内存消耗：1,074.66kb] [文件加载：28]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]Access to non-public constructor of class app\index\controller\Index[E:\AppServ\www\thinkphp\library\think\App.php:359]
+---------------------------------------------------------------
+[ 2018-04-18T22:48:33+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.031143s][吞吐率：32.11req/s] [内存消耗：1,345.34kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Array to string conversion[E:\AppServ\www\application\index\controller\Index.php:21]
+---------------------------------------------------------------
+[ 2018-04-18T22:48:53+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.021873s][吞吐率：45.72req/s] [内存消耗：1,218.96kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:49:03+08:00 ] 127.0.0.1 GET /index/index/admin/hehan/123
+[ info ] tp5.com/index/index/admin/hehan/123 [运行时间：0.021808s][吞吐率：45.85req/s] [内存消耗：1,219.14kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'hehan' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:50:55+08:00 ] 127.0.0.1 GET /index/index/admin/hehan/123
+[ info ] tp5.com/index/index/admin/hehan/123 [运行时间：0.025059s][吞吐率：39.91req/s] [内存消耗：1,219.38kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'hehan' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:51:10+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.021499s][吞吐率：46.51req/s] [内存消耗：1,218.77kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:51:54+08:00 ] 127.0.0.1 GET /index/index/index
+[ info ] tp5.com/index/index/index [运行时间：0.028144s][吞吐率：35.53req/s] [内存消耗：1,345.60kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义变量: repuest[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:52:11+08:00 ] 127.0.0.1 GET /index/index/index
+[ info ] tp5.com/index/index/index [运行时间：0.027070s][吞吐率：36.94req/s] [内存消耗：1,345.95kb] [文件加载：36]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]Undefined property: app\index\controller\Index::$repuest[E:\AppServ\www\application\index\controller\Index.php:12]
+---------------------------------------------------------------
+[ 2018-04-18T22:52:19+08:00 ] 127.0.0.1 GET /index/index/index
+[ info ] tp5.com/index/index/index [运行时间：0.023146s][吞吐率：43.20req/s] [内存消耗：1,300.84kb] [文件加载：32]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:52:44+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.021697s][吞吐率：46.09req/s] [内存消耗：1,220.93kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:53:03+08:00 ] 127.0.0.1 GET /index/index/admin
+[ info ] tp5.com/index/index/admin [运行时间：0.025068s][吞吐率：39.89req/s] [内存消耗：1,218.95kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:53:11+08:00 ] 127.0.0.1 GET /index/index/admin/333/3333
+[ info ] tp5.com/index/index/admin/333/3333 [运行时间：0.021651s][吞吐率：46.19req/s] [内存消耗：1,219.07kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  0 => '3333',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:53:23+08:00 ] 127.0.0.1 GET /index/index/admin/333sad'/3333
+[ info ] tp5.com/index/index/admin/333sad'/3333 [运行时间：0.021594s][吞吐率：46.31req/s] [内存消耗：1,218.80kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T22:53:30+08:00 ] 127.0.0.1 GET /index/index/admin/sad/3333
+[ info ] tp5.com/index/index/admin/sad/3333 [运行时间：0.022137s][吞吐率：45.17req/s] [内存消耗：1,219.06kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'sad' => '3333',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-18T23:10:10+08:00 ] 127.0.0.1 GET /index/index/admin/sad/3333
+[ info ] tp5.com/index/index/admin/sad/3333 [运行时间：0.025644s][吞吐率：39.00req/s] [内存消耗：1,219.06kb] [文件加载：30]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'admin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+  'sad' => '3333',
+)
+[ info ] [ RUN ] app\index\controller\Index->admin[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File

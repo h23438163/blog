@@ -1,0 +1,503 @@
+---------------------------------------------------------------
+[ 2018-05-02T09:48:14+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.516412s][吞吐率：1.94req/s] [内存消耗：2,587.86kb] [文件加载：46]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'navi',
+  1 => 'pagenow',
+  2 => 'pagecount',
+  3 => 'article_list',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001724s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001300s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yu_blog_article` LIMIT 1 [ RunTime:0.000449s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`add_date`,u.username as author,`article_tag1`,`article_tag2`,`article_tag3`,`article_img`,`content`,`comments_num` FROM `yu_blog_article` `b` INNER JOIN `yu_user` `u` ON `u`.`user_id`=`b`.`user_id` ORDER BY `add_date`  DESC LIMIT 0,5 [ RunTime:0.001082s ]
+---------------------------------------------------------------
+[ 2018-05-02T09:48:14+08:00 ] 127.0.0.1 GET /static/images/upload/QQ%CD%BC%C6%AC20180320204359.png
+[ info ] tp5.com/static/images/upload/QQ%CD%BC%C6%AC20180320204359.png [运行时间：0.031264s][吞吐率：31.99req/s] [内存消耗：1,184.76kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-02T09:48:14+08:00 ] 127.0.0.1 GET /static/images/upload/QQ%CD%BC%C6%AC20180320204359.png
+[ info ] tp5.com/static/images/upload/QQ%CD%BC%C6%AC20180320204359.png [运行时间：0.030062s][吞吐率：33.26req/s] [内存消耗：1,184.76kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-02T09:48:31+08:00 ] 127.0.0.1 GET /article/article/article/articleId/651.html
+[ info ] tp5.com/article/article/article/articleId/651.html [运行时间：0.119906s][吞吐率：8.34req/s] [内存消耗：2,724.35kb] [文件加载：50]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'article',
+    1 => 'article',
+    2 => 'article',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+  'articleId' => '651',
+)
+[ info ] [ RUN ] app\article\controller\Article->article[ E:\AppServ\www\application\article\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/article\view\article\article.html [ array (
+  0 => 'reply_list',
+  1 => 'article',
+  2 => 'comments_list',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001431s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001169s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`add_date`,u.username as author,`article_tag1`,`article_tag2`,`article_tag3`,`article_img`,`content`,`b`.`user_id` FROM `yu_blog_article` `b` INNER JOIN `yu_user` `u` ON `u`.`user_id`=`b`.`user_id` WHERE  `article_id` = 651 LIMIT 1 [ RunTime:0.000708s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_article_comments` [ RunTime:0.001093s ]
+[ sql ] [ SQL ] SELECT `c`.*,u.username as comment_name FROM `yu_article_comments` `c` INNER JOIN `yu_user` `u` ON `c`.`user_id`=`u`.`user_id` WHERE  `article_id` = 651 ORDER BY `comment_id` [ RunTime:0.000636s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_comments_reply` [ RunTime:0.001074s ]
+[ sql ] [ SQL ] SELECT `r`.*,u.username as reply_name FROM `yu_comments_reply` `r` INNER JOIN `yu_user` `u` ON `r`.`user_id`=`u`.`user_id` WHERE  `comment_id` IN (1,2,3,5) ORDER BY `reply_date` [ RunTime:0.000654s ]
+---------------------------------------------------------------
+[ 2018-05-02T09:49:05+08:00 ] 127.0.0.1 GET /index/index/login.html
+[ info ] tp5.com/index/index/login.html [运行时间：0.112020s][吞吐率：8.93req/s] [内存消耗：1,678.73kb] [文件加载：42]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/article/article/article/articleId/651.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-02T09:49:07+08:00 ] 127.0.0.1 POST /user/user/login.html
+[ info ] tp5.com/user/user/login.html [运行时间：0.126899s][吞吐率：7.88req/s] [内存消耗：2,763.43kb] [文件加载：49]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'content-length' => '549',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://tp5.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryvEhYSUp09OliGVjk',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'hehan',
+  'password' => 'moe303514',
+  'authcode' => 'ddas',
+  'imageField_x' => '68',
+  'imageField_y' => '18',
+)
+[ info ] [ RUN ] app\user\controller\User->login[ E:\AppServ\www\application\user\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] E:\AppServ\www\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001433s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_user` [ RunTime:0.001157s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yu_user` WHERE  `username` = 'hehan' LIMIT 1 [ RunTime:0.000531s ]
+[ sql ] [ SQL ] SELECT `password` FROM `yu_user` WHERE  `username` = 'hehan' LIMIT 1 [ RunTime:0.000635s ]
+[ sql ] [ SQL ] SELECT `user_id` FROM `yu_user` WHERE  `username` = 'hehan' LIMIT 1 [ RunTime:0.000501s ]
+---------------------------------------------------------------
+[ 2018-05-02T09:49:09+08:00 ] 127.0.0.1 GET /index/index/showarticle.html
+[ info ] tp5.com/index/index/showarticle.html [运行时间：0.062767s][吞吐率：15.93req/s] [内存消耗：2,588.59kb] [文件加载：46]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/user/user/login.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'navi',
+  1 => 'pagenow',
+  2 => 'pagecount',
+  3 => 'article_list',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001411s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001153s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yu_blog_article` LIMIT 1 [ RunTime:0.000433s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`add_date`,u.username as author,`article_tag1`,`article_tag2`,`article_tag3`,`article_img`,`content`,`comments_num` FROM `yu_blog_article` `b` INNER JOIN `yu_user` `u` ON `u`.`user_id`=`b`.`user_id` ORDER BY `add_date`  DESC LIMIT 0,5 [ RunTime:0.000946s ]
+---------------------------------------------------------------
+[ 2018-05-02T09:49:09+08:00 ] 127.0.0.1 GET /static/images/upload/QQ%CD%BC%C6%AC20180320204359.png
+[ info ] tp5.com/static/images/upload/QQ%CD%BC%C6%AC20180320204359.png [运行时间：0.029528s][吞吐率：33.87req/s] [内存消耗：1,184.86kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-02T09:49:09+08:00 ] 127.0.0.1 GET /static/images/upload/QQ%CD%BC%C6%AC20180320204359.png
+[ info ] tp5.com/static/images/upload/QQ%CD%BC%C6%AC20180320204359.png [运行时间：0.029752s][吞吐率：33.61req/s] [内存消耗：1,184.86kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-02T09:49:11+08:00 ] 127.0.0.1 GET /user/user/userinfo/userId/14.html
+[ info ] tp5.com/user/user/userinfo/userId/14.html [运行时间：0.049524s][吞吐率：20.19req/s] [内存消耗：1,536.65kb] [文件加载：39]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'user',
+    1 => 'user',
+    2 => 'userinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+  'userId' => '14',
+)
+[ info ] [ RUN ] app\user\controller\User->userInfo[ E:\AppServ\www\application\user\controller\User.php ]
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/user\view\user\user_info.html [ array (
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-02T09:50:46+08:00 ] 127.0.0.1 GET /index/index/showarticle.html
+[ info ] tp5.com/index/index/showarticle.html [运行时间：0.071518s][吞吐率：13.98req/s] [内存消耗：2,588.72kb] [文件加载：46]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/user/user/userinfo/userId/14.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'navi',
+  1 => 'pagenow',
+  2 => 'pagecount',
+  3 => 'article_list',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001539s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001236s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yu_blog_article` LIMIT 1 [ RunTime:0.000447s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`add_date`,u.username as author,`article_tag1`,`article_tag2`,`article_tag3`,`article_img`,`content`,`comments_num` FROM `yu_blog_article` `b` INNER JOIN `yu_user` `u` ON `u`.`user_id`=`b`.`user_id` ORDER BY `add_date`  DESC LIMIT 0,5 [ RunTime:0.000936s ]
+---------------------------------------------------------------
+[ 2018-05-02T09:50:46+08:00 ] 127.0.0.1 GET /static/images/upload/QQ%CD%BC%C6%AC20180320204359.png
+[ info ] tp5.com/static/images/upload/QQ%CD%BC%C6%AC20180320204359.png [运行时间：0.030833s][吞吐率：32.43req/s] [内存消耗：1,184.86kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'images',
+    2 => 'upload',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-05-02T09:50:49+08:00 ] 127.0.0.1 GET /article/article/article/articleId/652.html
+[ info ] tp5.com/article/article/article/articleId/652.html [运行时间：0.070693s][吞吐率：14.15req/s] [内存消耗：2,718.11kb] [文件加载：50]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'article',
+    1 => 'article',
+    2 => 'article',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; PHPSESSID=84gtiktsktn6hcvrmupbsqr8v2',
+)
+[ info ] [ PARAM ] array (
+  'articleId' => '652',
+)
+[ info ] [ RUN ] app\article\controller\Article->article[ E:\AppServ\www\application\article\controller\Article.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/article\view\article\article.html [ array (
+  0 => 'reply_list',
+  1 => 'article',
+  2 => 'comments_list',
+) ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001446s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001194s ]
+[ sql ] [ SQL ] SELECT `article_id`,`article_title`,`add_date`,u.username as author,`article_tag1`,`article_tag2`,`article_tag3`,`article_img`,`content`,`b`.`user_id` FROM `yu_blog_article` `b` INNER JOIN `yu_user` `u` ON `u`.`user_id`=`b`.`user_id` WHERE  `article_id` = 652 LIMIT 1 [ RunTime:0.000704s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_article_comments` [ RunTime:0.000990s ]
+[ sql ] [ SQL ] SELECT `c`.*,u.username as comment_name FROM `yu_article_comments` `c` INNER JOIN `yu_user` `u` ON `c`.`user_id`=`u`.`user_id` WHERE  `article_id` = 652 ORDER BY `comment_id` [ RunTime:0.000609s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_comments_reply` [ RunTime:0.000993s ]
+[ sql ] [ SQL ] SELECT `r`.*,u.username as reply_name FROM `yu_comments_reply` `r` INNER JOIN `yu_user` `u` ON `r`.`user_id`=`u`.`user_id` WHERE  `comment_id` IN (6) ORDER BY `reply_date` [ RunTime:0.000570s ]

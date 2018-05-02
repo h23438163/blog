@@ -1,0 +1,2368 @@
+---------------------------------------------------------------
+[ 2018-04-26T12:59:13+08:00 ] 127.0.0.1 GET /
+[ info ] tp5.com/ [运行时间：0.559808s][吞吐率：1.79req/s] [内存消耗：1,416.78kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T12:59:19+08:00 ] 127.0.0.1 GET /hehan
+[ info ] tp5.com/hehan [运行时间：0.073698s][吞吐率：13.57req/s] [内存消耗：1,156.30kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T12:59:40+08:00 ] 127.0.0.1 GET /hehan/id/1/name/hehan
+[ info ] tp5.com/hehan/id/1/name/hehan [运行时间：0.030060s][吞吐率：33.27req/s] [内存消耗：1,156.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => 'id',
+    2 => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'hehan',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:00:19+08:00 ] 127.0.0.1 GET /hehan/id/1/name/hehan
+[ info ] tp5.com/hehan/id/1/name/hehan [运行时间：0.029718s][吞吐率：33.65req/s] [内存消耗：1,159.43kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => 'id',
+    2 => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'hehan',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:00:24+08:00 ] 127.0.0.1 GET /hehan/id/1/name/hehan
+[ info ] tp5.com/hehan/id/1/name/hehan [运行时间：0.029655s][吞吐率：33.72req/s] [内存消耗：1,159.70kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => 'id',
+    2 => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'hehan',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:00:46+08:00 ] 127.0.0.1 GET /hehan/id/1/name/hehan.html
+[ info ] tp5.com/hehan/id/1/name/hehan.html [运行时间：0.029573s][吞吐率：33.81req/s] [内存消耗：1,159.58kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => 'id',
+    2 => '1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'name' => 'hehan',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:00:57+08:00 ] 127.0.0.1 GET /hehan-id-1-name-hehan.html
+[ info ] tp5.com/hehan-id-1-name-hehan.html [运行时间：0.062194s][吞吐率：16.08req/s] [内存消耗：1,438.43kb] [文件加载：39]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'hello_world',
+    2 => 'admin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'id',
+  0 => 'name',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:hello[E:\AppServ\www\thinkphp\library\think\App.php:431]
+---------------------------------------------------------------
+[ 2018-04-26T13:01:28+08:00 ] 127.0.0.1 GET /hehan/admin/turnover
+[ info ] tp5.com/hehan/admin/turnover [运行时间：0.037433s][吞吐率：26.71req/s] [内存消耗：1,158.94kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => 'admin',
+    2 => 'turnover',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:01:37+08:00 ] 127.0.0.1 GET /hehan/admin/turnover
+[ info ] tp5.com/hehan/admin/turnover [运行时间：0.029491s][吞吐率：33.91req/s] [内存消耗：1,159.19kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => 'admin',
+    2 => 'turnover',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:01:42+08:00 ] 127.0.0.1 GET /hehan/
+[ info ] tp5.com/hehan/ [运行时间：0.029567s][吞吐率：33.82req/s] [内存消耗：1,158.77kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'hehan',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:01:58+08:00 ] 127.0.0.1 GET /hehan.html
+[ info ] tp5.com/hehan.html [运行时间：0.038561s][吞吐率：25.93req/s] [内存消耗：1,438.21kb] [文件加载：39]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'hello_world',
+    2 => 'admin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'admin' => NULL,
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:hello[E:\AppServ\www\thinkphp\library\think\App.php:431]
+---------------------------------------------------------------
+[ 2018-04-26T13:02:39+08:00 ] 127.0.0.1 GET /hehan.html
+[ info ] tp5.com/hehan.html [运行时间：0.035117s][吞吐率：28.48req/s] [内存消耗：1,423.79kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'hello_world',
+    2 => 'admin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'admin' => NULL,
+)
+[ info ] [ RUN ] app\index\Controller\HelloWorld->admin[ E:\AppServ\www\application\index\controller\HelloWorld.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:29:32+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.060574s][吞吐率：16.51req/s] [内存消耗：1,177.49kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:30:17+08:00 ] 127.0.0.1 GET /Detail/info
+[ info ] tp5.com/Detail/info [运行时间：0.029738s][吞吐率：33.63req/s] [内存消耗：1,177.49kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'Detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:32:19+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.036932s][吞吐率：27.08req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:33:22+08:00 ] 127.0.0.1 GET /index/detail/getinfo
+[ info ] tp5.com/index/detail/getinfo [运行时间：0.038105s][吞吐率：26.24req/s] [内存消耗：1,437.94kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'detail',
+    2 => 'getinfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Detail->getInfo[ E:\AppServ\www\application\index\controller\Detail.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:33:28+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.030846s][吞吐率：32.42req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:34:15+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.034518s][吞吐率：28.97req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:34:51+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.038639s][吞吐率：25.88req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:35:22+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.029532s][吞吐率：33.86req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:37:05+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.037710s][吞吐率：26.52req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=1|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:38:08+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.029880s][吞吐率：33.47req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:38:13+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.029750s][吞吐率：33.61req/s] [内存消耗：1,177.52kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:40:04+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.040952s][吞吐率：24.42req/s] [内存消耗：1,177.84kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:43:56+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.037113s][吞吐率：26.94req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:49:54+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.037275s][吞吐率：26.83req/s] [内存消耗：1,177.80kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'info',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:51:02+08:00 ] 127.0.0.1 GET /detail/index/info
+[ info ] tp5.com/detail/index/info [运行时间：0.029590s][吞吐率：33.80req/s] [内存消耗：1,177.59kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail',
+    1 => 'index',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:52:05+08:00 ] 127.0.0.1 GET /index/detail/info
+[ info ] tp5.com/index/detail/info [运行时间：0.048591s][吞吐率：20.58req/s] [内存消耗：1,459.44kb] [文件加载：40]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'detail',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:53:27+08:00 ] 127.0.0.1 GET /detail-info
+[ info ] tp5.com/detail-info [运行时间：0.032193s][吞吐率：31.06req/s] [内存消耗：1,439.38kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Detail',
+    2 => 'getinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'info',
+)
+[ info ] [ RUN ] app\index\controller\Detail->getInfo[ E:\AppServ\www\application\index\controller\Detail.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:54:12+08:00 ] 127.0.0.1 GET /detail-info
+[ info ] tp5.com/detail-info [运行时间：0.041468s][吞吐率：24.11req/s] [内存消耗：1,177.59kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'detail-info',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T13:54:18+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.034154s][吞吐率：29.28req/s] [内存消耗：1,439.46kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Detail',
+    2 => 'getinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'info',
+)
+[ info ] [ RUN ] app\index\controller\Detail->getInfo[ E:\AppServ\www\application\index\controller\Detail.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T15:50:12+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.041025s][吞吐率：24.38req/s] [内存消耗：1,439.71kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Detail',
+    2 => 'getinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'info',
+)
+[ info ] [ RUN ] app\index\controller\Detail->getInfo[ E:\AppServ\www\application\index\controller\Detail.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T15:56:21+08:00 ] 127.0.0.1 GET /detail/info
+[ info ] tp5.com/detail/info [运行时间：0.042319s][吞吐率：23.63req/s] [内存消耗：1,439.71kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Detail',
+    2 => 'getinfo',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'info',
+)
+[ info ] [ RUN ] app\index\controller\Detail->getInfo[ E:\AppServ\www\application\index\controller\Detail.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T16:58:54+08:00 ] 127.0.0.1 GET /admintest/user/setattr
+[ info ] tp5.com/admintest/user/setattr [运行时间：0.065318s][吞吐率：15.31req/s] [内存消耗：1,183.65kb] [文件加载：34]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'user',
+    2 => 'setattr',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T16:59:28+08:00 ] 127.0.0.1 GET /admintest/user/setattr
+[ info ] tp5.com/admintest/user/setattr [运行时间：0.032398s][吞吐率：30.87req/s] [内存消耗：1,184.02kb] [文件加载：34]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'user',
+    2 => 'setattr',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T17:00:19+08:00 ] 127.0.0.1 GET /admintest/users/setattr
+[ info ] tp5.com/admintest/users/setattr [运行时间：0.035344s][吞吐率：28.29req/s] [内存消耗：1,439.52kb] [文件加载：37]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'setattr',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->setAttr[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T17:00:50+08:00 ] 127.0.0.1 GET /admintest/users/setattr
+[ info ] tp5.com/admintest/users/setattr [运行时间：0.154563s][吞吐率：6.47req/s] [内存消耗：2,474.89kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'setattr',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->setAttr[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001670s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001248s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`birthday` , `name` , `email`) VALUES (675529200 , 'hehan修改完成' , 'hehan234386163@163.com') [ RunTime:0.000673s ]
+---------------------------------------------------------------
+[ 2018-04-26T17:03:07+08:00 ] 127.0.0.1 GET /admintest/users/getattr
+[ info ] tp5.com/admintest/users/getattr [运行时间：0.062833s][吞吐率：15.92req/s] [内存消耗：2,479.11kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'getattr',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->getAttr[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001494s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001137s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_user` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000608s ]
+---------------------------------------------------------------
+[ 2018-04-26T17:03:23+08:00 ] 127.0.0.1 GET /admintest/users/getattr
+[ info ] tp5.com/admintest/users/getattr [运行时间：0.050606s][吞吐率：19.76req/s] [内存消耗：2,479.73kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'getattr',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->getAttr[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001473s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001142s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_user` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000584s ]
+---------------------------------------------------------------
+[ 2018-04-26T17:04:33+08:00 ] 127.0.0.1 GET /admintest/users/getattr
+[ info ] tp5.com/admintest/users/getattr [运行时间：0.049615s][吞吐率：20.16req/s] [内存消耗：2,480.52kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'getattr',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->getAttr[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001613s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001213s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_user` WHERE  `id` = 11 LIMIT 1 [ RunTime:0.000611s ]
+---------------------------------------------------------------
+[ 2018-04-26T17:08:24+08:00 ] 127.0.0.1 GET /admintest/users/auto
+[ info ] tp5.com/admintest/users/auto [运行时间：0.092519s][吞吐率：10.81req/s] [内存消耗：1,475.39kb] [文件加载：41]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'auto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->auto[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [1]Call to undefined function app\admintest\Controller\User()[E:\AppServ\www\application\admintest\controller\Users.php:88]
+---------------------------------------------------------------
+[ 2018-04-26T17:08:34+08:00 ] 127.0.0.1 GET /admintest/users/auto
+[ info ] tp5.com/admintest/users/auto [运行时间：0.051695s][吞吐率：19.34req/s] [内存消耗：2,477.93kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'auto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->auto[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001579s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001158s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`name` , `email` , `birthday`) VALUES ('hehan修改完成' , '234386163@163.com' , 0) [ RunTime:0.000571s ]
+---------------------------------------------------------------
+[ 2018-04-26T17:09:10+08:00 ] 127.0.0.1 GET /admintest/users/auto
+[ info ] tp5.com/admintest/users/auto [运行时间：0.049653s][吞吐率：20.14req/s] [内存消耗：2,477.93kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'auto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->auto[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001479s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001132s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`name` , `email` , `birthday`) VALUES ('hehan修改完成' , '234386163@163.com' , 0) [ RunTime:0.000560s ]
+---------------------------------------------------------------
+[ 2018-04-26T17:09:39+08:00 ] 127.0.0.1 GET /admintest/users/auto
+[ info ] tp5.com/admintest/users/auto [运行时间：0.049879s][吞吐率：20.05req/s] [内存消耗：2,477.14kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'auto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->auto[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001533s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001177s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`name` , `email` , `birthday`) VALUES ('hehan修改完成' , '234386163@163.com' , 1000000) [ RunTime:0.000652s ]
+---------------------------------------------------------------
+[ 2018-04-26T17:10:09+08:00 ] 127.0.0.1 GET /admintest/users/auto
+[ info ] tp5.com/admintest/users/auto [运行时间：0.049484s][吞吐率：20.21req/s] [内存消耗：2,477.92kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admintest',
+    1 => 'users',
+    2 => 'auto',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admintest\Controller\Users->auto[ E:\AppServ\www\application\admintest\controller\Users.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001495s ] mysql:host=127.0.0.1;dbname=thinkphp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.001166s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`name` , `email` , `birthday`) VALUES ('hehan修改完成' , '234386163@163.com' , 1524733809) [ RunTime:0.000615s ]
+---------------------------------------------------------------
+[ 2018-04-26T23:12:20+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.067452s][吞吐率：14.83req/s] [内存消耗：2,472.97kb] [文件加载：46]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [1049]SQLSTATE[HY000] [1049] Unknown database 'my_blog'[E:\AppServ\www\thinkphp\library\think\db\Connection.php:293]
+---------------------------------------------------------------
+[ 2018-04-26T23:12:50+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.101738s][吞吐率：9.83req/s] [内存消耗：2,480.13kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001553s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.047370s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000699s ]
+---------------------------------------------------------------
+[ 2018-04-26T23:17:43+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.063456s][吞吐率：15.76req/s] [内存消耗：2,480.06kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001602s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.002041s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000698s ]
+---------------------------------------------------------------
+[ 2018-04-26T23:18:37+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.050905s][吞吐率：19.64req/s] [内存消耗：2,480.13kb] [文件加载：44]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001465s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001749s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000575s ]
+---------------------------------------------------------------
+[ 2018-04-26T23:23:19+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.069586s][吞吐率：14.37req/s] [内存消耗：2,156.40kb] [文件加载：42]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010803s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001916s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000603s ]
+---------------------------------------------------------------
+[ 2018-04-26T23:25:37+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.120994s][吞吐率：8.26req/s] [内存消耗：2,179.03kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001863s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.002255s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000652s ]
+[ error ] [0]模板文件不存在:E:\AppServ\www\public/../application/index\view\index\index.html[E:\AppServ\www\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2018-04-26T23:26:02+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.054950s][吞吐率：18.20req/s] [内存消耗：2,179.01kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001450s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001738s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000710s ]
+[ error ] [0]模板文件不存在:E:\AppServ\www\public/../application/index\view\index\show_article.html[E:\AppServ\www\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2018-04-26T23:26:39+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.055466s][吞吐率：18.03req/s] [内存消耗：2,179.01kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001486s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001712s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000576s ]
+[ error ] [0]模板文件不存在:E:\AppServ\www\public/../application/index\view\index\show_article.html[E:\AppServ\www\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2018-04-26T23:26:57+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.053264s][吞吐率：18.77req/s] [内存消耗：2,179.03kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001589s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001745s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000613s ]
+[ error ] [0]模板文件不存在:E:\AppServ\www\public/../application/index\view\index\index.html[E:\AppServ\www\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2018-04-26T23:27:44+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.063692s][吞吐率：15.70req/s] [内存消耗：2,178.84kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001569s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001757s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000680s ]
+[ error ] [0]模板文件不存在:index.html[E:\AppServ\www\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2018-04-26T23:27:55+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.052260s][吞吐率：19.14req/s] [内存消耗：2,179.03kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001469s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001758s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000593s ]
+[ error ] [0]模板文件不存在:E:\AppServ\www\public/../application/index\view\index\index.html[E:\AppServ\www\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2018-04-26T23:30:24+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.063630s][吞吐率：15.72req/s] [内存消耗：2,179.07kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001490s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001705s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000581s ]
+[ error ] [0]模板文件不存在:E:\AppServ\www\public/../application/index\view\index\index.html[E:\AppServ\www\thinkphp\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2018-04-26T23:32:27+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.114558s][吞吐率：8.73req/s] [内存消耗：2,381.67kb] [文件加载：49]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001621s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001824s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000597s ]
+[ error ] [64]main(): Failed opening required 'E:/AppServ/www/public/controllers/showArticle.php' (include_path='.;C:\php\pear')[E:\AppServ\www\runtime\temp\30e62dd1f6f46d8a4d2221ffa620ceda.php:2]
+---------------------------------------------------------------
+[ 2018-04-26T23:32:56+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.066581s][吞吐率：15.02req/s] [内存消耗：2,343.55kb] [文件加载：49]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001487s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001803s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000583s ]
+[ error ] [8]未定义变量: PageNow[E:\AppServ\www\runtime\temp\30e62dd1f6f46d8a4d2221ffa620ceda.php:50]
+---------------------------------------------------------------
+[ 2018-04-26T23:51:15+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.073366s][吞吐率：13.63req/s] [内存消耗：2,341.58kb] [文件加载：47]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001682s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001861s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000601s ]
+[ error ] [0]模板标签错误:volist[E:\AppServ\www\thinkphp\library\think\template\TagLib.php:275]
+---------------------------------------------------------------
+[ 2018-04-26T23:52:18+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.057605s][吞吐率：17.36req/s] [内存消耗：2,341.58kb] [文件加载：47]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001483s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001701s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000578s ]
+[ error ] [0]模板标签错误:volist[E:\AppServ\www\thinkphp\library\think\template\TagLib.php:275]
+---------------------------------------------------------------
+[ 2018-04-26T23:53:54+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.078136s][吞吐率：12.80req/s] [内存消耗：2,352.02kb] [文件加载：49]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001616s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001737s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000605s ]
+[ error ] [8]未定义变量: PageNow[E:\AppServ\www\runtime\temp\30e62dd1f6f46d8a4d2221ffa620ceda.php:50]
+---------------------------------------------------------------
+[ 2018-04-26T23:55:31+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.064756s][吞吐率：15.44req/s] [内存消耗：2,352.02kb] [文件加载：49]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001585s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001288s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000624s ]
+[ error ] [8]未定义变量: PageNow[E:\AppServ\www\runtime\temp\30e62dd1f6f46d8a4d2221ffa620ceda.php:136]
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /index/index/showarticle
+[ info ] tp5.com/index/index/showarticle [运行时间：0.057955s][吞吐率：17.25req/s] [内存消耗：2,337.13kb] [文件加载：45]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'showarticle',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->showArticle[ E:\AppServ\www\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\AppServ\www\public/../application/index\view\index\index.html [ array (
+  0 => 'article_list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001447s ] mysql:host=127.0.0.1;dbname=myblog;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yu_blog_article` [ RunTime:0.001224s ]
+[ sql ] [ SQL ] SELECT * FROM `yu_blog_article` LIMIT 0,5 [ RunTime:0.000581s ]
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /style.css
+[ info ] tp5.com/style.css [运行时间：0.039784s][吞吐率：25.14req/s] [内存消耗：1,177.29kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'style.css',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'text/css,*/*;q=0.1',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /js/jquery-321.js
+[ info ] tp5.com/js/jquery-321.js [运行时间：0.043469s][吞吐率：23.00req/s] [内存消耗：1,177.29kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'jquery-321.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => '*/*',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /js/common.js
+[ info ] tp5.com/js/common.js [运行时间：0.043049s][吞吐率：23.23req/s] [内存消耗：1,177.22kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'common.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => '*/*',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /js/jump_page.js
+[ info ] tp5.com/js/jump_page.js [运行时间：0.046340s][吞吐率：21.58req/s] [内存消耗：1,177.20kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'jump_page.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => '*/*',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /index/index/images/logo.jpg
+[ info ] tp5.com/index/index/images/logo.jpg [运行时间：0.092125s][吞吐率：10.85req/s] [内存消耗：1,458.59kb] [文件加载：40]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'thinkphp_show_page_trace=0|0; pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/search_btn.gif
+[ info ] tp5.com/images/search_btn.gif [运行时间：0.039759s][吞吐率：25.15req/s] [内存消耗：1,177.42kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'search_btn.gif',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/backtop.gif
+[ info ] tp5.com/images/backtop.gif [运行时间：0.034981s][吞吐率：28.59req/s] [内存消耗：1,177.41kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'backtop.gif',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/go_jump.png
+[ info ] tp5.com/images/go_jump.png [运行时间：0.037431s][吞吐率：26.72req/s] [内存消耗：1,177.41kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'go_jump.png',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/img1.jpg
+[ info ] tp5.com/images/img1.jpg [运行时间：0.033599s][吞吐率：29.76req/s] [内存消耗：1,177.30kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'img1.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/hbg_img.jpg
+[ info ] tp5.com/images/hbg_img.jpg [运行时间：0.042493s][吞吐率：23.53req/s] [内存消耗：1,177.41kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'hbg_img.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/img2.jpg
+[ info ] tp5.com/images/img2.jpg [运行时间：0.043438s][吞吐率：23.02req/s] [内存消耗：1,177.38kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'img2.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/search_btn.gif
+[ info ] tp5.com/images/search_btn.gif [运行时间：0.033019s][吞吐率：30.29req/s] [内存消耗：1,177.42kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'search_btn.gif',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:52+08:00 ] 127.0.0.1 GET /images/go_jump.png
+[ info ] tp5.com/images/go_jump.png [运行时间：0.032469s][吞吐率：30.80req/s] [内存消耗：1,177.41kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'go_jump.png',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:53+08:00 ] 127.0.0.1 GET /images/backtop.gif
+[ info ] tp5.com/images/backtop.gif [运行时间：0.031565s][吞吐率：31.68req/s] [内存消耗：1,177.41kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'backtop.gif',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'accept' => 'image/webp,image/*,*/*;q=0.8',
+  'dnt' => '1',
+  'referer' => 'http://tp5.com/index/index/showarticle',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+  'cookie' => 'pgv_pvi=3993230336; thinkphp_show_page_trace=0|0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-04-26T23:55:53+08:00 ] 127.0.0.1 GET /images/logo.jpg
+[ info ] tp5.com/images/logo.jpg [运行时间：0.030614s][吞吐率：32.66req/s] [内存消耗：1,176.29kb] [文件加载：33]
+[ info ] [ LANG ] E:\AppServ\www\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'images',
+    1 => 'logo.jpg',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'tp5.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36 Maxthon/5.1.3.2000',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
