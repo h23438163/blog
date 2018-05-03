@@ -38,13 +38,13 @@
 		<div class="content_resize">
 			<div class="mainbar">
 				<div class="article">
-					<h2><span>发表文章</span></h2><div class="clr"></div>     	
-					<p>发表博客</p>
-					<form action={:url('article/article/addarticle')} method="post" enctype="multipart/form-data" id='submit'>
+					<h2><span>编辑文章</span></h2><div class="clr"></div>
+					<p>编辑博客</p>
+					<form action={:url('article/article/updatearticle')} method="post" enctype="multipart/form-data" id='submit'>
 						<ol>
 							<li>
 								<label for="title">标题</label>
-								<input id="title" name="article_title" class="text" /><span id='title_error' style='color:red'></span>
+								<input id="title" name="article_title" class="text" value="{$article.article_title}"/><span id='title_error' style='color:red'></span>
 							</li>
 							<li>
 								<label for="author">发布者</label>
@@ -52,19 +52,19 @@
 							</li>
 							<li id="article_tag">
 								<label for="tag">分类</label>
-								<input id="tag1" name="article_tag1" class="text" /><span id='tag_error' style='color:red'></span><br>
-								<input id="tag2" name="article_tag2" class="text" /><br>
-								<input id="tag3" name="article_tag3" class="text" />
+								<input id="tag1" name="article_tag1" class="text" value="{$article.article_tag1}"/><span id='tag_error' style='color:red'></span><br>
+								<input id="tag2" name="article_tag2" class="text" value="{$article.article_tag2}"/><br>
+								<input id="tag3" name="article_tag3" class="text" value="{$article.article_tag3}"/>
 								
 							</li> 
 							<li>
 								<label for="img_upload" >上传图片(小于500kb)</label>
 								<div class='img_upload_style'>上传图片</div>
-								<input type="file" id="img_upload" name="img_upload" accept="image/png, image/jpeg, image/gif, image/jpg"  style='width:78px;height:30px;position:relative;opacity: 0;' /><span id='img_name'></span>
+								<input type="file" id="img_upload" name="img_upload" accept="image/png, image/jpeg, image/gif, image/jpg" style='width:78px;height:30px;position:relative;opacity: 0;' /><span id='img_name'></span>
 							</li>
 							<li>
 								<label for="content">博客内容</label>
-								<textarea id="content" name="content" rows="8" cols="50" wrap="virtual"></textarea><span id='content_error' style='color:red'></span>
+								<textarea id="content" name="content" rows="8" cols="50" wrap="virtual">{$article.content}</textarea><span id='content_error' style='color:red'></span>
 							</li>
 							<li>
 								<label for="content">验证码(60秒后过期)</label>
@@ -72,6 +72,7 @@
 								请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
 							</li>
 							<li>
+								<input type="hidden" name="article_id" value={$article.article_id}>
 								<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
 								<div class="clr"></div>
 							</li>

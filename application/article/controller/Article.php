@@ -57,7 +57,7 @@ class Article extends Controller
             }
 
             //处理中文名
-            $data['article_img'] = iconv('gbk','utf-8',$data['article_img']);
+            $data['article_img'] = iconv('GB18030','utf-8',$data['article_img']);
         } elseif ($img === null) {
             //如果没有上传,设置默认图片
             $data['article_img'] = '/images/img'.rand(1,2).'.jpg';
@@ -137,14 +137,99 @@ class Article extends Controller
     }
 
     //编辑文章
-    public function editArticle($userId) {
-        echo 'article';
-        echo $userId;
+    public function editArticle($articleId) {
+
+        if (!is_numeric($articleId)) {
+            $this->error('输入错误');
+        }
+
+       $blogArticle = new BlogArticle();
+
+       $article = $blogArticle->where('article_id', '=', $articleId)
+                              ->field('article_id,article_title,article_tag1,article_tag2,article_tag3,content')
+                              ->find();
+
+       if (is_object($article)) {
+           $this->assign('article', $article);
+       } else {
+           $this->error('文章未找到');
+       }
+
+       return $this->fetch();
     }
 
     //更新文章
     public function updateArticle() {
-        echo 'article';
+
+        $data = $this->request->param();
+
+        //上传图片处理
+        $head_img = $this->request->file('img_upload');
+        if (is_object($head_img)) {
+            //验证图片
+            $fileValidate = $head_img->validate(['size' => 500000,'ext' => 'gif,jpg,jpeg,bmp,png'])->check();
+
+            if ($fileValidate === false) {
+                $this->error('图片上传错误');
+            }
+
+            //移动保存图片
+            $file = $head_img->move(ROOT_PATH . 'public' . DS . '/static/images/upload','',false);
+
+            //判断上传的图片是否存在
+            //设置图片路径
+            if ($file !== false) {
+                $data['article_img'] = '/images/upload/'.$file->getSaveName();
+            } else {
+                //图片信息
+                $img_array = $head_img->getInfo();
+                $img_name  = $img_array['name'];
+                $data['article_img'] = '/images/upload/'.$img_name;
+            }
+
+            //处理中文名
+            $data['article_img'] = iconv('GB18030','utf-8',$data['article_img']);
+            //字段有图片地址
+            $field = 'article_title,article_tag1,article_tag2,article_tag3,article_img,content';
+        } elseif ($head_img === null) {
+            //字段无图片地址
+            $field = 'article_title,article_tag1,article_tag2,article_tag3,content';
+        }
+
+        $articleId = $data['article_id'];
+        unset($data['article_id']);
+        $blogArticle = new BlogArticle();
+        $article     = $blogArticle->where('article_id', '=', $articleId)
+                                   ->field($field)
+                                   ->find();
+        //验证结果集
+        if (is_object($article)) {
+            $article = $article->toArray();
+        } else {
+            $this->error('文章未找到');
+        }
+
+        //对比数据是否一致
+        $isUpdate = false;
+        foreach ($article as $key => $val) {
+            if ($article[$key] !== $data[$key]) {
+                $isUpdate = true;
+            }
+        }
+
+        //dump($data);exit;
+        if ($isUpdate === true) {
+            //数据有修改
+            $affected_rows = $blogArticle->allowField(true)->save($data,['article_id' => $articleId]);
+            if ($affected_rows > 0) {
+                $this->success('修改文章成功',url('article/article/article?articleId='.$articleId));
+            } else {
+                $this->error('修改文章失败');
+            }
+        } else {
+            //数据有修改
+            $this->success('修改文章成功',url('article/article/article?articleId='.$articleId));
+        }
 
     }
 

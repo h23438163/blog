@@ -84,7 +84,7 @@
 								{$article.article_tag3}
 							</a>
 							{eq name='$Think.session.user.userId' value='$article.user_id'}
-							<a href={:url('article/article/editarticle?userId='.$Think.session.user.userId)} class="com">编辑</a>
+							<a href={:url('article/article/editarticle?articleId='.$article.article_id)} class="com">编辑</a>
 							{/eq}
 						</p>
 						<!--文章配图-->

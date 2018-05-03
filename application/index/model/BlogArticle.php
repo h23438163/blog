@@ -22,9 +22,9 @@ class BlogArticle extends Model
     ];
     public function getAddDateAttr($addtime){
 
-        $year = date('Y',$addtime);
+        $year  = date('Y',$addtime);
         $month = date('M',$addtime);
-        $day = date('d',$addtime);
+        $day   = date('d',$addtime);
 
         return  array('year' => $year,'month' => $month,'day' => $day);
     }

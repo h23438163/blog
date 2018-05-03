@@ -92,7 +92,7 @@ class User extends Controller
                 $data['head_img'] = '/images/'.$data['username'] .'/'. $img_name;
             }
             //处理中文名
-            $data['head_img'] = iconv('gbk','utf-8',$data['head_img']);
+            $data['head_img'] = iconv('GB18030','utf-8',$data['head_img']);
         } elseif ($head_img === null) {
             //未上传
             if (empty($data['img_num'])) {
