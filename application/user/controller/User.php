@@ -9,6 +9,7 @@
 namespace app\user\controller;
 
 
+use app\index\model\BlogArticle;
 use think\Controller;
 use app\user\model\User as UserModel;
 use think\Session;
@@ -152,7 +153,27 @@ class User extends Controller
         return $this->fetch();
     }
 
-    public function articleList() {
+    public function articleList($page = 1, $PageSize = 5) {
+
+        $userId = Session::get('userId','user');
+
+        $blogArticle = new BlogArticle();
+
+        $listCount = $blogArticle->where('user_id', '=', $userId)
+                                 ->count();
+        $PageCount = ceil($listCount / $PageSize);
+        $PageStart = ($page - 1) * $PageSize;
+        $titlelist = $blogArticle->where('user_id', '=', $userId)
+                                 ->limit($PageStart,$PageSize)
+                                 ->field('article_id,article_title')
+                                 ->order('add_date', 'desc')
+                                 ->select();
+
+        $Navi = Navi($page,$PageCount,'user/user/articlelist');
+
+        $this->assign('Navi', $Navi);
+        $this->assign('titlelist', $titlelist);
+        //dump($titlelist);exit;
         return $this->fetch();
     }
     public function commentList() {

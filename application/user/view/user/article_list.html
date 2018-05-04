@@ -42,6 +42,14 @@
 				<li>
 					<h3>发布的文章</h3>
 				</li>
+				<li>
+					{volist name='titlelist' id='title'}
+					<h3><a href={:url('article/article/article?articleId='.$title.article_id)}>{$title.article_title}</a></h3>
+					{/volist}
+				</li>
+				<li>
+					{$Navi}
+				</li>
 
 			</ol>
 		</div>
