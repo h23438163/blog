@@ -15,10 +15,14 @@ class User extends Model
 {
     protected $autoWriteTimestamp = true;
     protected $createTime = 'create_time';
-    protected $updateTime = 'login_time';
+    protected $updateTime = false;
     protected $insert = [
         'status'
     ];
+
+    /*public function getLoginTimeAttr($logintime) {
+        return date('Y年m月d日 g:i:s a',$logintime);
+    }*/
 
     public function setUserIdAttr($userid) {
         return null;

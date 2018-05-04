@@ -24,7 +24,7 @@ class User extends Controller
         //判断
         $hasUsername = $this->hasUsername($data['username'], $user);
         if ($hasUsername == 0) {
-            $this->error('用户不存在,请注册',url('index/index/register'));
+            $this->error('用户名或密码错误');
         }
 
         //验证器
@@ -35,14 +35,18 @@ class User extends Controller
 
         //匹配密码
         $password = $user->where('username','=',$data['username'])->value('password');
-        if (md5($data['password'])  === $password ) {
-            $userId = $user->where('username', '=', $data['username'])->value('user_id');
+        if (md5($data['password'])  === $password) {
+            $userId    = $user->where('username', '=', $data['username'])->value('user_id');
+            $loginTime = $user->where('username', '=', $data['username'])->value('login_time');
+            $loginTime = date('Y年m月d日 g:i:s a',$loginTime);
             //设置Session
             Session::set('username', $data['username'], 'user');
             Session::set('userId', $userId, 'user');
+            Session::set('loginTime', $loginTime, 'user');
+            $user->save(['login_time' => $_SERVER['REQUEST_TIME']],['username' => $data['username']]);
             $this->success('登陆成功',url('index/index/showarticle'));
         }else {
-            $this->error('密码错误',url('index/index/login'));
+            $this->error('用户名或密码错误');
         }
 
         $user->save(['status' => 1],['username' => $data['username']]);
@@ -129,6 +133,22 @@ class User extends Controller
         if (Session::has('username','user') === false) {
             $this->error('请登陆',url('index/index/login'));
         }
+
+        $fields = 'email,head_img,create_time';
+
+        $user = new UserModel();
+        $userInfo = $user->where('user_id', '=', Session::get('userId','user'))
+                         ->field($fields)
+                         ->find();
+
+        if ($userInfo !== null) {
+            $userInfo = $userInfo->toArray();
+            $userInfo['user_id']    = Session::get('userId','user');
+            $userInfo['username']   = Session::get('username','user');
+            $userInfo['login_time'] = Session::get('loginTime','user');
+        }
+        //dump($userInfo);exit;
+        $this->assign('userInfo', $userInfo);
         return $this->fetch();
     }
 
