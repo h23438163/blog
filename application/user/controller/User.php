@@ -152,6 +152,19 @@ class User extends Controller
         return $this->fetch();
     }
 
+    public function articleList() {
+        return $this->fetch();
+    }
+    public function commentList() {
+        return $this->fetch();
+    }
+    public function replyList() {
+        return $this->fetch();
+    }
+    public function favorite() {
+        return $this->fetch();
+    }
+
     //判断username唯一,提供AJAX使用
     public function hasUsername($username = '',$UserModel = '') {
 

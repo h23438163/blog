@@ -97,7 +97,7 @@
 						{volist name='comments_list' id='comment' key='key'}
 							<div class='comments'>
 								<!--评论序号-->
-								<h3>#{$key}</h3>
+								<h3 id="comment{$comment.comment_id}">#{$key}</h3>
 								<!--评论人名字-->
 								<span class='com_name'>
 									{$comment.comment_name}
@@ -270,9 +270,9 @@
 								<!--回复评论-->
 								<br><br>
 								{notempty name='reply_list'}
-									{volist name='reply_list' id='reply'}
+									{volist name='reply_list' id='reply' key='reply_key'}
 										{eq name='$comment.comment_id' value='$reply.comment_id'}
-											<div >
+											<div id="reply{$reply.reply_id}">
 												<!--回复人名字-->
 												<span class='com_name'>
 													{$reply.reply_name}
@@ -294,6 +294,7 @@
 												{/eq}
 												<!--回复内容-->
 												<p class='reply_comment_content'>{$reply.reply_content}</p>
+
 											</div>
 											<br>
 										{/eq}
