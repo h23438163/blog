@@ -41,7 +41,17 @@
 				<li>
 					<h3>评论记录</h3>
 				</li>
-
+				<li>
+					{volist name='commentlist' id='comment'}
+					<h3><a href={:url('article/article/article','articleId='.$comment.article_id.'')}#comment{$comment.comment_id}>{$comment.article_title}</a></h3>
+					{/volist}
+				</li>
+				<li>
+					{$Navi}
+				</li>
+				<li>
+					<a href={:url('user/user/userinfo')}>返回</a>
+				</li>
 			</ol>
 		</div>
 		<div class="sidebar">	

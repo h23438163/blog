@@ -9,6 +9,7 @@
 namespace app\user\controller;
 
 
+use app\article\model\ArticleComments;
 use app\index\model\BlogArticle;
 use think\Controller;
 use app\user\model\User as UserModel;
@@ -153,35 +154,70 @@ class User extends Controller
         return $this->fetch();
     }
 
+    //用户发布文章列表
     public function articleList($page = 1, $PageSize = 5) {
 
-        $userId = Session::get('userId','user');
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        } else {
+            $userId = Session::get('userId','user');
+        }
 
         $blogArticle = new BlogArticle();
-
-        $listCount = $blogArticle->where('user_id', '=', $userId)
-                                 ->count();
-        $PageCount = ceil($listCount / $PageSize);
-        $PageStart = ($page - 1) * $PageSize;
-        $titlelist = $blogArticle->where('user_id', '=', $userId)
-                                 ->limit($PageStart,$PageSize)
-                                 ->field('article_id,article_title')
-                                 ->order('add_date', 'desc')
-                                 ->select();
+        $listCount   = $blogArticle->where('user_id', '=', $userId)
+                                   ->count();
+        $PageCount   = ceil($listCount / $PageSize);
+        $PageStart   = ($page - 1) * $PageSize;
+        $titlelist   = $blogArticle->where('user_id', '=', $userId)
+                                   ->limit($PageStart,$PageSize)
+                                   ->field('article_id,article_title')
+                                   ->order('add_date', 'desc')
+                                   ->select();
 
         $Navi = Navi($page,$PageCount,'user/user/articlelist');
 
         $this->assign('Navi', $Navi);
         $this->assign('titlelist', $titlelist);
-        //dump($titlelist);exit;
+
         return $this->fetch();
     }
-    public function commentList() {
+
+    //用户评论列表
+    public function commentList($page = 1, $PageSize = 5) {
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        } else {
+            $userId = Session::get('userId','user');
+        }
+
+        $articleComments = new ArticleComments();
+
+        $commentsCount = $articleComments->where('user_id', '=', $userId)->count();
+        $PageCount     = ceil($commentsCount/$PageSize);
+        $PageStart     = ($page - 1) * $PageSize;
+
+        $commentlist   = $articleComments->alias('c')
+                                         ->join('blog_article a','c.article_id = a.article_id')
+                                         ->field('c.article_id,c.comment_id,a.article_title')
+                                         ->where('c.user_id', '=',$userId)
+                                         ->limit($PageStart,$PageSize)
+                                         ->select();
+
+        $Navi = Navi($page,$PageCount,'user/user/commentlist');
+
+        $this->assign('Navi', $Navi);
+        $this->assign('commentlist',$commentlist);
         return $this->fetch();
     }
+
+    //用户回复列表
     public function replyList() {
         return $this->fetch();
     }
+
     public function favorite() {
         return $this->fetch();
     }
