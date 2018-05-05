@@ -19,6 +19,11 @@ class Comment extends Controller
 
     public function addComment(){
 
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+
         $blogArticle     = new BlogArticle();
         $articleComments = new ArticleComments();
 
@@ -49,6 +54,11 @@ class Comment extends Controller
     //编辑评论内容
     public function editComment($commentId = '') {
 
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+
         $comment = ArticleComments::get($commentId);
 
         if ($comment === null) {
@@ -63,6 +73,11 @@ class Comment extends Controller
 
     //更新评论内容
     public function updateComment() {
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
 
         $data = $this->request->param('','','htmlspecialchars');
         //验证器

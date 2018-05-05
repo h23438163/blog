@@ -23,6 +23,7 @@ class Article extends Controller
         if (!Session::has('username','user')) {
             $this->error('请登陆',url('index/index/login'));
         }
+
         //跳转URL
         $url_add  = url('index/index/addarticle');
         $data     = $this->request->param('','','htmlspecialchars');
@@ -139,6 +140,11 @@ class Article extends Controller
     //编辑文章
     public function editArticle($articleId) {
 
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+
         if (!is_numeric($articleId)) {
             $this->error('输入错误');
         }
@@ -161,7 +167,17 @@ class Article extends Controller
     //更新文章
     public function updateArticle() {
 
-        $data = $this->request->param();
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+
+        $data = $this->request->param('','','htmlspecialchars');
+
+        $validate = $this->validate($data,'UpdateArticle');
+        if ($validate !== true) {
+            $this->error($data);
+        }
 
         //上传图片处理
         $head_img = $this->request->file('img_upload');
@@ -196,7 +212,7 @@ class Article extends Controller
             $field = 'article_title,article_tag1,article_tag2,article_tag3,content';
         }
 
-        $articleId = $data['article_id'];
+        $articleId   = $data['article_id'];
         unset($data['article_id']);
         $blogArticle = new BlogArticle();
         $article     = $blogArticle->where('article_id', '=', $articleId)
