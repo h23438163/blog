@@ -42,6 +42,17 @@
 				<li>
 					<h3>回复记录</h3>
 				</li>
+                <li>
+                {volist name='replylist' id='reply'}
+                <h3><a href={:url('article/article/article','articleId='.$reply.article_id.'')}#reply{$reply.reply_id}>{$reply.article_title}</a></h3>
+                {/volist}
+                </li>
+                <li>
+                    {$Navi}
+                </li>
+                <li>
+                    <a href={:url('user/user/userinfo')}>返回</a>
+                </li>
 			</ol>
 		</div>
 		<div class="sidebar">	

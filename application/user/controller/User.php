@@ -10,6 +10,7 @@ namespace app\user\controller;
 
 
 use app\article\model\ArticleComments;
+use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
 use think\Controller;
 use app\user\model\User as UserModel;
@@ -214,7 +215,32 @@ class User extends Controller
     }
 
     //用户回复列表
-    public function replyList() {
+    public function replyList($page = 1, $PageSize = 5) {
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        } else {
+            $userId = Session::get('userId','user');
+        }
+
+        $commentReply = new CommentsReply();
+        $ReplyCount  = $commentReply->where('user_id', '=', $userId)->count();
+        $PageCount    = ceil($ReplyCount/$PageSize);
+        $PageStart    = ($page - 1) * $PageSize;
+
+        $replylist = $commentReply->alias('r')
+                                  ->join('article_comments c', 'r.comment_id = c.comment_id')
+                                  ->join('blog_article a', 'a.article_id = c.article_id')
+                                  ->where('r.user_id', '=', $userId)
+                                  ->field('a.article_title,c.article_id,r.reply_id')
+                                  ->limit($PageStart,$PageSize)
+                                  ->select();
+
+        $Navi = Navi($page, $PageCount,'user/user/replylist');
+        $this->assign('replylist',$replylist);
+        $this->assign('Navi',$Navi);
+
         return $this->fetch();
     }
 
@@ -227,10 +253,15 @@ class User extends Controller
 
         if (empty($username)) {
             $username = $this->request->param('username');
+            if (empty($username)) {
+                $this->error('错误');
+            }
         }
+
         if (!is_object($UserModel)) {
             $UserModel = new UserModel();
         }
+
         $hasUserName = $UserModel->where('username','=', $username)->count();
         return $hasUserName;
     }
@@ -240,10 +271,15 @@ class User extends Controller
 
         if (empty($email)) {
             $email = $this->request->param('email');
+            if (empty($email)) {
+                $this->error('错误');
+            }
         }
+
         if (!is_object($UserModel)) {
             $UserModel = new UserModel();
         }
+
         $hasEmail = $UserModel->where('email','=', $email)->count();
         return $hasEmail;
     }
