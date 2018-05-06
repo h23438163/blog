@@ -11,6 +11,7 @@ namespace app\article\controller;
 
 use app\article\model\ArticleComments;
 use app\index\model\BlogArticle;
+use app\remind\controller\Remind;
 use think\Controller;
 use think\Session;
 
@@ -41,10 +42,13 @@ class Comment extends Controller
         $data['user_id'] = Session::get('userId','user');
         //过滤保存返回受影响的行数
         $affected_rows = $articleComments->allowField(true)->save($data);
+        $commentId = $articleComments->where('user_id', '=', $data['user_id'])->getLastInsID();
 
         if ($affected_rows > 0) {
             //评论数+1
             $blogArticle->where('article_id', $data['article_id'])->update(['comments_num' => ++$commentsNum]);
+            //插入消息提醒数据
+            Remind::insertRemind('comment', $commentId, $data['article_id']);
             $this->success('评论成功',$url);
         } else {
             $this->error('评论失败',$url);

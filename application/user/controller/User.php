@@ -12,6 +12,7 @@ namespace app\user\controller;
 use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
+use app\remind\model\Remind;
 use think\Controller;
 use app\user\model\User as UserModel;
 use think\Session;
@@ -137,21 +138,34 @@ class User extends Controller
             $this->error('请登陆',url('index/index/login'));
         }
 
+        $userId = Session::get('userId','user');
+
         $fields = 'email,head_img,create_time';
 
         $user = new UserModel();
-        $userInfo = $user->where('user_id', '=', Session::get('userId','user'))
+        $userInfo = $user->where('user_id', '=', $userId)
                          ->field($fields)
                          ->find();
 
         if ($userInfo !== null) {
             $userInfo = $userInfo->toArray();
-            $userInfo['user_id']    = Session::get('userId','user');
+            $userInfo['user_id']    = $userId;
             $userInfo['username']   = Session::get('username','user');
             $userInfo['login_time'] = Session::get('loginTime','user');
         }
-        //dump($userInfo);exit;
+
+        $remind      = new Remind();
+        $remindCount = $remind->where('remind_user_id', '=',$userId)
+                              ->where('isremind', '=', '0')
+                              ->count();
+
         $this->assign('userInfo', $userInfo);
+        $this->assign('remindCount', $remindCount);
+        return $this->fetch();
+    }
+
+    //查看消息
+    public function remindList(){
         return $this->fetch();
     }
 
@@ -225,7 +239,7 @@ class User extends Controller
         }
 
         $commentReply = new CommentsReply();
-        $ReplyCount  = $commentReply->where('user_id', '=', $userId)->count();
+        $ReplyCount   = $commentReply->where('user_id', '=', $userId)->count();
         $PageCount    = ceil($ReplyCount/$PageSize);
         $PageStart    = ($page - 1) * $PageSize;
 

@@ -11,6 +11,7 @@ namespace app\article\controller;
 use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
+use app\remind\controller\Remind;
 use think\Controller;
 use think\Session;
 
@@ -44,11 +45,14 @@ class Reply extends Controller
         $data['user_id'] = Session::get('userId', 'user');
         //保存入数据库
         $affected_rows   = $commentsReply->allowField(true)->save($data);
+        $replyId = $commentsReply->where('user_id', '=', $data['user_id'])->getLastInsID();
 
         //判断受影响的行数
         if ($affected_rows > 0) {
             //更新文章评论总数
             $blogArticle->where('article_id',$data['article_id'])->update(['comments_num' => ++$commentsNum]);
+            //插入消息提醒数据
+            Remind::insertRemind('reply', $replyId, $data['article_id']);
             $this->success('回复成功',$url);
         } else {
             $this->error('回复失败',$url);
