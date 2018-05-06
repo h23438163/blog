@@ -42,6 +42,14 @@
 				<li>
 					<h3>消息提醒</h3>
 				</li>
+				<li>
+					{volist name='remindlist' id='remind'}
+					<h3><a href={:url('article/article/article','articleId='.$remind.article_id.'')}#{$remind.remind_type}{$remind.remind_id}>{$remind.article_title}</a></h3>
+					{/volist}
+				</li>
+				<li>
+					{$Navi}
+				</li>
 			</ol>
 		</div>
 		<div class="sidebar">	

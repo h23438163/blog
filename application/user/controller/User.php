@@ -12,7 +12,7 @@ namespace app\user\controller;
 use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
-use app\remind\model\Remind;
+use app\remind\controller\Remind;
 use think\Controller;
 use app\user\model\User as UserModel;
 use think\Session;
@@ -154,10 +154,7 @@ class User extends Controller
             $userInfo['login_time'] = Session::get('loginTime','user');
         }
 
-        $remind      = new Remind();
-        $remindCount = $remind->where('remind_user_id', '=',$userId)
-                              ->where('isremind', '=', '0')
-                              ->count();
+        $remindCount = Remind::getRemindCount($userId);
 
         $this->assign('userInfo', $userInfo);
         $this->assign('remindCount', $remindCount);
@@ -165,7 +162,17 @@ class User extends Controller
     }
 
     //查看消息
-    public function remindList(){
+    public function remindList($page = 1, $PageSize = 5){
+        $userId = Session::get('userId','user');
+        $remindList  = Remind::showRemind($userId, $page, $PageSize);
+        $remindCount = Remind::getRemindCount($userId);
+        $PageCount   = ceil($remindCount / $PageSize);
+
+        //分页
+        $Navi = Navi($page,$PageCount,'user/user/remindlist');
+
+        $this->assign('remindlist', $remindList);
+        $this->assign('Navi', $Navi);
         return $this->fetch();
     }
 

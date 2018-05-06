@@ -8,8 +8,6 @@
 
 namespace app\remind\controller;
 
-
-use app\article\model\CommentsReply;
 use think\Controller;
 use app\remind\model\Remind as RemindModel;
 use think\Db;
@@ -46,8 +44,40 @@ class Remind extends Controller
         }
 
         $remindModel->remind_user_id  = $remind_userId[0]['user_id'];
-        $remindModel->save();
+        //返回整数或者false
+        return $remindModel->save();
 
+
+    }
+
+
+    public static function showRemind($userId = '',$page = 1, $PageSize = 5) {
+
+        $remindModel = new RemindModel();
+
+        $PageStart   = ($page - 1) * $PageSize;
+        $remindList  = $remindModel ->alias('r')
+                                    ->join('blog_article a','a.article_id = r.article_id')
+                                    ->field('a.article_title,r.remind_type,r.remind_id,r.article_id')
+                                    ->where('remind_user_id', '=', $userId)
+                                    ->where('isremind', '=', '0')
+                                    ->order('id','desc')
+                                    ->limit($PageStart,$PageSize)
+                                    ->select();
+        //dump($remindList);exit();
+        return $remindList;
+
+
+    }
+
+    public static function getRemindCount($userId = '') {
+
+        $remind      = new RemindModel();
+        $remindCount = $remind->where('remind_user_id', '=',$userId)
+                              ->where('isremind', '=', '0')
+                              ->count();
+
+        return $remindCount;
     }
 
     public function isRemind () {
