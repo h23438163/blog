@@ -11,6 +11,7 @@ namespace app\remind\controller;
 use think\Controller;
 use app\remind\model\Remind as RemindModel;
 use think\Db;
+use think\Session;
 
 class Remind extends Controller
 {
@@ -58,7 +59,7 @@ class Remind extends Controller
         $PageStart   = ($page - 1) * $PageSize;
         $remindList  = $remindModel ->alias('r')
                                     ->join('blog_article a','a.article_id = r.article_id')
-                                    ->field('a.article_title,r.remind_type,r.remind_id,r.article_id')
+                                    ->field('a.article_title,r.id')
                                     ->where('remind_user_id', '=', $userId)
                                     ->where('isremind', '=', '0')
                                     ->order('id','desc')
@@ -70,7 +71,8 @@ class Remind extends Controller
 
     }
 
-    public static function getRemindCount($userId = '') {
+
+    public static function getRemindCount($userId) {
 
         $remind      = new RemindModel();
         $remindCount = $remind->where('remind_user_id', '=',$userId)
@@ -80,7 +82,32 @@ class Remind extends Controller
         return $remindCount;
     }
 
-    public function isRemind () {
+
+    public function isRemind ($id) {
+
+        $remind     = RemindModel::get($id);
+        $articleId  = $remind->article_id;
+        $remindType = $remind->remind_type;
+        $remindId   = $remind->remind_id;
+        $remind->isremind = 1;
+        $url = url('article/article/article','articleId='.$articleId);
+        $url = $url.'#'.$remindType.$remindId;
+        if ($remind->save()) {
+            $this->redirect($url);
+        }
+
+    }
+
+
+    public function allIsRemind () {
+        $userId = Session::get('userId','user');
+        $remind = new RemindModel();
+        $affected_rows = $remind->save(['isremind' => '1'],['remind_user_id' => $userId]);
+        if ($affected_rows > 0) {
+            $this->success('设置成功',url('user/user/remindlist'));
+        } else {
+            $this->success('没有新消息',url('user/user/remindlist'));
+        }
 
     }
 }

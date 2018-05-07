@@ -43,12 +43,19 @@
 					<h3>消息提醒</h3>
 				</li>
 				<li>
-					{volist name='remindlist' id='remind'}
-					<h3><a href={:url('article/article/article','articleId='.$remind.article_id.'')}#{$remind.remind_type}{$remind.remind_id}>{$remind.article_title}</a></h3>
-					{/volist}
+					{notempty name='remindlist'}
+						{volist name='remindlist' id='remind'}
+						<h3><a href={:url('remind/remind/isremind','id='.$remind.id)}>{$remind.article_title}</a></h3>
+						{/volist}
+					{else/}
+						<h3>没有消息</h3>
+					{/notempty}
 				</li>
 				<li>
 					{$Navi}
+				</li>
+				<li>
+					<a href={:url('remind/remind/allisremind')}>全部设为已读</a>
 				</li>
 			</ol>
 		</div>

@@ -14,13 +14,9 @@ use think\Model;
 class Remind extends Model
 {
     protected $insert = [
-        'isremind',
+        ['isremind' => '0'],
         'id'
     ];
-
-    public function setIsRemindAttr($isremind) {
-        return 0;
-    }
 
     public function setIdAttr($id) {
         return null;
