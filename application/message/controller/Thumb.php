@@ -48,7 +48,6 @@ class Thumb extends Controller
                     break;
             }
             if ($message->save() > 0) {
-                //$messageThumb->data($data);
                 $messageThumb->save($data);
             }
         } elseif (is_object($thumbRes)) {

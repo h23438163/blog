@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>留言本</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />  
+<link href="/static/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/static/js/jquery-321.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/contact.js"></script>
+</head>
+<body>
+<div class="main">
+	<div class="header">
+		<div class="header_resize">
+			<div class="logo">
+				<h1 id="animate_logo">
+					<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />
+					我的<span>博客</span> <small>给我留言</small>
+				</h1>
+			</div>
+			<div class="menu_nav">
+				<ul>
+					<li><a href={:url('index/index/showarticle')}>博客</a></li>
+					<li><a href={:url('index/index/showAbout')}>关于我</a></li>
+					<li  class="active"><a href={:url('index/index/showmessage')}>留言本</a></li>
+					<li>
+						{empty name='$Think.session.user.username'}
+						<a href={:url('index/index/login')}>登陆</a>
+						{else /}
+						<a href={:url('user/user/userInfo?userId='.$Think.session.user.userId)}>{$Think.session.user.username}</a>
+						{/empty}
+					</li>
+				</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+	<div class="hbg">&nbsp;</div>
+	<div class="content">
+		<div class="content_resize">
+			<div class="mainbar">
+				<div>
+					<h2><span>留言本</span></h2><div class="clr"></div>
+					<form action={:url('message/message/addmessage')} method="post"  id="sendmessage">
+						<ol>
+							<li>
+								<label for="nickname">发布者</label>
+								<h3><a href={:url('user/user/userinfo')}>{$Think.session.user.username}</a></h3>
+							</li>
+							<li>
+								<label for="send_message_content" >留言内容</label>
+								<textarea id="send_message_content" name="content" rows="8" cols="50"></textarea>
+								<span id='content_error' style='color:red'></span>
+							</li>
+							<li>
+								<label for="authcode">验证码(60秒后过期)</label>
+								<img id='captcha_img' alt='点击刷新按钮刷新'>
+								<a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='func/authcode.php?p=contact&r='+Math.random()">刷新</a><br>
+								请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
+							</li>
+							<li>
+								<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/message.php">查看所有留言</a>
+								<div class="clr"></div>
+							</li>
+						</ol>
+					</form>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="searchform">
+					<form id="formsearch" name="formsearch" method="get" action="/search.php">
+						<span id='select'>
+							<select>
+								<option value='blog'>站内</option>
+								<option value='baidu'>百度</option>
+							</select>
+						</span>
+						<span>
+							<input name="article_tag" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
+						</span>
+						<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+					</form>
+				</div>
+				<div class="gadget">
+					<!--天气预报-->
+					<iframe width="310px" scrolling="no" height="25px" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&a=getcode&id=40&h=25&w=310"></iframe>
+					<!--天气预报END-->
+					<!--菜单栏-->
+					<h2 class="star"><span>菜单栏</h2><div class="clr"></div>
+					<ul class="sb_menu">
+						<li><a href="https://poi.io/#/" target="_blank">POI浏览器</a></li>
+						<!--
+						<li><a href="#">Style Demo</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Archives</a></li>
+						<li><a href="#" title="Website Templates">Web Templates</a></li>
+						-->
+						<li><a href="#">源码下载</a></li>
+				   </ul>
+				</div>
+				<!--div class="gadget">
+					<h2 class="star"><span>Sponsors</span></h2><div class="clr"></div>
+					<ul class="ex_menu">
+						<li><a href="#" title="Website Templates">DreamTemplate</a><br />Over 6,000+ Premium Web Templates</li>
+						<li><a href="#">TemplateSOLD</a><br />Premium WordPress &amp; Joomla Themes</li>
+						<li><a href="#" title="Affordable Hosting">ImHosted.com</a><br />Affordable Web Hosting Provider</li>
+						<li><a href="#" title="Stock Icons">MyVectorStore</a><br />Royalty Free Stock Icons</li>
+						<li><a href="#" title="Website Builder">Evrsoft</a><br />Website Builder Software &amp; Tools</li>
+						<li><a href="#" title="CSS Templates">CSS Hub</a><br />Premium CSS Templates</li>
+					</ul>
+				</div-->
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+	<!--div class="fbg">
+		<div class="fbg_resize">
+			<div class="col c1">
+				<h2><span>Image Gallery</span></h2>
+				<a href="#"><img src="images/pix1.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix2.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix3.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix4.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix5.jpg" width="58" height="58" alt="pix" /></a>
+				<a href="#"><img src="images/pix6.jpg" width="58" height="58" alt="pix" /></a>
+			</div>
+			<div class="col c2">
+				<h2><span>Lorem Ipsum</span></h2>
+				<p>Lorem ipsum dolor<br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
+			</div>
+			<div class="col c3">
+				<h2><span>About</span></h2>
+				<img src="images/white.jpg" width="56" height="56" alt="pix" />
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. llorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum. <a href="#">Learn more...</a></p>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div-->
+	<div class="footer">
+		<div class="footer_resize">
+			<!--p class="lf">© Copyright <a href="#">MyWebSite</a>. Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a></p-->
+			<ul class="fmenu">
+				<li >
+					<a href={:url('index/index/showarticle')}>博客</a>
+				</li>
+				<li>
+					<a href={:url('index/index/showAbout')}>关于我</a>
+				</li>
+				<li class="active">
+					<a href={:url('index/index/showmessage')}>留言本</a>
+				</li>
+				<li>
+					{empty name='$Think.session.user.username'}
+					<a href={:url('index/index/login')}>登陆</a>
+					{else /}
+					<a href={:url('user/user/userInfo?userId='.$Think.session.user.userId)}>{$Think.session.user.username}</a>
+					{/empty}
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

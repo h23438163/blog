@@ -13,6 +13,16 @@ use think\Model;
 
 class Message extends Model
 {
+    protected $insert = [
+        'message_id'   => null,
+        'good_and_bad' => 0,
+        'send_date'
+    ];
+
+    public function setSendDateAttr ($senddate) {
+        return time();
+    }
+
     public function getSendDateAttr ($senddate) {
         $date = date('Y年m月d日',$senddate);
         $time = date('g:i:s a',$senddate);

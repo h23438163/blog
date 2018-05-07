@@ -54,7 +54,7 @@ class Index extends Controller
         if (!Session::has('username','user')) {
             $this->error('请登陆',url('index/index/login'));
         }
-        return view();
+        return View();
     }
 
     public function showMessage($page = 1, $PageSize = 5){
@@ -73,6 +73,13 @@ class Index extends Controller
         $this->assign('messagelist', $MessageList);
         return $this->fetch();
 
+    }
+
+    public function addMessage() {
+        if (!Session::has('username','user')) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+        return View();
     }
 
     public function showAbout(){

@@ -47,7 +47,7 @@
 		<div class="mainbar">
 			<input type='image' src='/static/images/backtop.gif' id='backtop'>
 			<div id="add_message">
-				<a href="/contact.php">发布留言</a> 	
+				<a href={:url('index/index/addmessage')}>发布留言</a>
 			</div>
 			<p class="pages">
 				<small>
@@ -59,7 +59,7 @@
 				<span class='jump_bar'><a href='javascript:void(0)'class='jump_close'>X</a></span>
 				<form action='/message.php' method='get' >
 					跳转到<input type='text' name='page'>页
-					<input type='image' src='/static//images/go_jump.png' title='跳转'>
+					<input type='image' src='/static/images/go_jump.png' title='跳转'>
 				</form>
 			</div>
 			{volist name='messagelist' id='message' key='key'}
