@@ -9,7 +9,9 @@
 namespace app\message\model;
 
 
-class MessageThumb
+use think\Model;
+
+class MessageThumb extends Model
 {
 
 }

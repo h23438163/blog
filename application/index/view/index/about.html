@@ -24,8 +24,14 @@
 				<ul>
 					<li><a href={:url('index/index/showarticle')}>博客</a></li>
 					<li class="active"><a href={:url('index/index/showAbout')}>关于我</a></li>
-					<li><a href="/contact.php">留言本</a></li>
-					<li><a href="/resume/login.php">简历</a></li>
+					<li><a href={:url('index/index/showmessage')}>留言本</a></li>
+					<li>
+						{empty name='$Think.session.user.username'}
+						<a href={:url('index/index/login')}>登陆</a>
+						{else /}
+						<a href={:url('user/user/userInfo?userId='.$Think.session.user.userId)}>{$Think.session.user.username}</a>
+						{/empty}
+					</li>
 				</ul>
 			</div>
 			<div class="clr"></div>
@@ -138,10 +144,22 @@
 	<div class="footer">
 		<div class="footer_resize">
 		<ul class="fmenu">
-			<li><a href={:url('index/index/showarticle')}>博客</a></li>
-			<li class="active"><a href={:url('index/index/showAbout')}>关于我</a></li>
-			<li><a href="/contact.php">留言本</a></li>
-			<li><a href="/resume/login.php">简历</a></li>
+			<li >
+				<a href={:url('index/index/showarticle')}>博客</a>
+			</li>
+			<li class="active">
+				<a href={:url('index/index/showAbout')}>关于我</a>
+			</li>
+			<li>
+				<a href={:url('index/index/showmessage')}>留言本</a>
+			</li>
+			<li>
+				{empty name='$Think.session.user.username'}
+				<a href={:url('index/index/login')}>登陆</a>
+				{else /}
+				<a href={:url('user/user/userInfo?userId='.$Think.session.user.userId)}>{$Think.session.user.username}</a>
+				{/empty}
+			</li>
 		</ul>
 		<div class="clr"></div>
 		</div>

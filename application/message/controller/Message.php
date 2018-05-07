@@ -33,5 +33,11 @@ class Message extends Controller
         return $messageCount;
     }
 
+    public static function getMessageThumb($messageId) {
+        $message = MessageModel::get($messageId);
+        $thumbNum = $message->good_and_bad;
+        return $thumbNum;
+    }
+
 
 }

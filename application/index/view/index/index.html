@@ -118,12 +118,10 @@
 							//如果不这么做会打开所有文章
 							$('#display{$key},#display_back{$key}').click(function(){
 								if(this.innerText == "点击查看文章"){
-
 									$("#display{$key}").hide();
 									$("#display_back{$key}").show();
 									$(".arti_content{$key}").slideToggle(1000);
 								}else{
-
 									$(".arti_content{$key}").slideToggle(1000,function(){
 										$("#display_back{$key}").hide();
 										$("#display{$key}").show();
