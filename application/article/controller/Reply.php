@@ -17,12 +17,15 @@ use think\Session;
 
 class Reply extends Controller
 {
-    public function addReply(){
-
-        //判断是否登陆
-        if (Session::has('username','user') === false) {
+    public function _initialize()
+    {
+        //验证是否登陆
+        if (!Session::has('username','user')) {
             $this->error('请登陆',url('index/index/login'));
         }
+    }
+
+    public function addReply(){
 
         //实例化对象
         $blogArticle   = new BlogArticle();
@@ -64,11 +67,6 @@ class Reply extends Controller
     //编辑回复内容
     public function editReply($replyId) {
 
-        //判断是否登陆
-        if (Session::has('username','user') === false) {
-            $this->error('请登陆',url('index/index/login'));
-        }
-
         //获取评论结果集
         $reply = CommentsReply::get($replyId);
 
@@ -86,11 +84,6 @@ class Reply extends Controller
 
     //更新回复内容
     public function updateReply() {
-
-        //判断是否登陆
-        if (Session::has('username','user') === false) {
-            $this->error('请登陆',url('index/index/login'));
-        }
 
         //获取提交的数据(htmlspecialchars过滤函数)
         $data  = $this->request->param('', '', 'htmlspecialchars');

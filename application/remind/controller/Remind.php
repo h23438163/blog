@@ -15,6 +15,15 @@ use think\Session;
 
 class Remind extends Controller
 {
+
+    public function _initialize()
+    {
+        //验证是否登陆
+        if (!Session::has('username','user')) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+    }
+    
     public static function insertRemind($remindType = '', $remindId = '', $articleId = '')
     {
         $remindModel = new RemindModel();

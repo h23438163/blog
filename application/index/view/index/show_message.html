@@ -64,7 +64,7 @@
 			</div>
 			{volist name='messagelist' id='message' key='key'}
 			<div class='message'>
-				<h3>#{$pagestart+$key}</h3>
+				<h3 id="{$message.message_id}">#{$pagestart+$key}</h3>
 				<div class='message_info'>
 					<a href='javascript:void(0)'><img src='/static{$message.head_img}' title='#'></a><br>
 					<span class='message_name'>
@@ -75,6 +75,9 @@
 						{$message.send_date.time}
 					</span>
 				</div>
+                {eq name='$Think.session.user.userId' value='$message.user_id'}
+                <a href={:url('message/message/editmessage','messageId='.$message.message_id.'&pageNow='.$pagenow)} class="com">编辑</a>
+                {/eq}
 				<div class='pop'></div>
 				<div class='dashed'></div>
 				<p class='message_content'>{$message.content}</p>
