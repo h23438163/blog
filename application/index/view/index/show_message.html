@@ -93,7 +93,7 @@
 
 						$.ajax({
 							url: "{:url('message/thumb/thumb')}",
-							data:{'type':'good','message_id':"{$message.message_id}"},
+							data:{'thumb':'good','message_id':"{$message.message_id}"},
 							type : "POST",
 							async : true,
 							success:function(data){
@@ -105,7 +105,7 @@
 					$('#bad{$key}').click(function(){
 						$.ajax({
 							url: "{:url('message/thumb/thumb')}",
-							data:{'type':'bad','message_id':"{$message.message_id}"},
+							data:{'thumb':'bad','message_id':"{$message.message_id}"},
 							type : "POST",
 							async : true,
 							success: function(data){

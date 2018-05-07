@@ -12,26 +12,65 @@ namespace app\message\controller;
 use app\message\model\MessageThumb;
 use \app\message\model\Message;
 use think\Controller;
+use think\Session;
 
 class Thumb extends Controller
 {
     public function thumb(){
 
         $data     = $this->request->param('','','htmlspecialchars');
-        $thumb    = Message::get($data['message_id']);
-        $thumbNum = $thumb->good_and_bad;
+        $message  = Message::get($data['message_id']);
+        $userId   = Session::get('userId','user');
+        $data['user_id'] = $userId;
+        $messageThumb    = new MessageThumb();
+        $thumbNum        = $message->good_and_bad;
 
-        switch ($data['type']) {
-            case 'good':
-                $thumb->good_and_bad = ++$thumbNum;
-                $thumb->save();
-                break;
-            case 'bad':
-                $thumb->good_and_bad = --$thumbNum;
-                $thumb->save();
-                break;
+        $thumbRes = $messageThumb->where('user_id', '=', '14')
+                                    ->where('message_id', '=', $data['message_id'])
+                                    ->find();
+
+        if ($thumbRes === null) {
+            switch ($data['thumb']) {
+                case 'good':
+                    $message->good_and_bad = ++$thumbNum;
+                    break;
+                case 'bad':
+                    $message->good_and_bad = --$thumbNum;
+                    break;
+            }
+            if ($message->save() > 0) {
+                //$messageThumb->data($data);
+                $messageThumb->save($data);
+            }
+        } elseif (is_object($thumbRes)) {
+            $thumbRes = $thumbRes->toArray();
+            if ($data['thumb'] === $thumbRes['thumb']) {
+               switch ($data['thumb']) {
+                   case 'good':
+                       $message->good_and_bad = --$thumbNum;
+                       break;
+                   case 'bad':
+                       $message->good_and_bad = ++$thumbNum;
+                       break;
+               }
+               if ($message->save() > 0){
+                   $messageThumb::destroy($thumbRes['id']);
+               }
+            } elseif ($data['thumb'] !== $thumbRes['thumb']){
+                switch ($data['thumb']) {
+                    case 'good':
+                        $message->good_and_bad = $thumbNum+2;
+                        break;
+                    case 'bad':
+                        $message->good_and_bad = $thumbNum-2;
+                        break;
+                }
+                if ($message->save() > 0){
+                    $messageThumb->save($data,['id' => $thumbRes['id']]);
+                }
+            }
         }
 
-        return $thumb->good_and_bad;
+        return $message->good_and_bad;
     }
 }

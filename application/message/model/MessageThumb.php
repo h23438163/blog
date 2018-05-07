@@ -13,5 +13,11 @@ use think\Model;
 
 class MessageThumb extends Model
 {
+    protected $insert = [
+        'id',
+    ];
 
+    public function setIdAttr () {
+        return null;
+    }
 }
