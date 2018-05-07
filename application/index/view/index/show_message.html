@@ -90,28 +90,35 @@
 				$(document).ready(function(){
 
 					$('#good{$key}').click(function(){
-
+                        {notempty name='$Think.session.user.userId'}
 						$.ajax({
 							url: "{:url('message/thumb/thumb')}",
 							data:{'thumb':'good','message_id':"{$message.message_id}"},
 							type : "POST",
 							async : true,
 							success:function(data){
-								$('#gab_count{$key}').text(data);
+                                $('#gab_count{$key}').text(data);
 							}
 						});
+                        {else/}
+                            window.alert('请登录');
+                        {/notempty}
 					});
 
 					$('#bad{$key}').click(function(){
-						$.ajax({
-							url: "{:url('message/thumb/thumb')}",
-							data:{'thumb':'bad','message_id':"{$message.message_id}"},
-							type : "POST",
-							async : true,
-							success: function(data){
-								$('#gab_count{$key}').text(data);
-							}
-						});
+                        {notempty name='$Think.session.user.userId'}
+                        $.ajax({
+                            url: "{:url('message/thumb/thumb')}",
+                            data:{'thumb':'bad','message_id':"{$message.message_id}"},
+                            type : "POST",
+                            async : true,
+                            success:function(data){
+                                $('#gab_count{$key}').text(data);
+                            }
+                        });
+                        {else/}
+                            window.alert('请登录');
+                        {/notempty}
 					});
 				});
 			</script>

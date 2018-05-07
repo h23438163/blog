@@ -16,6 +16,15 @@ use think\Session;
 
 class Thumb extends Controller
 {
+    public function _initialize()
+    {
+        if (!Session::has('userId','user')) {
+
+            exit('false');
+
+        }
+    }
+
     public function thumb(){
 
         $data     = $this->request->param('','','htmlspecialchars');
@@ -25,7 +34,7 @@ class Thumb extends Controller
         $messageThumb    = new MessageThumb();
         $thumbNum        = $message->good_and_bad;
 
-        $thumbRes = $messageThumb->where('user_id', '=', '14')
+        $thumbRes = $messageThumb->where('user_id', '=', $userId)
                                     ->where('message_id', '=', $data['message_id'])
                                     ->find();
 
@@ -53,9 +62,7 @@ class Thumb extends Controller
                        $message->good_and_bad = ++$thumbNum;
                        break;
                }
-               if ($message->save() > 0){
-                   $messageThumb::destroy($thumbRes['id']);
-               }
+               $messageThumb::destroy($thumbRes['id']);
             } elseif ($data['thumb'] !== $thumbRes['thumb']){
                 switch ($data['thumb']) {
                     case 'good':
@@ -65,10 +72,9 @@ class Thumb extends Controller
                         $message->good_and_bad = $thumbNum-2;
                         break;
                 }
-                if ($message->save() > 0){
-                    $messageThumb->save($data,['id' => $thumbRes['id']]);
-                }
+                $messageThumb->save($data,['id' => $thumbRes['id']]);
             }
+            $message->save();
         }
 
         return $message->good_and_bad;
