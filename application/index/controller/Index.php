@@ -8,6 +8,7 @@
 
 namespace app\index\controller;
 
+use app\message\controller\Message;
 use think\Controller;
 use app\index\model\BlogArticle;
 use think\Session;
@@ -56,7 +57,21 @@ class Index extends Controller
         return view();
     }
 
-    public function showMessage(){
+    public function showMessage($page = 1, $PageSize = 5){
+
+        $PageStart   = ($page - 1) * $PageSize;
+        $MessageList  = Message::showMessage($PageStart, $PageSize);
+        $MessageCount = Message::getMessageCount();
+        $PageCount    = ceil($MessageCount / $PageSize);
+
+        $Navi = Navi($page, $PageCount, 'index/index/showmessage');
+
+        $this->assign('Navi', $Navi);
+        $this->assign('pagenow',$page);
+        $this->assign('pagestart',$PageStart);
+        $this->assign('pagecount',$PageCount);
+        $this->assign('messagelist', $MessageList);
+        return $this->fetch();
 
     }
 

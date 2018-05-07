@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的博客</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />  
+<link href="/static/style.css" rel="stylesheet" type="text/css" />
+<link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
+<script type="text/javascript" src="/static/js/jquery-321.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/message.js">></script>
+<script type="text/javascript" src="/static/js/jump_page.js"></script>
+</head>
+<body>
+<div class="main">
+	<div class="header">
+		<div class="header_resize">
+			<div class="logo">
+				<h1 id="animate_logo">
+				<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />我的
+				<span>博客</span>
+				<small>博客文章</small>
+				</h1>  
+			</div>
+			<div class="menu_nav">
+				<ul>
+					<li class="active"><a href="/index.php">博客</a></li>
+					<li><a href="/about.php">关于我</a></li>
+					<li><a href="/contact.php">留言本</a></li>
+					<li><a href="/resume/login.php">简历</a></li>
+				</ul>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+	<div class="hbg">&nbsp;</div>
+
+<div class="content">
+	<div class="content_resize">
+		<div class="mainbar">
+			<input type='image' src='/static/images/backtop.gif' id='backtop'>
+			<div id="add_message">
+				<a href="/contact.php">发布留言</a> 	
+			</div>
+			<p class="pages">
+				<small>
+					Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;
+				</small> 		
+					{$Navi} <a href='javascript:void(0)' class='jump'>跳转</a>
+			</p>
+			<div class='jump_page'>
+				<span class='jump_bar'><a href='javascript:void(0)'class='jump_close'>X</a></span>
+				<form action='/message.php' method='get' >
+					跳转到<input type='text' name='page'>页
+					<input type='image' src='/static//images/go_jump.png' title='跳转'>
+				</form>
+			</div>
+			{volist name='messagelist' id='message' key='key'}
+			<div class='message'>
+				<h3>#{$pagestart+$key}</h3>
+				<div class='message_info'>
+					<a href='javascript:void(0)'><img src='/static{$message.head_img}' title='#'></a><br>
+					<span class='message_name'>
+						<a href='javascript:void(0)' style='font-weight:bold;font-size:15px;color:#49b6e9;text-decoration: none;'>{$message.username}</a>
+					</span><br>
+					<span class='message_time'>
+						{$message.send_date.date} <br>
+						{$message.send_date.time}
+					</span>
+				</div>
+				<div class='pop'></div>
+				<div class='dashed'></div>
+				<p class='message_content'>{$message.content}</p>
+				<div class='dianzan' id='dianzan{$key}'>
+					<a href='javascript:void(0)' id='good{$key}'>赞</a><br/>
+					<span id='gab_count{$key}'>
+						{$message.good_and_bad}
+					</span><br/>
+					<a href='javascript:void(0)' id='bad{$key}'>踩</a>
+				</div>
+			</div>	
+			<script>
+				$(document).ready(function(){
+					$('#good{$key}').click(function(){
+						$.ajax({
+							url:'controllers/good_and_bad.php',
+							data:{'good_and_bad':'good','message_id':"{$message.message_id}"},
+							type : "POST",
+							async : true,
+							success:function(data){
+								$('#gab_count{$key}').text(data);
+							}
+						});
+					});
+
+					$('#bad{$key}').click(function(){
+						$.ajax({
+							url:'controllers/good_and_bad.php',
+							data:{'good_and_bad':'bad','message_id':"{$message.message_id}"},
+							type : "POST",
+							async : true,
+							success:function(data){
+								$('#gab_count{$key}').text(data);
+							}
+						});
+					});
+				});
+			</script>
+			{/volist}<br>
+			<p class="pages">
+			<small>
+				Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;
+			</small>
+				{$Navi} <a href='javascript:void(0)' class='jump'>跳转</a>
+			</p>
+		</div>
+		<div class="sidebar">	
+			<!--搜索栏-->
+			<div class="searchform">
+				<form id="formsearch" name="formsearch" method="get" action="/search.php">
+					<span id='select'>
+						<select>
+							<option value='blog'>站内</option>
+							<option value='baidu'>百度</option>
+						</select>
+					</span>
+					<span>
+						<input name="article_tag" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
+					</span>
+					<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+				</form>
+			</div>
+			<!--搜索栏END-->
+			<!--rightbar-->
+			<div class="gadget">
+				<!--天气预报-->
+				<iframe width="310px" scrolling="no" height="25px" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&a=getcode&id=40&h=25&w=310"></iframe>
+				<!--天气预报END-->
+				<!--菜单栏-->
+				<h2 class="star">菜单栏</h2>
+				<div class="clr"></div>
+				<ul class="sb_menu">
+					<li><a href="https://poi.io/#/" target="_blank">POI浏览器</a></li>
+					<!--
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Archives</a></li>
+					<li><a href="#" title="Website Templates">Web Templates</a></li>
+					-->
+					<li><a href="#">源码下载</a></li>
+				</ul>
+			</div>
+			<!--
+			<div class="gadget">
+				<h2 class="star"><span>赞助栏</span></h2>
+				<div class="clr"></div>
+				<ul class="ex_menu">
+					<li>
+						<a href="#" title="Website Templates">DreamTemplate</a><br/>Over 6,000+ Premium Web Templates
+					</li>
+					<li>
+						<a href="#">TemplateSOLD</a><br />Premium WordPress &amp; Joomla Themes
+					</li>
+					<li>
+						<a href="#" title="Affordable Hosting">ImHosted.com</a><br />Affordable Web Hosting Provider
+					</li>
+					<li>
+						<a href="#" title="Stock Icons">MyVectorStore</a><br />Royalty Free Stock Icons
+					</li>
+					<li>
+						<a href="#" title="Website Builder">Evrsoft</a><br />Website Builder Software &amp; Tools
+					</li>
+					<li>
+						<a href="#" title="CSS Templates">CSS Hub</a><br />Premium CSS Templates
+					</li>
+				</ul>
+			</div>
+			-->
+			<!--rightbar-->
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+	</div>
+</div>
+	<div class="footer">
+		<div class="footer_resize">
+			<ul class="fmenu"><br/>
+				<li class="active">
+					<a href="/index.php">博客</a>
+				</li>
+				<li>
+					<a href="/about.php">关于我</a>
+				</li>
+				<li>
+					<a href="/contact.php">留言本</a>
+				</li>
+				<li>
+					<a href="/resume/login.php">简历</a>
+				</li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
