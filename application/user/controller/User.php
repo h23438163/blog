@@ -11,6 +11,7 @@ namespace app\user\controller;
 
 use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
+use app\favorite\controller\Favorite;
 use app\index\model\BlogArticle;
 use app\message\controller\Message;
 use app\remind\controller\Remind;
@@ -221,7 +222,6 @@ class User extends Controller
         $commentsCount = $articleComments->where('user_id', '=', $userId)->count();
         $PageCount     = ceil($commentsCount/$PageSize);
         $PageStart     = ($page - 1) * $PageSize;
-
         $commentlist   = $articleComments->alias('c')
                                          ->join('blog_article a','c.article_id = a.article_id')
                                          ->field('c.article_id,c.comment_id,a.article_title')
@@ -283,7 +283,14 @@ class User extends Controller
         return $this->fetch();
     }
 
-    public function favorite() {
+    public function favorite($page = 1, $PageSize = 5) {
+        $userId = Session::get('userId','user');
+        $favoriteList = Favorite::favoriteList($userId, $page, $PageSize);
+        $favoriteCount = Favorite::getFavoriteCount($userId);
+        $PageCount   = ceil($favoriteCount / $PageSize);
+        $Navi = Navi($page,$PageCount,'user/user/favorite');
+        $this->assign('favoritelist', $favoriteList);
+        $this->assign('Navi', $Navi);
         return $this->fetch();
     }
 

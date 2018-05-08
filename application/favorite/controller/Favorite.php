@@ -55,4 +55,22 @@ class Favorite extends Controller
 
 
     }
+
+    public static function favoriteList ($userId, $page, $PageSize) {
+        $favorite     = new FavoriteModel();
+        $PageStart    = ($page - 1) * $PageSize;
+        $favoriteList = $favorite->alias('f')
+                                 ->join('blog_article a', 'a.article_id = f.article_id')
+                                 ->field('a.article_title,f.article_id')
+                                 ->where('f.user_id', '=', $userId)
+                                 ->order('add_time', 'desc')
+                                 ->limit($PageStart, $PageSize)
+                                 ->select();
+        return $favoriteList;
+    }
+    public static function getFavoriteCount ($userId) {
+        $favorite      = new FavoriteModel();
+        $favoriteCount = $favorite->where('user_id', '=',$userId)->count();
+        return $favoriteCount;
+    }
 }

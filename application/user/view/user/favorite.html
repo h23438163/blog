@@ -42,6 +42,17 @@
 				<li>
 					<h3>收藏夹</h3>
 				</li>
+				<li>
+					{volist name='favoritelist' id='favorite'}
+					<h3><a href={:url('article/article/article','articleId='.$favorite.article_id.'')}>{$favorite.article_title}</a></h3>
+					{/volist}
+				</li>
+				<li>
+					{$Navi}
+				</li>
+				<li>
+					<a href={:url('user/user/userinfo')}>返回</a>
+				</li>
 			</ol>
 		</div>
 		<div class="sidebar">	
