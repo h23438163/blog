@@ -83,9 +83,48 @@
 							<a href='/search.php?article_tag={$article.article_tag3}'>
 								{$article.article_tag3}
 							</a>
+
 							{eq name='$Think.session.user.userId' value='$article.user_id'}
 							<a href={:url('article/article/editarticle?articleId='.$article.article_id)} class="com">编辑</a>
 							{/eq}
+                            <a href='javascript:void(0)' class="fav" title="点击收藏">☆</a>
+                            <script>
+                                $(document).ready(function () {
+                                    {notempty name='$Think.session.user.username'}
+                                    $.ajax({
+                                        url    :"{:url('favorite/favorite/isfavorite','articleId='.$article.article_id)}",
+                                        type   :'GET',
+                                        async  : true,
+                                        success:function (data) {
+                                            if (data != 0) {
+                                                $('.fav').text('★');
+                                                $('.fav').attr({'title':'已收藏'});
+                                            }
+                                        }
+                                    });
+                                    $('.fav').click(function () {
+                                        $.ajax({
+                                            url    :"{:url('favorite/favorite/addfavorite','articleId='.$article.article_id)}",
+                                            type   :'GET',
+                                            async  : true,
+                                            success:function (data) {
+                                                if (data == 0) {
+                                                    $('.fav').text('★');
+                                                    $('.fav').attr({'title':'已收藏'});
+                                                } else if (data == 1) {
+                                                    $('.fav').text('☆');
+                                                    $('.fav').attr({'title':'点击收藏'});
+                                                }
+                                            }
+                                        });
+                                    });
+                                    {else /}
+                                        $('.fav').click(function () {
+                                            window.alert('请登陆');
+                                        });
+                                    {/notempty}
+                                 });
+                            </script>
 						</p>
 						<!--文章配图-->
 						<img src="/static{$article.article_img}" width="605" height="197" alt="image" />
