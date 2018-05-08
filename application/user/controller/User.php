@@ -12,6 +12,7 @@ namespace app\user\controller;
 use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
+use app\message\controller\Message;
 use app\remind\controller\Remind;
 use think\Controller;
 use app\user\model\User as UserModel;
@@ -262,6 +263,23 @@ class User extends Controller
         $this->assign('replylist',$replylist);
         $this->assign('Navi',$Navi);
 
+        return $this->fetch();
+    }
+
+    public function messageList ($page = 1, $PageSize = 5) {
+
+        $userId = Session::get('userId', 'user');
+        $PageStart    = ($page - 1) * $PageSize;
+        $messageCount = Message::getMessageCount($userId);
+        $PageCount    = ceil($messageCount / $PageSize);
+        $messageLIst  = Message::userMessageList($userId, $PageStart, $PageSize);
+
+        $Navi = Navi($page, $PageCount,'user/user/messagelist');
+
+        $this->assign('messagelist', $messageLIst);
+        $this->assign('Navi', $Navi);
+        $this->assign('pagenow', $page);
+        $this->assign('pagecount', $PageCount);
         return $this->fetch();
     }
 

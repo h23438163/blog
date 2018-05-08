@@ -36,17 +36,14 @@ class Message extends Controller
         return $messageList;
     }
 
-    public static function getMessageCount () {
+    public static function getMessageCount ($userId = '') {
         $messageModel = new MessageModel();
-        $messageCount = $messageModel->count();
-
+        if (empty($userId)) {
+            $messageCount = $messageModel->count();
+        } else {
+            $messageCount = $messageModel->where('user_id', '=', $userId)->count();
+        }
         return $messageCount;
-    }
-
-    public static function getMessageThumb($messageId) {
-        $message = MessageModel::get($messageId);
-        $thumbNum = $message->good_and_bad;
-        return $thumbNum;
     }
 
     public function addMessage () {
@@ -90,6 +87,16 @@ class Message extends Controller
         $this->assign('message',$message);
         $this->assign('pagenow',$pageNow);
         return $this->fetch();
+    }
+
+    public static function userMessageList ($userId, $PageStart, $PageSize) {
+        $message = new MessageModel();
+        $messageList = $message ->alias('m')
+                                ->join('user u', 'm.user_id = u.user_id')
+                                ->where('m.user_id', '=', $userId)
+                                ->limit($PageStart,$PageSize)
+                                ->select();
+        return $messageList;
     }
 
     public function updateMessage(){

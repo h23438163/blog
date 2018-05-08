@@ -1,13 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>我的博客</title>
+<title>留言记录</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 <link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
 <script type="text/javascript" src="/static/js/jquery-321.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/message.js">></script>
+<script type="text/javascript" src="/static/js/jump_page.js"></script>
 </head>
 <body>
 <div class="main">
@@ -24,10 +27,14 @@
 				<ul>
 					<li><a href={:url('index/index/showarticle')}>博客</a></li>
 					<li><a href={:url('index/index/showAbout')}>关于我</a></li>
-					<li><a href={:url('index/index/showmessage')}>留言本</a></li>
-					<li class="active"><a href={:url('user/user/userInfo?userId='.$Think.session.user.userId)}>{$Think.session.user.username}</a></li>
-
-				</ul>
+					<li class="active"><a href={:url('index/index/showmessage')}>留言本</a></li>
+					<li>
+						{empty name='$Think.session.user.username'}
+						<a href={:url('index/index/login')}>登陆</a>
+						{else /}
+						<a href={:url('user/user/userInfo?userId='.$Think.session.user.userId)}>{$Think.session.user.username}</a>
+						{/empty}
+					</li>
 				</ul>
 			</div>
 			<div class="clr"></div>
@@ -38,42 +45,49 @@
 <div class="content">
 	<div class="content_resize">
 		<div class="mainbar">
-			<ol>
-				<li id='head_img'>
-					<img src="/static{$userInfo.head_img}">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href={:url('user/user/updateinfo?userId='.$Think.session.user.userId)}>编辑资料</a>
-				</li>
-				<li>
-					<h3>用户名</h3>
-					<span id='username'>{$userInfo.username}</span>
-				</li>
-				<li>
-					<h3>邮箱</h3>
-					<span id='email'>{$userInfo.email}</span>
-				</li>
-				<li>
-					<h3>注册时间</h3>
-					<span id='createTime'>{$userInfo.create_time}</span>
-				</li>
-				<li>
-					<h3>上次登陆时间</h3>
-					<span id='loginTime'>{$userInfo.login_time}</span>
-				</li>
-				<li>
-					<h3><a href={:url('user/user/remindlist')}>消息</a>{$remindCount}</h3>
-				</li>
-				<li>
-                    <h3><a href={:url('user/user/articlelist')}>发帖记录</a></h3>
-                    <h3><a href={:url('user/user/commentlist')}>评论记录</a></h3>
-                    <h3><a href={:url('user/user/replylist')}>回复记录</a></h3>
-                    <h3><a href={:url('user/user/messagelist')}>留言记录</a></h3>
-                    <h3><a href={:url('user/user/favorite')}>收藏夹</a></h3>
-				</li>
-				<li>
-				</li>
-			</ol>
+			<input type='image' src='/static/images/backtop.gif' id='backtop'>
+			<div id="add_message">
+				<a href={:url('index/index/addmessage')}>发布留言</a>
+			</div>
+			<h3>我的留言记录</h3>
+			<p class="pages">
+				<small>
+					Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;
+				</small> 		
+					{$Navi} <a href='javascript:void(0)' class='jump'>跳转</a>
+			</p>
+			<div class='jump_page'>
+				<span class='jump_bar'><a href='javascript:void(0)'class='jump_close'>X</a></span>
+				<form action='/message.php' method='get' >
+					跳转到<input type='text' name='page'>页
+					<input type='image' src='/static/images/go_jump.png' title='跳转'>
+				</form>
+			</div>
+			{volist name='messagelist' id='message' key='key'}
+			<div class='message'>
+				<h3 id="{$message.message_id}">#{$key}</h3>
+				<div class='message_info'>
+					<a href='javascript:void(0)'><img src='/static{$message.head_img}' title='#'></a><br>
+					<span class='message_name'>
+						<a href='javascript:void(0)' style='font-weight:bold;font-size:15px;color:#49b6e9;text-decoration: none;'>{$message.username}</a>
+					</span><br>
+					<span class='message_time'>
+						{$message.send_date.date} <br>
+						{$message.send_date.time}
+					</span>
+				</div>
+                <a href={:url('message/message/editmessage','messageId='.$message.message_id.'&pageNow='.$pagenow)} class="com">编辑</a>
+				<div class='pop'></div>
+				<div class='dashed'></div>
+				<p class='message_content'>{$message.content}</p>
+			</div>
+			{/volist}<br>
+			<p class="pages">
+			<small>
+				Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;
+			</small>
+				{$Navi} <a href='javascript:void(0)' class='jump'>跳转</a>
+			</p>
 		</div>
 		<div class="sidebar">	
 			<!--搜索栏-->
@@ -88,7 +102,7 @@
 					<span>
 						<input name="article_tag" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
 					</span>
-					<input name="button_search" src="/static//images/search_btn.gif" class="button_search" type="image" />
+					<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
 				</form>
 			</div>
 			<!--搜索栏END-->
@@ -145,17 +159,21 @@
 	<div class="footer">
 		<div class="footer_resize">
 			<ul class="fmenu"><br/>
-				<li >
+				<li>
 					<a href={:url('index/index/showarticle')}>博客</a>
 				</li>
 				<li>
 					<a href={:url('index/index/showAbout')}>关于我</a>
 				</li>
-				<li>
+				<li class="active">
 					<a href={:url('index/index/showmessage')}>留言本</a>
 				</li>
-				<li class="active">
+				<li>
+					{empty name='$Think.session.user.username'}
+					<a href={:url('index/index/login')}>登陆</a>
+					{else /}
 					<a href={:url('user/user/userInfo?userId='.$Think.session.user.userId)}>{$Think.session.user.username}</a>
+					{/empty}
 				</li>
 			</ul>
 			<div class="clr"></div>
