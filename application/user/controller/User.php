@@ -17,6 +17,7 @@ use app\message\controller\Message;
 use app\remind\controller\Remind;
 use think\Controller;
 use app\user\model\User as UserModel;
+use think\Cookie;
 use think\Session;
 
 class User extends Controller
@@ -291,6 +292,12 @@ class User extends Controller
         $Navi = Navi($page,$PageCount,'user/user/favorite');
         $this->assign('favoritelist', $favoriteList);
         $this->assign('Navi', $Navi);
+        return $this->fetch();
+    }
+
+    public function history() {
+        $historyList = $_COOKIE['article'];
+        $this->assign('historylist',$historyList);
         return $this->fetch();
     }
 

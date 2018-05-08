@@ -39,41 +39,21 @@
 	<div class="content_resize">
 		<div class="mainbar">
 			<ol>
-				<li id='head_img'>
-					<img src="/static{$userInfo.head_img}">
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href={:url('user/user/updateinfo?userId='.$Think.session.user.userId)}>编辑资料</a>
+				<li>
+					<h3>浏览记录</h3>
 				</li>
 				<li>
-					<h3>用户名</h3>
-					<span id='username'>{$userInfo.username}</span>
+					{foreach name='historylist' item='history'}
+					<h3><a href={:url('article/article/article?articleId='.$key)}>{$history}</a></h3>
+					{/foreach}
 				</li>
 				<li>
-					<h3>邮箱</h3>
-					<span id='email'>{$userInfo.email}</span>
+
 				</li>
 				<li>
-					<h3>注册时间</h3>
-					<span id='createTime'>{$userInfo.create_time}</span>
+					<a href={:url('user/user/userinfo')}>返回</a>
 				</li>
-				<li>
-					<h3>上次登陆时间</h3>
-					<span id='loginTime'>{$userInfo.login_time}</span>
-				</li>
-				<li>
-					<h3><a href={:url('user/user/remindlist')}>消息</a>{$remindCount}</h3>
-				</li>
-				<li>
-                    <h3><a href={:url('user/user/articlelist')}>发帖记录</a></h3>
-                    <h3><a href={:url('user/user/commentlist')}>评论记录</a></h3>
-                    <h3><a href={:url('user/user/replylist')}>回复记录</a></h3>
-                    <h3><a href={:url('user/user/messagelist')}>留言记录</a></h3>
-                    <h3><a href={:url('user/user/favorite')}>收藏夹</a></h3>
-                    <h3><a href={:url('user/user/history')}>浏览历史</a></h3>
-				</li>
-				<li>
-				</li>
+
 			</ol>
 		</div>
 		<div class="sidebar">	

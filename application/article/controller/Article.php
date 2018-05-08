@@ -12,6 +12,7 @@ use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
 use think\Controller;
+use think\Cookie;
 use think\Session;
 
 class Article extends Controller
@@ -98,6 +99,7 @@ class Article extends Controller
         //判断返回类型
         if (is_object($article)) {
             $article = $article->toArray();
+            Cookie::set('article['.$article['article_id'].']',$article['article_title']);
         } else {
             return $this->fetch();
         }
