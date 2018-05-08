@@ -14,7 +14,7 @@ use think\Model;
 class Remind extends Model
 {
     protected $insert = [
-        ['isremind' => '0'],
+        'isremind' => '0',
         'id'
     ];
 

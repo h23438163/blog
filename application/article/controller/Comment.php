@@ -45,7 +45,7 @@ class Comment extends Controller
         //过滤保存返回受影响的行数
         $affected_rows = $articleComments->allowField(true)->save($data);
         $commentId = $articleComments->where('user_id', '=', $data['user_id'])->getLastInsID();
-
+        //dump($data['article_id']);exit;
         if ($affected_rows > 0) {
             //评论数+1
             $blogArticle->where('article_id', $data['article_id'])->update(['comments_num' => ++$commentsNum]);

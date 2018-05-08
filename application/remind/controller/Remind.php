@@ -23,13 +23,14 @@ class Remind extends Controller
             $this->error('请登陆',url('index/index/login'));
         }
     }
-    
+
+
     public static function insertRemind($remindType = '', $remindId = '', $articleId = '')
     {
         $remindModel = new RemindModel();
         $remindModel->remind_type = $remindType;
-        $remindModel->remind_id = $remindId;
-        $remindModel->article_id = $articleId;
+        $remindModel->remind_id   = $remindId;
+        $remindModel->article_id  = $articleId;
 
         if ($remindType == 'reply') {
             $remind_userId = Db::query('SELECT 
@@ -56,8 +57,6 @@ class Remind extends Controller
         $remindModel->remind_user_id  = $remind_userId[0]['user_id'];
         //返回整数或者false
         return $remindModel->save();
-
-
     }
 
 
@@ -68,13 +67,13 @@ class Remind extends Controller
         $PageStart   = ($page - 1) * $PageSize;
         $remindList  = $remindModel ->alias('r')
                                     ->join('blog_article a','a.article_id = r.article_id')
-                                    ->field('a.article_title,r.id')
+                                    ->field('a.article_title,r.id,r.remind_type')
                                     ->where('remind_user_id', '=', $userId)
                                     ->where('isremind', '=', '0')
                                     ->order('id','desc')
                                     ->limit($PageStart,$PageSize)
                                     ->select();
-        //dump($remindList);exit();
+
         return $remindList;
 
 

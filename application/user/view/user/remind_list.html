@@ -45,7 +45,13 @@
 				<li>
 					{notempty name='remindlist'}
 						{volist name='remindlist' id='remind'}
-						<h3><a href={:url('remind/remind/isremind','id='.$remind.id)}>{$remind.article_title}</a></h3>
+						<h3>
+							<a href={:url('remind/remind/isremind','id='.$remind.id)}>{$remind.article_title}</a>&nbsp;&nbsp;&nbsp;
+							{switch name='$remind.remind_type'}
+								{case value='comment'}评论{/case}
+								{case value='reply'}回复{/case}
+							{/switch}
+						</h3>
 						{/volist}
 					{else/}
 						<h3>没有消息</h3>
