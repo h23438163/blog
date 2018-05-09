@@ -34,7 +34,7 @@ class Index extends Controller
         $Navi = Navi($page,$PageCount,$path);
 
         //查询字段
-        $fields = 'article_id,article_title,add_date,u.username as author,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
+        $fields = 'article_id,article_title,add_date,u.username as author,b.user_id,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
         $article_list  = $blogArticle->alias('b') //别名
                                      ->join('user u','u.user_id = b.user_id') //内连接
                                      ->limit($PageStart,$PageSize)

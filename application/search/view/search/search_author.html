@@ -50,6 +50,7 @@
 				<div id="add_article">
 					<a href={:url('index/index/addarticle')}>发表博客</a>
 				</div>
+				<h1>搜索的作者是:<span style='background:yellow'>{$username}</span></h1>
 				<p class="pages">
 					<small>
 					Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;
@@ -58,7 +59,7 @@
 				</p>
 				<div class='jump_page'>
 					<span class='jump_bar'><a href='javascript:void(0)'class='jump_close'>X</a></span>
-					<form action={:url('index/index/showarticle')} method='get' >
+					<form action={:url('search/search/searchauthor','userId='.$userId)} method='get' >
 						跳转到<input type='text' name='page'>页
 					<input type='image' src='/static/images/go_jump.png' title='跳转'>
 					</form>
@@ -87,7 +88,7 @@
 					</h2>
 					<p class="subh2"></p>
 					<p>
-						发布者:<a href={:url('search/search/searchauthor','userId='.$article.user_id)}>{$article.author}</a> &nbsp;|&nbsp;
+						发布者:{$article.author} &nbsp;|&nbsp;
 						分类:
 						<!--tag1-->
 						<a href={:url('search/search/searchtag','tag='.$article.article_tag1)}>
