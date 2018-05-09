@@ -27,7 +27,7 @@ class Search extends Controller
         $PageStart     = ($page - 1) * $PageSize;
         $path = '/search/search/searchtag';
         //分页函数
-        $Navi = Navi($page,$PageCount,$path);
+        $Navi = Navi($page,$PageCount,$path,'&tag='.$tag);
 
         //查询字段
         $fields = 'article_id,article_title,add_date,u.username as author,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
@@ -40,12 +40,13 @@ class Search extends Controller
                                      ->select();
         //dump($article_list);exit;
 
+        $this->assign('tag',$tag);
         $this->assign('navi',$Navi);
         $this->assign('pagenow',$page);
         $this->assign('pagecount',$PageCount);
         $this->assign('article_list',$article_list);
 
-        return $this->fetch('index@index/index');
+        return $this->fetch();
     }
 
     public function searchAuthor ($author) {
