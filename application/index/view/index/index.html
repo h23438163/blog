@@ -87,20 +87,21 @@
 					</h2>
 					<p class="subh2"></p>
 					<p>
-						发布者:{$article.author} &nbsp;|&nbsp;
+						发布者:<a href={:url('search/search/searchauthor','author='.$article.author)}>{$article.author}</a> &nbsp;|&nbsp;
 						分类:
 						<!--tag1-->
-						<a href="/search.php?article_tag={$article.article_tag1}">
+						<a href={:url('search/search/searchtag','tag='.$article.article_tag1)}>
 							{$article.article_tag1}
 						</a>
 						<!--tag2-->
-						<a href="/search.php?article_tag={$article.article_tag2}">
+						<a href={:url('search/search/searchtag','tag='.$article.article_tag2)}>
 							{$article.article_tag2}
 						</a>
 						<!--tag3-->
-						<a href="/search.php?article_tag={$article.article_tag3}">
-						    {$article.article_tag3}
+						<a href={:url('search/search/searchtag','tag='.$article.article_tag3)}>
+							{$article.article_tag3}
 						</a>
+
 						<!--评论数-->
 						<a href={:url('article/article/article?articleId='.$article.article_id)} class="com">评论({$article.comments_num})</a>
 					</p>
