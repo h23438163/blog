@@ -20,7 +20,7 @@ class Index extends Controller
     public function showArticle($page = 1,$PageSize = 5){
 
         //页码验证
-        if (!is_numeric($page)) {
+        if (!is_numeric($page) || $page < 1) {
             $this->error('页码错误',url('index/index/showarticle?page=1'));
         }
 
@@ -28,6 +28,11 @@ class Index extends Controller
         //分页处理
         $article_count = $blogArticle->count();
         $PageCount     = ceil($article_count/$PageSize);
+
+        if ($page > $PageCount) {
+            $this->error('页码错误',url('index/index/showarticle?page=1'));
+        }
+
         $PageStart     = ($page - 1) * $PageSize;
         $path = '/index/index/showarticle';
         //分页函数
@@ -59,10 +64,19 @@ class Index extends Controller
 
     public function showMessage($page = 1, $PageSize = 5){
 
+        //页码验证
+        if (!is_numeric($page) || $page < 1) {
+            $this->error('页码错误',url('index/index/showmessage?page=1'));
+        }
+
         $PageStart   = ($page - 1) * $PageSize;
         $MessageList  = Message::showMessage($PageStart, $PageSize);
         $MessageCount = Message::getMessageCount();
         $PageCount    = ceil($MessageCount / $PageSize);
+
+        if ($page > $PageCount) {
+            $this->error('页码错误',url('index/index/showmessage?page=1'));
+        }
 
         $Navi = Navi($page, $PageCount, 'index/index/showmessage');
 
