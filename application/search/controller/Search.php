@@ -95,4 +95,45 @@ class Search extends Controller
 
         return $this->fetch();
     }
+
+    public function searchAll ($page = 1, $PageSize = 5, $keyword = '') {
+
+        //页码验证
+        if (!is_numeric($page) || $page < 1) {
+            $this->error('页码错误',url('search/search/searchall','page=1&keyword='.$keyword));
+        }
+
+        $blogArticle = new BlogArticle();
+
+        $resultCount = $blogArticle->alias('b') //别名
+                                   ->join('user u','u.user_id = b.user_id')
+                                   ->whereLike('concat(article_title,article_tag1,article_tag2,article_tag3,content,u.username)', '%'.$keyword.'%')
+                                   ->count();
+        $PageCount   = ceil($resultCount / $PageSize);
+
+        if ($page > $PageCount) {
+            $this->error('超出范围',url('search/search/searchall','page=1&keyword='.$keyword));
+        }
+
+        $PageStart     = ($page - 1) * $PageSize;
+        //分页函数
+        $Navi = Navi($page,$PageCount,'/search/search/searchall','&keyword='.$keyword);
+
+        $fields = 'article_id,article_title,add_date,u.username as author,b.user_id,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
+        $article_list  = $blogArticle->alias('b') //别名
+                                     ->join('user u','u.user_id = b.user_id') //内连接
+                                     ->limit($PageStart,$PageSize)
+                                     ->order('add_date','DESC')
+                                     ->field($fields) //设置字段
+                                     ->whereLike('concat(article_title,article_tag1,article_tag2,article_tag3,content,u.username)', '%'.$keyword.'%')
+                                     ->select();
+
+        $this->assign('keyword',$keyword);
+        $this->assign('navi',$Navi);
+        $this->assign('pagenow',$page);
+        $this->assign('pagecount',$PageCount);
+        $this->assign('article_list',$article_list);
+
+        return $this->fetch();
+    }
 }
