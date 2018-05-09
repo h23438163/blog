@@ -51,14 +51,11 @@
 			</div>
 			<h3>我的留言记录</h3>
 			<p class="pages">
-				<small>
-					Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;
-				</small> 		
 					{$Navi} <a href='javascript:void(0)' class='jump'>跳转</a>
 			</p>
 			<div class='jump_page'>
 				<span class='jump_bar'><a href='javascript:void(0)'class='jump_close'>X</a></span>
-				<form action='/message.php' method='get' >
+				<form action={:url('user/user/messagelist')} method='get' >
 					跳转到<input type='text' name='page'>页
 					<input type='image' src='/static/images/go_jump.png' title='跳转'>
 				</form>
@@ -83,9 +80,6 @@
 			</div>
 			{/volist}<br>
 			<p class="pages">
-			<small>
-				Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;
-			</small>
 				{$Navi} <a href='javascript:void(0)' class='jump'>跳转</a>
 			</p>
 		</div>

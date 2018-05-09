@@ -43,9 +43,13 @@
 					<h3>浏览记录</h3>
 				</li>
 				<li>
+					{notempty name='history'}
 					{foreach name='historylist' item='history'}
 					<h3><a href={:url('article/article/article?articleId='.$key)}>{$history}</a></h3>
 					{/foreach}
+					{else /}
+					没有记录
+					{/notempty}
 				</li>
 				<li>
 

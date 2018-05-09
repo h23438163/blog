@@ -280,15 +280,14 @@ class User extends Controller
         $this->assign('messagelist', $messageLIst);
         $this->assign('Navi', $Navi);
         $this->assign('pagenow', $page);
-        $this->assign('pagecount', $PageCount);
         return $this->fetch();
     }
 
     public function favorite($page = 1, $PageSize = 5) {
         $userId = Session::get('userId','user');
-        $favoriteList = Favorite::favoriteList($userId, $page, $PageSize);
+        $favoriteList  = Favorite::favoriteList($userId, $page, $PageSize);
         $favoriteCount = Favorite::getFavoriteCount($userId);
-        $PageCount   = ceil($favoriteCount / $PageSize);
+        $PageCount     = ceil($favoriteCount / $PageSize);
         $Navi = Navi($page,$PageCount,'user/user/favorite');
         $this->assign('favoritelist', $favoriteList);
         $this->assign('Navi', $Navi);
@@ -296,7 +295,12 @@ class User extends Controller
     }
 
     public function history() {
-        $historyList = $_COOKIE['article'];
+        if (!empty($_COOKIE['article'])) {
+            $historyList = $_COOKIE['article'];
+        } else {
+            $historyList = '';
+        }
+
         $this->assign('historylist',$historyList);
         return $this->fetch();
     }
