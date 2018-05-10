@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
 	//选中头像效果
-	$('#head_img_select img').click(function(){
-
+    $('#head_img_select img').click(function(){
 		if($(this).css('border-width') == '3px'){
 			$(this).animate({'border-width':'1px','width':'30px'},function(){
 				$(this).css({'border-color':''});
@@ -36,53 +35,64 @@ $(document).ready(function(){
 
     //表单不能为空提示效果
     $('#username').blur(function (){
-
         if($.trim($(this).val()) == ''){
             $('#username_error').text('用户名不能为空');
-
-        }else {
-            $('#username_error').text('');
-
+        } else {
+            var username = $.trim($(this).val());
+            $.ajax({
+                url:has_username_url,
+                data:{'username':username},
+                type : "POST",
+                async : true,
+                success:function(data){
+                    if (data > 0) {
+                        $('#username_error').text('用户名已被注册');
+                    } else {
+                        $('#username_error').text('');
+                    }
+                }
+            });
         }
     });
-    $('#password').blur(function (){
-
-        if($.trim($(this).val()) == ''){
+    $('#password').blur(function () {
+        if ($.trim($(this).val()) == '') {
             $('#password_error').text('密码不能为空');
-
-        }else {
+        } else if ($.trim($(this).val()) != $.trim($('#repassword').val())) {
+            $('#password_error').text('两次密码不一致');
+        } else {
             $('#password_error').text('');
-
         }
     });
-
     $('#repassword').blur(function (){
-
         if($.trim($(this).val()) != $.trim($('#password').val())) {
             $('#password_error').text('两次密码不一致');
-
         }else {
             $('#password_error').text('');
-
         }
     });
-
     $('#email').blur(function (){
-
         if($.trim($(this).val()) == ''){
             $('#email_error').text('email不能为空');
-
         }else {
-            $('#email_error').text('');
-
+            var email = $.trim($(this).val());
+            $.ajax({
+                url:has_email_url,
+                data:{'email':email},
+                type : "POST",
+                async : true,
+                success:function(data){
+                    if (data > 0) {
+                        $('#email_error').text('email已被注册');
+                    } else {
+                        $('#email_error').text('');
+                    }
+                }
+            });
         }
     });
-
    $('#authcode').blur(function (){
-
         if($.trim($(this).val()) == ''){
             $('#authcode_error').text('请填写验证码');
-
         }else {
             var authcode = $.trim($(this).val());
             $.ajax({
@@ -101,12 +111,8 @@ $(document).ready(function(){
                             $('#captcha_img').attr({"src":captcha_src});
                             break;
                     }
-
                 }
-
             });
-            //$('#authcode_error').text('');
-
         }
    });
 
@@ -120,6 +126,23 @@ $(document).ready(function(){
         if($.trim($('#username').val()) == ''){
             $('#username_error').text('用户名不能为空');
             username = false;
+        } else {
+            var username = $.trim($('#username').val());
+            $.ajax({
+                url   :has_username_url,
+                data  :{'username':username},
+                type  : "POST",
+                async : false,
+                success:function(data){
+                    if (data > 0) {
+                        $('#username_error').text('用户名已被注册');
+                        username = false;
+                    } else {
+                        $('#username_error').text('');
+                        username = true;
+                    }
+                }
+            });
         }
 
         if($.trim($('#password').val()) == ''){
@@ -133,6 +156,23 @@ $(document).ready(function(){
         if($.trim($('#email').val()) == ''){
             $('#email_error').text('请输入内容');
             email = false;
+        } else {
+            var email = $.trim($('#email').val());
+            $.ajax({
+                url:has_email_url,
+                data:{'email':email},
+                type : "POST",
+                async : false,
+                success:function(data){
+                    if (data > 0) {
+                        $('#email_error').text('email已被注册');
+                        email    = false;
+                    } else {
+                        $('#email_error').text('');
+                        email    = true;
+                    }
+                }
+            });
         }
 
         if($.trim($('#authcode').val()) == ''){
