@@ -9,7 +9,9 @@
 <script type="text/javascript" src="/static/js/common.js"></script>
 <script>
 	var captcha_url = "{:url('captcha/captcha/check')}";
-	var captcha_src = "{:captcha_src('addcomment')}";
+	var captcha_src = "{:captcha_src('register')}";
+	var has_username_url = "{:url('user/user/hasusername')}";
+	var has_email_url = "{:url('user/user/hasemail')}";
 </script>
 <script type="text/javascript" src="/static/js/register.js"></script>
 </head>
@@ -25,9 +27,9 @@
 			</div>
 			<div class="menu_nav">
 				<ul>
-					<li><a href={:url('index/index/showarticle')}>博客</a></li>
-					<li><a href={:url('index/index/showAbout')}>关于我</a></li>
-					<li><a href="/contact.php">留言本</a></li>
+					<li><a href="{:url('index/index/showarticle')}">博客</a></li>
+					<li><a href="{:url('index/index/showAbout')}">关于我</a></li>
+					<li><a href="{:url('index/index/showmessage')}">留言本</a></li>
 				  	<li class="active"><a href=javascript:void(0)>用户注册</a></li>
 				</div>
 			<div class="clr"></div>

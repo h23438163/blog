@@ -27,9 +27,57 @@ return [
 	//[]是可选变量,[]内的:admin表示传递的参数名为admin,如需多参数设置,参考上面的配置
 	//method表示参数传递的方法,可以为POST,GET等
 	//ext表示文件的扩展名
-	//如需更多设置,参考使用手册
-	'hehan/[:admintest]' => ['index/hello_world/admintest',['method' => 'get', 'ext' => 'html'],/*这里可以对参数进行匹配*/['admintest' => '\w+']],
+	//如需更多设置,参考使用手册                                                                    /*这里可以对参数进行匹配*/
+	'hehan/[:admintest]' => ['index/hello_world/admintest',['method' => 'get', 'ext' => 'html'],['admintest' => '\w+']],
 
 	'today/:year/:month'  => ['index/hello_world/today', ['method' => 'get'], ['year'  => '\d{4}', 'month' => '\d{2}']],
+
+    //index
+    'index/[:page]'    => ['index/index/showarticle', ['method' => 'get'],['page' => '\d+']],
+	'loginPage'        => ['index/index/login',       ['method' => 'get']],
+	'registerPage'     => ['index/index/register',    ['method' => 'get']],
+	'message/[:page]'  => ['index/index/showmessage', ['method' => 'get'],['page' => '\d+']],
+	'about'            => ['index/index/showabout',   ['method' => 'get']],
+	'addarticle'   => ['index/index/addarticle', ['method' => 'get']],
+	'addmessage'   => ['index/index/addmessage', ['method' => 'get']],
+
+    //article
+    'insertarticle' => ['article/article/addarticle',    ['method' => 'post']],
+    'updatearticle' => ['article/article/updatearticle', ['method' => 'post']],
+    'article/:articleId'     => ['article/article/article',     ['method' => 'get'],['articleId' => '\d+']],
+    'editarticle/:articleId' => ['article/article/editarticle', ['method' => 'get'],['articleId' => '\d+']],
+    //comment
+    'addcomment'    => ['article/comment/addcomment',    ['method' => 'post']],
+    'updatecomment' => ['article/comment/updatecomment', ['method' => 'post']],
+    'editcomment/:commentId' => ['article/comment/editcomment', ['method' => 'get'],['commentId' => '\d+']],
+    //reply
+    'addreply'    => ['article/reply/addreply',    ['method' => 'post']],
+    'updatereply' => ['article/reply/updatereply', ['method' => 'post']],
+    'editreply/:replyId' => ['article/reply/editreply', ['method' => 'get'],['replyId' => '\d+']],
+    //message
+    'addmessage'    => ['message/message/addmessage',    ['method' => 'get']],
+    'updatemessage' => ['message/message/updatemessage', ['method' => 'post']],
+    'editmessage/:messageId/:pageNow' => ['message/message/editmessage', ['method' => 'get'],['messageId' => '\d+' ,'pageNow' => '\d+']],
+    //user
+    'userInfo' => ['user/user/userinfo', ['method' => 'get']],
+    'login'    => ['user/user/login',    ['method' => 'post']],
+    'register' => ['user/user/register', ['method' => 'post']],
+    'remindlist/[:page]'  => ['user/user/remindlist',  ['method' => 'get'],['page' => '\d+']],
+    'articleist/[:page]'  => ['user/user/articlelist', ['method' => 'get'],['page' => '\d+']],
+    'commentlist/[:page]' => ['user/user/commentlist', ['method' => 'get'],['page' => '\d+']],
+    'replyist/[:page]'    => ['user/user/replylist',   ['method' => 'get'],['page' => '\d+']],
+    'messagelist/[:page]' => ['user/user/messagelist', ['method' => 'get'],['page' => '\d+']],
+    'favorite/[:page]'  => ['user/user/favorite', ['method' => 'get'],['page' => '\d+']],
+    'history/[:page]'   => ['user/user/history',  ['method' => 'get'],['page' => '\d+']],
+    'hasemail/:email'   => ['user/user/hasemail',         ['method' => 'post', 'ajax' => true],['email' => '\w+']],
+    'hasusername/:username'  => ['user/user/hasusername', ['method' => 'post', 'ajax' => true],['username' => '\w+']],
+    //favorite
+    //remind
+    //search
+    'searchtag/:tag/[:page]'       => ['search/search/searchtag',    ['method' => 'get'],['page' => '\d+', 'tag' => '\w+']],
+    'searchauthor/:userId/[:page]' => ['search/search/searchauthor', ['method' => 'get'],['page' => '\d+', 'userId' => '\d+']],
+    'searchall'   => ['search/search/searchall', ['method' => 'get']],
+    //captcha
+
 
 ];

@@ -32,7 +32,7 @@ class Search extends Controller
 
         $PageStart     = ($page - 1) * $PageSize;
         //分页函数
-        $Navi = Navi($page,$PageCount,'/search/search/searchtag','&tag='.$tag);
+        $Navi = Navi($page,$PageCount,'search/search/searchtag','&tag='.$tag);
 
         //查询字段
         $fields = 'article_id,article_title,add_date,u.username as author,b.user_id,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
@@ -73,7 +73,7 @@ class Search extends Controller
         $username  = $user->where('user_id', '=', $userId)->value('username');
         $PageStart = ($page - 1) * $PageSize;
         //分页函数
-        $Navi = Navi($page,$PageCount,'/search/search/searchauthor','&userId='.$userId);
+        $Navi = Navi($page,$PageCount,'search/search/searchauthor','&userId='.$userId);
 
         //查询字段
         $fields = 'article_id,article_title,add_date,u.username as author,b.user_id,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
@@ -97,7 +97,6 @@ class Search extends Controller
     }
 
     public function searchAll ($page = 1, $PageSize = 5, $keyword = '') {
-
         //页码验证
         if (!is_numeric($page) || $page < 1) {
             $this->error('页码错误',url('search/search/searchall','page=1&keyword='.$keyword));
@@ -117,7 +116,7 @@ class Search extends Controller
 
         $PageStart     = ($page - 1) * $PageSize;
         //分页函数
-        $Navi = Navi($page,$PageCount,'/search/search/searchall','&keyword='.$keyword);
+        $Navi = Navi($page,$PageCount,'search/search/searchall','&keyword='.$keyword);
 
         $fields = 'article_id,article_title,add_date,u.username as author,b.user_id,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
         $article_list  = $blogArticle->alias('b') //别名

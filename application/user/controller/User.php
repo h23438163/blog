@@ -279,6 +279,7 @@ class User extends Controller
         return $this->fetch();
     }
 
+
     public function messageList ($page = 1, $PageSize = 5) {
 
         //判断是否登陆

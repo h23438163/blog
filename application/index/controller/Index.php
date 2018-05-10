@@ -34,9 +34,8 @@ class Index extends Controller
         }
 
         $PageStart     = ($page - 1) * $PageSize;
-        $path = '/index/index/showarticle';
         //分页函数
-        $Navi = Navi($page,$PageCount,$path);
+        $Navi = Navi($page,$PageCount,'index/index/showarticle');
 
         //查询字段
         $fields = 'article_id,article_title,add_date,u.username as author,b.user_id,article_tag1,article_tag2,article_tag3,article_img,content,comments_num';
@@ -69,7 +68,7 @@ class Index extends Controller
             $this->error('页码错误',url('index/index/showmessage?page=1'));
         }
 
-        $PageStart   = ($page - 1) * $PageSize;
+        $PageStart    = ($page - 1) * $PageSize;
         $MessageList  = Message::showMessage($PageStart, $PageSize);
         $MessageCount = Message::getMessageCount();
         $PageCount    = ceil($MessageCount / $PageSize);
