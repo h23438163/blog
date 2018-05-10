@@ -187,7 +187,7 @@
 												</li>
 												<li>
 													<label for="content">验证码(60秒后过期)</label>
-													<img id='captcha_img{$key}' alt='点击刷新按钮刷新'><a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img<?php echo $key;?>').src='func/authcode.php?p=rep&r='+Math.random()">刷新</a><br>
+													<img id='captcha_img{$key}' src="{:captcha_src('addreply')}" alt='点击刷新按钮刷新'><a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img{$key}').src='{:captcha_src('addreply')}'">刷新</a><br>
 													请输入验证码<br><input type='text' name='authcode' id='authcode_reply{$key}'><span id='authcode_reply_error{$key}' style='color:red'></span>
 												</li>
 												<li>
@@ -359,7 +359,7 @@
 								</li>
 								<li>
 									<label for="content">验证码(60秒后过期)</label>
-									<img id='captcha_img' alt='点击刷新按钮刷新'><a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='func/authcode.php?p=comm&r='+Math.random()">刷新</a><br>
+									<img id='captcha_img' src="{:captcha_src('addcomment')}" alt='点击刷新按钮刷新'><a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='{:captcha_src('addcomment')}'">刷新</a><br>
 									请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
 								</li>
 								<li>

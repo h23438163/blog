@@ -54,13 +54,13 @@
 							</li>
 							<li>
 								<label for="authcode">验证码(60秒后过期)</label>
-								<img id='captcha_img' alt='点击刷新按钮刷新'>
-								<a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='func/authcode.php?p=contact&r='+Math.random()">刷新</a><br>
+								<img id='captcha_img' src="{:captcha_src('addmessage')}" alt='点击刷新按钮刷新'>
+								<a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='{:captcha_src('addmessage')}'">刷新</a><br>
 								请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
 							</li>
 							<li>
 								<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/message.php">查看所有留言</a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href={:url('index/index/showmessage')}>查看所有留言</a>
 								<div class="clr"></div>
 							</li>
 						</ol>

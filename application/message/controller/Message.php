@@ -8,7 +8,7 @@
 
 namespace app\message\controller;
 
-
+use app\captcha\controller\Captcha;
 use think\Controller;
 use app\message\model\Message as MessageModel;
 use think\Session;
@@ -50,6 +50,10 @@ class Message extends Controller
 
         $data = $this->request->param('','','htmlspecialchars');
 
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
+
         $validate = $this->validate($data,'AddMessage');
         if ($validate !== true) {
             $this->error($validate,url('message/message/addmessage'));
@@ -67,8 +71,6 @@ class Message extends Controller
         } else {
             $this->error('留言失败',url('message/message/addmessag'));
         }
-
-
 
     }
 
@@ -102,6 +104,10 @@ class Message extends Controller
     public function updateMessage(){
         
         $data = $this->request->param('','','htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
 
         $validate = $this->validate($data, 'UpdateMessage');
         if ($validate !== true) {

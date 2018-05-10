@@ -12,6 +12,7 @@ use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
 use app\index\model\BlogArticle;
 use app\remind\controller\Remind;
+use app\captcha\controller\Captcha;
 use think\Controller;
 use think\Session;
 
@@ -32,6 +33,11 @@ class Reply extends Controller
         $commentsReply = new CommentsReply();
         //获取提交的数据(htmlspecialchars过滤函数)
         $data          = $this->request->param('','','htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
+
         //文章评论总数
         $commentsNum   = $blogArticle->where('article_id',$data['article_id'])->value('comments_num');
         //跳转URL
@@ -87,6 +93,10 @@ class Reply extends Controller
 
         //获取提交的数据(htmlspecialchars过滤函数)
         $data  = $this->request->param('', '', 'htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
 
         //验证器
         $validate = $this->validate($data, 'UpdateReply');

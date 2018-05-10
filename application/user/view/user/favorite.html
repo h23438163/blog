@@ -42,6 +42,7 @@
 				<li>
 					<h3>收藏夹</h3>
 				</li>
+				{notempty name='favoritelist'}
 				<li>
 					{volist name='favoritelist' id='favorite'}
 					<h3><a href={:url('article/article/article','articleId='.$favorite.article_id.'')}>{$favorite.article_title}</a></h3>
@@ -50,6 +51,9 @@
 				<li>
 					{$Navi}
 				</li>
+				{else/}
+				没有收藏任何文章
+				{/notempty}
 				<li>
 					<a href={:url('user/user/userinfo')}>返回</a>
 				</li>

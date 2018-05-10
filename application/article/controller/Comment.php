@@ -12,6 +12,7 @@ namespace app\article\controller;
 use app\article\model\ArticleComments;
 use app\index\model\BlogArticle;
 use app\remind\controller\Remind;
+use app\captcha\controller\Captcha;
 use think\Controller;
 use think\Session;
 
@@ -25,12 +26,18 @@ class Comment extends Controller
         }
     }
 
+    //新增评论
     public function addComment(){
 
         $blogArticle     = new BlogArticle();
         $articleComments = new ArticleComments();
 
         $data        = $this->request->param('','','htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
+
         $url         = url('article/article/article?articleId=' . $data['article_id']);
         //文章评论数
         $commentsNum = $blogArticle->where('article_id', $data['article_id'])->value('comments_num');
@@ -76,6 +83,11 @@ class Comment extends Controller
     public function updateComment() {
 
         $data = $this->request->param('','','htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
+
         //验证器
         $validate = $this->validate($data,'UpdateComment');
         if ($validate !== true) {

@@ -11,6 +11,7 @@ namespace app\user\controller;
 
 use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
+use app\captcha\controller\Captcha;
 use app\favorite\controller\Favorite;
 use app\index\model\BlogArticle;
 use app\message\controller\Message;
@@ -26,6 +27,11 @@ class User extends Controller
     public function login(){
 
         $data        = $this->request->param('','','htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
+
         //实例化User模型
         $user        = new UserModel();
         //判断
@@ -64,6 +70,11 @@ class User extends Controller
     public function register(){
 
         $data     = $this->request->param();
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
+
         //验证器
         $validate = $this->validate($data, 'Register');
         if ($validate !== true) {
@@ -166,6 +177,12 @@ class User extends Controller
 
     //查看消息
     public function remindList($page = 1, $PageSize = 5){
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+
         $userId = Session::get('userId','user');
         $remindList  = Remind::showRemind($userId, $page, $PageSize);
         $remindCount = Remind::getRemindCount($userId);
@@ -185,10 +202,9 @@ class User extends Controller
         //判断是否登陆
         if (Session::has('username','user') === false) {
             $this->error('请登陆',url('index/index/login'));
-        } else {
-            $userId = Session::get('userId','user');
         }
 
+        $userId = Session::get('userId','user');
         $blogArticle = new BlogArticle();
         $listCount   = $blogArticle->where('user_id', '=', $userId)
                                    ->count();
@@ -214,21 +230,19 @@ class User extends Controller
         //判断是否登陆
         if (Session::has('username','user') === false) {
             $this->error('请登陆',url('index/index/login'));
-        } else {
-            $userId = Session::get('userId','user');
         }
 
+        $userId = Session::get('userId','user');
         $articleComments = new ArticleComments();
-
-        $commentsCount = $articleComments->where('user_id', '=', $userId)->count();
-        $PageCount     = ceil($commentsCount/$PageSize);
-        $PageStart     = ($page - 1) * $PageSize;
-        $commentlist   = $articleComments->alias('c')
-                                         ->join('blog_article a','c.article_id = a.article_id')
-                                         ->field('c.article_id,c.comment_id,a.article_title')
-                                         ->where('c.user_id', '=',$userId)
-                                         ->limit($PageStart,$PageSize)
-                                         ->select();
+        $commentsCount   = $articleComments->where('user_id', '=', $userId)->count();
+        $PageCount       = ceil($commentsCount/$PageSize);
+        $PageStart       = ($page - 1) * $PageSize;
+        $commentlist     = $articleComments->alias('c')
+                                           ->join('blog_article a','c.article_id = a.article_id')
+                                           ->field('c.article_id,c.comment_id,a.article_title')
+                                           ->where('c.user_id', '=',$userId)
+                                           ->limit($PageStart,$PageSize)
+                                           ->select();
 
         $Navi = Navi($page,$PageCount,'user/user/commentlist');
 
@@ -243,22 +257,20 @@ class User extends Controller
         //判断是否登陆
         if (Session::has('username','user') === false) {
             $this->error('请登陆',url('index/index/login'));
-        } else {
-            $userId = Session::get('userId','user');
         }
 
+        $userId = Session::get('userId','user');
         $commentReply = new CommentsReply();
         $ReplyCount   = $commentReply->where('user_id', '=', $userId)->count();
         $PageCount    = ceil($ReplyCount/$PageSize);
         $PageStart    = ($page - 1) * $PageSize;
-
-        $replylist = $commentReply->alias('r')
-                                  ->join('article_comments c', 'r.comment_id = c.comment_id')
-                                  ->join('blog_article a', 'a.article_id = c.article_id')
-                                  ->where('r.user_id', '=', $userId)
-                                  ->field('a.article_title,c.article_id,r.reply_id')
-                                  ->limit($PageStart,$PageSize)
-                                  ->select();
+        $replylist    = $commentReply->alias('r')
+                                     ->join('article_comments c', 'r.comment_id = c.comment_id')
+                                     ->join('blog_article a', 'a.article_id = c.article_id')
+                                     ->where('r.user_id', '=', $userId)
+                                     ->field('a.article_title,c.article_id,r.reply_id')
+                                     ->limit($PageStart,$PageSize)
+                                     ->select();
 
         $Navi = Navi($page, $PageCount,'user/user/replylist');
         $this->assign('replylist',$replylist);
@@ -268,6 +280,11 @@ class User extends Controller
     }
 
     public function messageList ($page = 1, $PageSize = 5) {
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
 
         $userId = Session::get('userId', 'user');
         $PageStart    = ($page - 1) * $PageSize;
@@ -284,9 +301,20 @@ class User extends Controller
     }
 
     public function favorite($page = 1, $PageSize = 5) {
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+
         $userId = Session::get('userId','user');
-        $favoriteList  = Favorite::favoriteList($userId, $page, $PageSize);
         $favoriteCount = Favorite::getFavoriteCount($userId);
+
+        if ($favoriteCount === 0) {
+            return $this->fetch();
+        }
+
+        $favoriteList  = Favorite::favoriteList($userId, $page, $PageSize);
         $PageCount     = ceil($favoriteCount / $PageSize);
         $Navi = Navi($page,$PageCount,'user/user/favorite');
         $this->assign('favoritelist', $favoriteList);
@@ -295,6 +323,12 @@ class User extends Controller
     }
 
     public function history() {
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
+            $this->error('请登陆',url('index/index/login'));
+        }
+
         if (!empty($_COOKIE['article'])) {
             $historyList = $_COOKIE['article'];
         } else {

@@ -68,6 +68,7 @@ class Favorite extends Controller
                                  ->select();
         return $favoriteList;
     }
+
     public static function getFavoriteCount ($userId) {
         $favorite      = new FavoriteModel();
         $favoriteCount = $favorite->where('user_id', '=',$userId)->count();

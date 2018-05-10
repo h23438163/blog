@@ -10,6 +10,7 @@ namespace app\article\controller;
 
 use app\article\model\ArticleComments;
 use app\article\model\CommentsReply;
+use app\captcha\controller\Captcha;
 use app\index\model\BlogArticle;
 use think\Controller;
 use think\Cookie;
@@ -20,14 +21,20 @@ class Article extends Controller
 
     //发布文章
     public function addArticle(){
-        //验证是否登陆
-        if (!Session::has('username','user')) {
+
+        //判断是否登陆
+        if (Session::has('username','user') === false) {
             $this->error('请登陆',url('index/index/login'));
         }
 
         //跳转URL
         $url_add  = url('index/index/addarticle');
         $data     = $this->request->param('','','htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
+
         //验证器
         $validate = $this->validate($data,'AddArticle');
         if ($validate !== true) {
@@ -99,7 +106,7 @@ class Article extends Controller
         //判断返回类型
         if (is_object($article)) {
             $article = $article->toArray();
-            Cookie::set('article['.$article['article_id'].']',$article['article_title']);
+            Cookie::set('article['.$article['article_id'].']',$article['article_title'],'3600');
         } else {
             return $this->fetch();
         }
@@ -151,19 +158,19 @@ class Article extends Controller
             $this->error('输入错误');
         }
 
-       $blogArticle = new BlogArticle();
+        $blogArticle = new BlogArticle();
 
-       $article = $blogArticle->where('article_id', '=', $articleId)
-                              ->field('article_id,article_title,article_tag1,article_tag2,article_tag3,content')
-                              ->find();
+        $article = $blogArticle->where('article_id', '=', $articleId)
+                               ->field('article_id,article_title,article_tag1,article_tag2,article_tag3,content')
+                               ->find();
 
-       if (is_object($article)) {
-           $this->assign('article', $article);
-       } else {
-           $this->error('文章未找到');
-       }
+        if (is_object($article)) {
+            $this->assign('article', $article);
+        } else {
+            $this->error('文章未找到');
+        }
 
-       return $this->fetch();
+        return $this->fetch();
     }
 
     //更新文章
@@ -175,6 +182,10 @@ class Article extends Controller
         }
 
         $data = $this->request->param('','','htmlspecialchars');
+
+        if (Captcha::check($data['authcode'], $this->request->action()) === 0 ) {
+            $this->error('验证码错误');
+        }
 
         $validate = $this->validate($data,'UpdateArticle');
         if ($validate !== true) {
