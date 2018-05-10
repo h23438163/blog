@@ -18,16 +18,16 @@
 		//点击评论博客效果代码END
 
 
-		// $('#comments_content').blur(function (){
-        //
-		// 	if($.trim($(this).val()) == ''){
-        //
-		// 		$('#comments_content_error').text('请输入内容');
-		// 	}else {
-        //
-		// 		$('#comments_content_error').text('');
-		// 	}
-		// });
+		$('#comments_content').blur(function (){
+
+			if($.trim($(this).val()) == ''){
+
+				$('#comments_content_error').text('请输入内容');
+			}else {
+
+				$('#comments_content_error').text('');
+			}
+		});
 
 		$('#authcode').blur(function (){
 
@@ -38,7 +38,7 @@
 				authcode = $.trim($(this).val());
 				$.ajax({
 					url:captcha_url,
-					data:{'authcode':authcode,'id':'addcomment'},
+					data:{'authcode':authcode,'id':'updatecomment'},
 					type : "POST",
 					async : true,
 					success:function(data){
@@ -65,12 +65,12 @@
 			var authcode = true;
 
 
-			/*if($.trim($('#comments_content').val()) == ''){
+			if($.trim($('#comments_content').val()) == ''){
 
 				$('#comments_content_error').text('请输入内容');
 
 				comments_content = false;
-			}*/
+			}
 
 			if($.trim($('#authcode').val()) == ''){
 
@@ -82,7 +82,7 @@
 				authcode = $.trim($('#authcode').val());
 				$.ajax({
 					url:captcha_url,
-					data:{'authcode':authcode,'id':'addcomment'},
+					data:{'authcode':authcode,'id':'updatecomment'},
 					type : "POST",
 					async : false,
 					success:function(data){

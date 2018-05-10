@@ -28,17 +28,15 @@
 
 		//百度搜索
 		$('#formsearch').submit(function (){
-			if($('#editbox_search').val() == '通过关键字搜索'){
-
+			if ($('#editbox_search').val() == '通过关键字搜索') {
 				window.alert('请输入搜索内容');
 				return false;
-			}else{
-				
-				if($('#select select').val() == 'baidu'){	
+			} else {
+				if ($('#select select').val() == 'baidu') {
 
 					window.open("http://www.baidu.com/s?wd="+$('#editbox_search').val());
-					return false;				
-				}		
+					return false;
+				}
 			}
 		});
 		//百度搜索END

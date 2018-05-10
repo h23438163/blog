@@ -1,33 +1,43 @@
-	$(document).ready(function(){	
+$(document).ready(function(){
 
-		//点击评论博客效果代码
-		$("#respond_article").click(function(){		
-				if($('.respond').css('display') == 'none'){
-
-					$(".respond").slideToggle(1000);
-					$('#respond_article a').text('点击收起');	
-					$("body,html").animate({scrollTop:$(document).height()},1000);
-							
-				}else{
+		
+		//表单不能为空提示效果
+		$('#title').blur(function (){
 					
-					$(".respond").slideToggle(1000,function(){
-						$('#respond_article a').text('点击评论');
-					});
-				}
+			if($.trim($(this).val()) == ''){
+
+				$('#title_error').text('请输入标题');		
+			}else {
+
+				$('#title_error').text('');		
+			}
 		});
-		//点击评论博客效果代码END
 
+		$('#tag1,#tag2,#tag3').blur(function (){
 
-		// $('#comments_content').blur(function (){
-        //
-		// 	if($.trim($(this).val()) == ''){
-        //
-		// 		$('#comments_content_error').text('请输入内容');
-		// 	}else {
-        //
-		// 		$('#comments_content_error').text('');
-		// 	}
-		// });
+			if($.trim($('#tag1').val()) == ''){
+				
+				$('#tag_error').text('请输入分类');
+			}else {
+				
+				$('#tag_error').text('');
+			}
+		});
+
+		$('#img_upload').change(function(){
+			$('#img_name').text(this.value);
+		});
+
+		$('#content').blur(function (){
+
+			if($.trim($(this).val()) == ''){
+
+				$('#content_error').text('内容不能为空');		
+			}else {
+
+				$('#content_error').text('');			
+			}
+		});
 
 		$('#authcode').blur(function (){
 
@@ -35,10 +45,10 @@
 				$('#authcode_error').text('请填写验证码');
 				
 			}else {
-				authcode = $.trim($(this).val());
+				var authcode = $.trim($(this).val());
 				$.ajax({
 					url:captcha_url,
-					data:{'authcode':authcode,'id':'addcomment'},
+					data:{'authcode':authcode,'id':'updatearticle'},
 					type : "POST",
 					async : true,
 					success:function(data){
@@ -53,36 +63,48 @@
 								break;
 						}
 					}
-				});			
+				});
 			}
 		});
 
-
 		$('#submit').submit(function (){
 
-			var comments_content = true;
-			var comments_name = true;
+			var title = true;
+			var tag = true;
+			var content = true;
 			var authcode = true;
 
+			if($.trim($('#title').val()) == ''){
 
-			/*if($.trim($('#comments_content').val()) == ''){
+				$('#title_error').text('请输入标题');
 
-				$('#comments_content_error').text('请输入内容');
+				title = false;
+			}
 
-				comments_content = false;
-			}*/
+			if($.trim($('#tag1').val()) == ''){
+
+				$('#tag_error').text('请输入分类');
+
+				tag = false;
+			}
+
+			if($.trim($('#content').val()) == ''){
+
+				$('#content_error').text('请输入内容');
+
+				content = false;
+			}
 
 			if($.trim($('#authcode').val()) == ''){
 
 				$('#authcode_error').text('请填写验证码');
-				
 				authcode = false;
 			}else {
 
 				authcode = $.trim($('#authcode').val());
 				$.ajax({
-					url:captcha_url,
-					data:{'authcode':authcode,'id':'addcomment'},
+                    url:captcha_url,
+                    data:{'authcode':authcode,'id':'updatearticle'},
 					type : "POST",
 					async : false,
 					success:function(data){
@@ -103,15 +125,13 @@
 				});
 			}
 
-			if(comments_content && comments_name && authcode){
+			if(title && tag && content && authcode){
 
 				return true;
 			}
-
 			return false;
 			
 		});
-
-		
 		//表单不能为空提示效果END
+
 	});

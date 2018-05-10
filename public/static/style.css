@@ -104,10 +104,10 @@ a {
 }
 
 
-a.rm, a.com { 
+a.rm, a.com{
 	text-decoration:none;
 }
-a.com { 
+a.com {
 	float:right;
 }
 
@@ -205,6 +205,12 @@ a.com {
 #article_content{
 	display:none;
 
+}
+/*点击收藏样式*/
+a.fav {
+	text-decoration:none;
+	float:right;
+	font-size: 50px;
 }
 /*显示评论样式*/
 .respond,.comments{ 
@@ -725,13 +731,6 @@ ol li{
 	
 }
 /*留言本表单样式END*/
-
-/*验证码样式*/
-#captcha_img{
-	width:100px;
-	height:30px;
-}
-/*验证码样式END*/
 
 /*博客发表页面样式*/
 #tag1, #tag2 ,#tag3{
