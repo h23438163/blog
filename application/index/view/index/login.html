@@ -7,7 +7,11 @@
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/static/js/jquery-321.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
+<script>
+	var captcha_url = "{:url('captcha/captcha/check')}";
+	var captcha_src = "{:captcha_src('login')}";
+</script>
+<script type="text/javascript" src="/static/js/login.js"></script>
 
 </head>
 <body>
