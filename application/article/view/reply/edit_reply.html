@@ -9,7 +9,11 @@
 <link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
 <script type="text/javascript" src="/static/js/jquery-321.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
-<script type="text/javascript" src="/static/js/comments.js"></script>
+<script>
+	var captcha_url = "{:url('captcha/captcha/check')}";
+	var captcha_src = "{:captcha_src('updatereply')}";
+</script>
+<script type="text/javascript" src="/static/js/edit_reply.js"></script>
 </head>
 <body>
 <div class="main">
@@ -45,7 +49,7 @@
 		<div class="content_resize">
 			<div class="mainbar">
 				{notempty name='$Think.session.user.username'}
-					<form action={:url('article/reply/updateReply')} method='post' id='submit'>
+					<form action={:url('article/reply/updateReply')} method='post' id='reply_submit'>
 						<h3>回复</h3>
 						<ol>
 							<li>
@@ -55,12 +59,12 @@
 							<li>
 								<label for="reply_content">回复内容</label>
 								<textarea id="reply_content" name="reply_content" rows="8" cols="50" wrap="hard">{$reply_content}</textarea>
-								<span id='comments_content_error' style='color:red'></span>
+								<span id='reply_content_error' style='color:red'></span>
 							</li>
 							<li>
 								<label for="content">验证码(60秒后过期)</label>
-								<img id='captcha_img' src="{:captcha_src('editreply')}" alt='点击刷新按钮刷新'><a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='{:captcha_src('editreply')}'">刷新</a><br>
-								请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
+								<img id='captcha_img' src="{:captcha_src('updatereply')}" alt='点击刷新按钮刷新'><a  href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='{:captcha_src('updatereply')}'">刷新</a><br>
+								请输入验证码<br><input type='text' name='authcode' id='authcode_reply'><span id='authcode_reply_error' style='color:red'></span>
 							</li>
 							<li>
 								<input type="hidden" name="reply_id" value="{$reply_id}">

@@ -2,14 +2,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>我的博客</title>
+<title>评论编辑</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 <link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
 <script type="text/javascript" src="/static/js/jquery-321.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
-<script type="text/javascript" src="/static/js/comments.js"></script>
+<script>
+	var captcha_url = "{:url('captcha/captcha/check')}";
+	var captcha_src = "{:captcha_src('updatecomment')}";
+</script>
+<script type="text/javascript" src="/static/js/edit_comments.js"></script>
 </head>
 <body>
 <div class="main">

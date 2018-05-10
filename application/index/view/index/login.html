@@ -7,6 +7,7 @@
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/static/js/jquery-321.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
 
 </head>
 <body>
@@ -34,11 +35,11 @@
 		<div class="content_resize">
 			<div class="mainbar">
 				<div>
-					<h2><span>注册</span></h2><div class="clr"></div>
-					<form action={:url('user/user/login')} method="post"  enctype="multipart/form-data" id="sendmessage">
+					<h2><span>登陆</span></h2><div class="clr"></div>
+					<form action={:url('user/user/login')} method="post"  enctype="multipart/form-data" id="login">
 						<ol>
 							<li>
-								登陆<br>
+								用户名<br>
 								<input id="username" name="username"  />
 								<span id='username_error' style='color:red'></span>
 							</li>

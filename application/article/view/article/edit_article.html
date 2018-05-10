@@ -6,9 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 <!--jquery引入-->
-<!--<script type="text/javascript" src="/static/js/jquery-321.js"></script>-->
-<!--<script type="text/javascript" src="/static/js/common.js"></script>-->
-<!--<script type="text/javascript" src="/static/js/add_article.js"></script>-->
+<script type="text/javascript" src="/static/js/jquery-321.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script>
+    var captcha_url = "{:url('captcha/captcha/check')}";
+    var captcha_src = "{:captcha_src('updatearticle')}";
+</script>
+<script type="text/javascript" src="/static/js/edit_article.js"></script>
 </head>
 <body>
 <div class="main">
@@ -68,7 +72,7 @@
 							</li>
 							<li>
 								<label for="content">验证码(60秒后过期)</label>
-								<img id='captcha_img' src="{:captcha_src('updatearticle')}" alt='点击刷新按钮刷新'><a href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='{:captcha_src('updateeditarticle')}'">刷新</a><br>
+								<img id='captcha_img' src="{:captcha_src('updatearticle')}" alt='点击刷新按钮刷新'><a href ='javascript:void(0)' onclick="document.getElementById('captcha_img').src='{:captcha_src('updatearticle')}'">刷新</a><br>
 								请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
 							</li>
 							<li>

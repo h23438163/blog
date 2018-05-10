@@ -6,9 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 <!--jquery引入-->
-<!--<script type="text/javascript" src="/static/js/jquery-321.js"></script>-->
-<!--<script type="text/javascript" src="/static/js/common.js"></script>-->
-<!--<script type="text/javascript" src="/static/js/add_article.js"></script>-->
+<script type="text/javascript" src="/static/js/jquery-321.js"></script>
+<script type="text/javascript" src="/static/js/common.js"></script>
+<script>
+    var captcha_url = "{:url('captcha/captcha/check')}";
+	var captcha_src = "{:captcha_src('addarticle')}";
+</script>
+<script type="text/javascript" src="/static/js/add_article.js"></script>
 </head>
 <body>
 <div class="main">

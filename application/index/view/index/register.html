@@ -7,6 +7,10 @@
 <link href="/static/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/static/js/jquery-321.js"></script>
 <script type="text/javascript" src="/static/js/common.js"></script>
+<script>
+	var captcha_url = "{:url('captcha/captcha/check')}";
+	var captcha_src = "{:captcha_src('addcomment')}";
+</script>
 <script type="text/javascript" src="/static/js/register.js"></script>
 </head>
 <body>
@@ -35,7 +39,7 @@
 			<div class="mainbar">
 				<div>
 					<h2><span>注册</span></h2><div class="clr"></div>
-					<form action={:url('user/user/register')} method="post"  enctype="multipart/form-data" id="sendmessage">
+					<form action={:url('user/user/register')} method="post"  enctype="multipart/form-data" id="register">
 						<ol>
 							<li>
 								用户名<br>

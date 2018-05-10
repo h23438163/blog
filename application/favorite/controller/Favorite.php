@@ -52,8 +52,6 @@ class Favorite extends Controller
                 return 0;
             }
         }
-
-
     }
 
     public static function favoriteList ($userId, $page, $PageSize) {
