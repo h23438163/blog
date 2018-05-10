@@ -15,11 +15,11 @@ return [//可以配置多个
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'myblog',
+    'database'        => '',
     // 用户名
-    'username'        => 'root',
+    'username'        => '',
     // 密码
-    'password'        => 'moe303514',
+    'password'        => '',
     // 端口
     'hostport'        => '',
     // 连接dsn
