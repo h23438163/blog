@@ -7,11 +7,11 @@
 <meta http-equiv="Cache-control" content="no-cache">
 <meta http-equiv="Cache" content="no-cache">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
-<link href="/static/style.css" rel="stylesheet" type="text/css" />
-<link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
-<script type="text/javascript" src="/static/js/jquery-321.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
-<script type="text/javascript" src="/static/js/jump_page.js"></script>
+<link href="__STATIC__/style.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
+<script type="text/javascript" src="__STATIC__/js/jquery-321.js"></script>
+<script type="text/javascript" src="__STATIC__/js/common.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jump_page.js"></script>
 </head>
 <body>
 <div class="main">
@@ -19,7 +19,7 @@
 		<div class="header_resize">
 			<div class="logo">
 				<h1 id="animate_logo">
-				<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />我的
+				<img src="__STATIC__/images/logo.jpg" width="48" height="50" alt="logo" />我的
 				<span>博客</span>
 				<small>博客主页</small>
 				</h1>  
@@ -46,7 +46,7 @@
 	<div class="content">
 		<div class="content_resize">
 			<div class="mainbar">
-				<input type='image' src='/static/images/backtop.gif' id='backtop'>
+				<input type='image' src='__STATIC__/images/backtop.gif' id='backtop'>
 				<div id="add_article">
 					<a href={:url('index/index/addarticle')}>发表博客</a>
 				</div>
@@ -61,7 +61,7 @@
 					<span class='jump_bar'><a href='javascript:void(0)'class='jump_close'>X</a></span>
 					<form action={:url('search/search/searchauthor','userId='.$userId)} method='get' >
 						跳转到<input type='text' name='page'>页
-					<input type='image' src='/static/images/go_jump.png' title='跳转'>
+					<input type='image' src='__STATIC__/images/go_jump.png' title='跳转'>
 					</form>
 				</div>
 				<!--提取文章数据-->	
@@ -93,11 +93,11 @@
 						<!--tag1-->
 						<a href={:url('search/search/searchtag','tag='.$article.article_tag1)}>
 							{$article.article_tag1}
-						</a>
+						</a> |
 						<!--tag2-->
 						<a href={:url('search/search/searchtag','tag='.$article.article_tag2)}>
 							{$article.article_tag2}
-						</a>
+						</a> |
 						<!--tag3-->
 						<a href={:url('search/search/searchtag','tag='.$article.article_tag3)}>
 							{$article.article_tag3}
@@ -108,7 +108,7 @@
 					</p>
 					<!--文章配图-->
 					<!--p style="max-height:123px;max-width:194px;overflow: hidden;"-->
-					<img src="/static{$article.article_img}" width="605" height="197" alt="image" id='thumbImage{$key}'/>
+					<img src="__STATIC__{$article.article_img}" width="605" height="197" alt="image" id='thumbImage{$key}'/>
 					<!--/p-->
 					<!--文章内容-->
 					<p class="arti_content{$key}" id='article_content'>{$article.content}</p>
@@ -157,7 +157,7 @@
 						<span>
 							<input name="keyword" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
 						</span>
-						<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+						<input name="button_search" src="__STATIC__/images/search_btn.gif" class="button_search" type="image" />
 					</form>
 				</div>
 				<!--搜索栏END-->

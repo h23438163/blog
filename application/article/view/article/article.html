@@ -5,15 +5,15 @@
 <title>我的博客</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
-<link href="/static/style.css" rel="stylesheet" type="text/css" />
-<link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
-<script type="text/javascript" src="/static/js/jquery-321.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
+<link href="__STATIC__/style.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
+<script type="text/javascript" src="__STATIC__/js/jquery-321.js"></script>
+<script type="text/javascript" src="__STATIC__/js/common.js"></script>
 <script>
     var captcha_url = "{:url('captcha/captcha/check')}";
     var captcha_src = "{:captcha_src('addcomment')}";
 </script>
-<script type="text/javascript" src="/static/js/comments.js"></script>
+<script type="text/javascript" src="__STATIC__/js/comments.js"></script>
 </head>
 <body>
 <div class="main">
@@ -21,7 +21,7 @@
 		<div class="header_resize">
 			<div class="logo">
 				<h1 id="animate_logo">
-				<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />我的
+				<img src="__STATIC__/images/logo.jpg" width="48" height="50" alt="logo" />我的
 				<span>博客</span>
 				<small>博客文章</small>
 				</h1>  
@@ -48,7 +48,7 @@
 	<div class="content">
 		<div class="content_resize">
 			<div class="mainbar">
-				<input type='image' src='/static/images/backtop.gif' id='backtop'>
+				<input type='image' src='__STATIC__/images/backtop.gif' id='backtop'>
 				{notempty name='article'}
 					<div id="respond_article">
 						<a href="javascript:void(0)">点击评论</a>
@@ -78,11 +78,11 @@
 							<!--tag1-->
 							<a href="{:url('search/search/searchtag','tag='.$article.article_tag1)}">
 								{$article.article_tag1}
-							</a>
+							</a> |
 							<!--tag2-->
 							<a href="{:url('search/search/searchtag','tag='.$article.article_tag2)}">
 								{$article.article_tag2}
-							</a>
+							</a> |
 							<!--tag3-->
 							<a href="{:url('search/search/searchtag','tag='.$article.article_tag3)}">
 								{$article.article_tag3}
@@ -97,7 +97,7 @@
                                 var addfavorite_url = "{:url('favorite/favorite/addfavorite','articleId='.$article.article_id)}";
                                 var isfavorite_url  = "{:url('favorite/favorite/isfavorite','articleId='.$article.article_id)}";
                             </script>
-                            <script type="text/javascript" src="/static/js/favorite.js"></script>
+                            <script type="text/javascript" src="__STATIC__/js/favorite.js"></script>
                             {else /}
                             <script>
                                 $('.fav').click(function () {
@@ -107,7 +107,7 @@
                             {/notempty}
 						</p>
 						<!--文章配图-->
-						<img src="/static{$article.article_img}" width="605" height="197" alt="image" />
+						<img src="__STATIC__{$article.article_img}" width="605" height="197" alt="image" />
 						<!--文章内容-->
 						<p class="arti_content" >{$article.content}</p>
 					</div>
@@ -171,7 +171,7 @@
 												<li>
 													<input type="hidden" name="article_id" value="{$article.article_id}">
 													<input type="hidden" name="comment_id" value="{$comment.comment_id}">
-													<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
+													<input type="image" name="imageField" id="imageField" src="__STATIC__/images/submit.gif" class="send" />
 													<div class="clr"></div>
 												</li>
 											</ol>
@@ -206,7 +206,7 @@
 															switch(data){
 																case '1':
 																	$('#authcode_reply_error{$key}').text('');
-																	$('#authcode_reply_error{$key}').append("<img src='/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
+																	$('#authcode_reply_error{$key}').append("<img src='__STATIC__/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
 																	break;
 																case '0':
 																	$('#authcode_reply_error{$key}').text('验证码错误');
@@ -243,7 +243,7 @@
                                                             switch(data){
                                                                 case '1':
                                                                     $('#authcode_reply_error{$key}').text('');
-                                                                    $('#authcode_reply_error{$key}').append("<img src='/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
+                                                                    $('#authcode_reply_error{$key}').append("<img src='__STATIC__/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
                                                                     authcode_reply = true;
                                                                     break;
                                                                 case '0':
@@ -325,7 +325,7 @@
 								</li>
 								<li>
 									<input type="hidden" name="article_id" value="{$article.article_id}">
-									<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
+									<input type="image" name="imageField" id="imageField" src="__STATIC__/images/submit.gif" class="send" />
 									<div class="clr"></div>
 								</li>
 							</ol>
@@ -353,7 +353,7 @@
 						<span>
 							<input name="keyword" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
 						</span>
-						<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+						<input name="button_search" src="__STATIC__/images/search_btn.gif" class="button_search" type="image" />
 					</form>
 				</div>
 			</div>

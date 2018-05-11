@@ -4,14 +4,14 @@
 <title>留言本</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
-<link href="/static/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/static/js/jquery-321.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
+<link href="__STATIC__/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__STATIC__/js/jquery-321.js"></script>
+<script type="text/javascript" src="__STATIC__/js/common.js"></script>
 <script>
 	var captcha_url = "{:url('captcha/captcha/check')}";
     var captcha_src = "{:captcha_src('addmessage')}";
 </script>
-<script type="text/javascript" src="/static/js/addmessage.js"></script>
+<script type="text/javascript" src="__STATIC__/js/addmessage.js"></script>
 </head>
 <body>
 <div class="main">
@@ -19,7 +19,7 @@
 		<div class="header_resize">
 			<div class="logo">
 				<h1 id="animate_logo">
-					<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />
+					<img src="__STATIC__/images/logo.jpg" width="48" height="50" alt="logo" />
 					我的<span>博客</span> <small>给我留言</small>
 				</h1>
 			</div>
@@ -63,7 +63,7 @@
 								请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
 							</li>
 							<li>
-								<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
+								<input type="image" name="imageField" id="imageField" src="__STATIC__/images/submit.gif" class="send" />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href={:url('index/index/showmessage')}>查看所有留言</a>
 								<div class="clr"></div>
 							</li>
@@ -83,7 +83,7 @@
 						<span>
 							<input name="keyword" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
 						</span>
-						<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+						<input name="button_search" src="__STATIC__/images/search_btn.gif" class="button_search" type="image" />
 					</form>
 				</div>
 				<div class="gadget">

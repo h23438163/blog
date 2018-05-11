@@ -29,7 +29,7 @@ class Index extends Controller
         $article_count = $blogArticle->count();
         $PageCount     = ceil($article_count/$PageSize);
 
-        if ($page > $PageCount) {
+        if ($page > $PageCount && $page !== 1) {
             $this->error('页码错误',url('index/index/showarticle?page=1'));
         }
 
@@ -73,7 +73,7 @@ class Index extends Controller
         $MessageCount = Message::getMessageCount();
         $PageCount    = ceil($MessageCount / $PageSize);
 
-        if ($page > $PageCount) {
+        if ($page > $PageCount && $page !== 1) {
             $this->error('页码错误',url('index/index/showmessage?page=1'));
         }
 

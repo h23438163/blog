@@ -5,12 +5,12 @@
 <title>我的博客</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
-<link href="/static/style.css" rel="stylesheet" type="text/css" />
-<link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
-<script type="text/javascript" src="/static/js/jquery-321.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
-<script type="text/javascript" src="/static/js/message.js">></script>
-<script type="text/javascript" src="/static/js/jump_page.js"></script>
+<link href="__STATIC__/style.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
+<script type="text/javascript" src="__STATIC__/js/jquery-321.js"></script>
+<script type="text/javascript" src="__STATIC__/js/common.js"></script>
+<script type="text/javascript" src="__STATIC__/js/message.js">></script>
+<script type="text/javascript" src="__STATIC__/js/jump_page.js"></script>
 </head>
 <body>
 <div class="main">
@@ -18,7 +18,7 @@
 		<div class="header_resize">
 			<div class="logo">
 				<h1 id="animate_logo">
-				<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />我的
+				<img src="__STATIC__/images/logo.jpg" width="48" height="50" alt="logo" />我的
 				<span>博客</span>
 				<small>博客文章</small>
 				</h1>  
@@ -45,10 +45,12 @@
 <div class="content">
 	<div class="content_resize">
 		<div class="mainbar">
-			<input type='image' src='/static/images/backtop.gif' id='backtop'>
+			<input type='image' src='__STATIC__/images/backtop.gif' id='backtop'>
 			<div id="add_message">
 				<a href={:url('index/index/addmessage')}>发布留言</a>
 			</div>
+			<!--判断是否有留言-->
+			{notempty name='messagelist'}
 			<p class="pages">
 				<small>
 					Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;
@@ -59,14 +61,14 @@
 				<span class='jump_bar'><a href='javascript:void(0)'class='jump_close'>X</a></span>
 				<form action={:url('index/index/showmessage')} method='get' >
 					跳转到<input type='text' name='page'>页
-					<input type='image' src='/static/images/go_jump.png' title='跳转'>
+					<input type='image' src='__STATIC__/images/go_jump.png' title='跳转'>
 				</form>
 			</div>
 			{volist name='messagelist' id='message' key='key'}
 			<div class='message'>
 				<h3 id="{$message.message_id}">#{$pagestart+$key}</h3>
 				<div class='message_info'>
-					<a href='javascript:void(0)'><img src='/static{$message.head_img}' title='#'></a><br>
+					<a href='javascript:void(0)'><img src='__STATIC__{$message.head_img}' title='#'></a><br>
 					<span class='message_name'>
 						<a href='javascript:void(0)' style='font-weight:bold;font-size:15px;color:#49b6e9;text-decoration: none;'>{$message.username}</a>
 					</span><br>
@@ -132,6 +134,10 @@
 			</small>
 				{$Navi} <a href='javascript:void(0)' class='jump'>跳转</a>
 			</p>
+			{else /}
+			<h3>还没有人留言</h3>
+			{/notempty}
+			<!--判断是否有留言END-->
 		</div>
 		<div class="sidebar">	
 			<!--搜索栏-->
@@ -146,7 +152,7 @@
 					<span>
 							<input name="keyword" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
 						</span>
-					<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+					<input name="button_search" src="__STATIC__/images/search_btn.gif" class="button_search" type="image" />
 				</form>
 			</div>
 			<!--搜索栏END-->

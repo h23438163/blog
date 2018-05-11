@@ -5,15 +5,15 @@
 <title>我的博客</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
-<link href="/static/style.css" rel="stylesheet" type="text/css" />
-<link href="/static/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
-<script type="text/javascript" src="/static/js/jquery-321.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
+<link href="__STATIC__/style.css" rel="stylesheet" type="text/css" />
+<link href="__STATIC__/images/logo.jpg" rel="icon" type="image/jpg" size="32x32"  />
+<script type="text/javascript" src="__STATIC__/js/jquery-321.js"></script>
+<script type="text/javascript" src="__STATIC__/js/common.js"></script>
 <script>
 	var captcha_url = "{:url('captcha/captcha/check')}";
 	var captcha_src = "{:captcha_src('updatereply')}";
 </script>
-<script type="text/javascript" src="/static/js/edit_reply.js"></script>
+<script type="text/javascript" src="__STATIC__/js/edit_reply.js"></script>
 </head>
 <body>
 <div class="main">
@@ -21,7 +21,7 @@
 		<div class="header_resize">
 			<div class="logo">
 				<h1 id="animate_logo">
-				<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />我的
+				<img src="__STATIC__/images/logo.jpg" width="48" height="50" alt="logo" />我的
 				<span>博客</span>
 				<small>博客文章</small>
 				</h1>  
@@ -68,7 +68,7 @@
 							</li>
 							<li>
 								<input type="hidden" name="reply_id" value="{$reply_id}">
-								<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
+								<input type="image" name="imageField" id="imageField" src="__STATIC__/images/submit.gif" class="send" />
 								<div class="clr"></div>
 							</li>
 						</ol>
@@ -92,7 +92,7 @@
 					<span>
 						<input name="article_tag" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
 					</span>
-					<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+					<input name="button_search" src="__STATIC__/images/search_btn.gif" class="button_search" type="image" />
 				</form>
 			</div>
 			<!--搜索栏END-->

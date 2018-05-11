@@ -4,16 +4,16 @@
 <title>留言本</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />  
-<link href="/static/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/static/js/jquery-321.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
+<link href="__STATIC__/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__STATIC__/js/jquery-321.js"></script>
+<script type="text/javascript" src="__STATIC__/js/common.js"></script>
 <script>
 	var captcha_url = "{:url('captcha/captcha/check')}";
 	var captcha_src = "{:captcha_src('register')}";
 	var has_username_url = "{:url('user/user/hasusername')}";
 	var has_email_url = "{:url('user/user/hasemail')}";
 </script>
-<script type="text/javascript" src="/static/js/register.js"></script>
+<script type="text/javascript" src="__STATIC__/js/register.js"></script>
 </head>
 <body>
 <div class="main">
@@ -21,7 +21,7 @@
 		<div class="header_resize">
 			<div class="logo">
 				<h1 id="animate_logo">
-					<img src="/static/images/logo.jpg" width="48" height="50" alt="logo" />
+					<img src="__STATIC__/images/logo.jpg" width="48" height="50" alt="logo" />
 					我的<span>博客</span> <small>给我留言</small>
 				</h1>
 			</div>
@@ -65,12 +65,12 @@
 							</li>
 							<li id='head_img_select'>
 								<span>选择头像或上传头像(小于200kb)</span><br>
-								<img src='/static/images/pix1.jpg' title='1'>
-								<img src='/static/images/pix2.jpg' title='2'>
-								<img src='/static/images/pix3.jpg' title='3'>
-								<img src='/static/images/pix4.jpg' title='4'>
-								<img src='/static/images/pix5.jpg' title='5'>
-								<img src='/static/images/pix6.jpg' title='6'>
+								<img src='__STATIC__/images/pix1.jpg' title='1'>
+								<img src='__STATIC__/images/pix2.jpg' title='2'>
+								<img src='__STATIC__/images/pix3.jpg' title='3'>
+								<img src='__STATIC__/images/pix4.jpg' title='4'>
+								<img src='__STATIC__/images/pix5.jpg' title='5'>
+								<img src='__STATIC__/images/pix6.jpg' title='6'>
 								<span id='img_dir'></span>
 								<span id='head_img_error'></span><br>
 								<input type='hidden' id='img_num' name='img_num' value=''>
@@ -84,7 +84,7 @@
 								请输入验证码<br><input type='text' name='authcode' id='authcode'><span id='authcode_error' style='color:red'></span>
 							</li>
 							<li>
-								<input type="image" name="imageField" id="imageField" src="/static/images/submit.gif" class="send" />
+								<input type="image" name="imageField" id="imageField" src="__STATIC__/images/submit.gif" class="send" />
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href={:url('index/index/login')}>立即登陆</a>
 								<div class="clr"></div>
 							</li>
@@ -104,7 +104,7 @@
 						<span>
 							<input name="keyword" class="editbox_search" id="editbox_search" maxlength="80" value="通过关键字搜索" type="text" />
 						</span>
-						<input name="button_search" src="/static/images/search_btn.gif" class="button_search" type="image" />
+						<input name="button_search" src="__STATIC__/images/search_btn.gif" class="button_search" type="image" />
 					</form>
 				</div>
 				<div class="gadget">
