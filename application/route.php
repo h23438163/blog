@@ -70,8 +70,8 @@ return [
     'messagelist/[:page]' => ['user/user/messagelist', ['method' => 'get'],['page' => '\d+']],
     'favorite/[:page]'  => ['user/user/favorite', ['method' => 'get'],['page' => '\d+']],
     'history/[:page]'   => ['user/user/history',  ['method' => 'get'],['page' => '\d+']],
-    'hasemail/:email'   => ['user/user/hasemail',         ['method' => 'post', 'ajax' => true],['email' => '\w+']],
-    'hasusername/:username'  => ['user/user/hasusername', ['method' => 'post', 'ajax' => true],['username' => '\w+']],
+    'hasemail'    => ['user/user/hasemail',    ['method' => 'post', 'ajax' => true],['email'    => '\w+']],
+    'hasusername' => ['user/user/hasusername', ['method' => 'post', 'ajax' => true],['username' => '\w+']],
     //favorite
     'addfavorite/:articleId'  => ['favorite/favorite/addfavorite', ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],
     'isfavorite/:articleId'   => ['favorite/favorite/isfavorite',  ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],

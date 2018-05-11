@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 	//选中头像效果
     $('#head_img_select img').click(function(){
-		if($(this).css('border-width') == '3px'){
+		if($(this).css('width') == '60px'){
 			$(this).animate({'border-width':'1px','width':'30px'},function(){
 				$(this).css({'border-color':''});
 				$('#head_img').css({'display':''});
@@ -11,7 +11,6 @@ $(document).ready(function(){
 			});
 			$('#img_dir').text('');
 		}else {
-
 			$('#head_img_select img').animate({'border-width':'1px','width':'30px'},500,function(){
 				$('#head_img_select img').css({'border-color':''});
 			});
