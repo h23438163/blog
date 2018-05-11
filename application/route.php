@@ -38,8 +38,9 @@ return [
 	'registerPage'     => ['index/index/register',    ['method' => 'get']],
 	'message/[:page]'  => ['index/index/showmessage', ['method' => 'get'],['page' => '\d+']],
 	'about'            => ['index/index/showabout',   ['method' => 'get']],
-	'addarticle'   => ['index/index/addarticle', ['method' => 'get']],
-	'addmessage'   => ['index/index/addmessage', ['method' => 'get']],
+	'addarticle' => ['index/index/addarticle', ['method' => 'get']],
+	'addmessage' => ['index/index/addmessage', ['method' => 'get']],
+	'download'   => ['index/index/download', ['method' => 'get']],
 
     //article
     'insertarticle' => ['article/article/addarticle',    ['method' => 'post']],
@@ -72,12 +73,17 @@ return [
     'hasemail/:email'   => ['user/user/hasemail',         ['method' => 'post', 'ajax' => true],['email' => '\w+']],
     'hasusername/:username'  => ['user/user/hasusername', ['method' => 'post', 'ajax' => true],['username' => '\w+']],
     //favorite
+    'addfavorite/:articleId'  => ['favorite/favorite/addfavorite', ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],
+    'isfavorite/:articleId'   => ['favorite/favorite/isfavorite',  ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],
+    //captcha
+    'check' => ['captcha/captcha/check',  ['method' => 'post', 'ajax' => true],['code' => '\d+']],
     //remind
+    'isremind/:id' => ['remind/remind/isremind',     ['method' => 'get'],['id' => '\d+']],
+    'allisremind'  => ['remind/remind/allisremind',  ['method' => 'get']],
     //search
     'searchtag/:tag/[:page]'       => ['search/search/searchtag',    ['method' => 'get'],['page' => '\d+', 'tag' => '\w+']],
     'searchauthor/:userId/[:page]' => ['search/search/searchauthor', ['method' => 'get'],['page' => '\d+', 'userId' => '\d+']],
-    'searchall'   => ['search/search/searchall', ['method' => 'get']],
-    //captcha
+    'searchall' => ['search/search/searchall', ['method' => 'get']],
 
 
 ];

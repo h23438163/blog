@@ -14,7 +14,6 @@ use think\Controller;
 class Captcha extends Controller
 {
     public static function check($code = '', $id = '', $reset = []) {
-
         if (empty($code)) {
             $data  = (new self())->request->param('', '', 'htmlspecialchars');
             $code  = $data['authcode'];
@@ -22,7 +21,7 @@ class Captcha extends Controller
             $reset = ['reset' => false];
         }
         $captcha = new \think\captcha\Captcha($reset);
-       if ($captcha->check($code, $id)) {
+        if ($captcha->check($code, $id)) {
             return 1;
         } else {
             return 0;

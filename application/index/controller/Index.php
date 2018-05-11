@@ -108,4 +108,11 @@ class Index extends Controller
         return View();
     }
 
+    public function download() {
+
+        return $this->redirect('https://github.com/h23438163/blog');
+    }
+
+
+
 }
