@@ -15,7 +15,12 @@ use think\Controller;
 
 class Search extends Controller
 {
-    public function searchTag ($page = 1, $PageSize = 5, $tag = '') {
+    public function searchTag ($PageSize = 5, $tag = '') {
+
+        if (empty($page)) {
+            $page = $this->request->get('page', '1', 'htmlspecialchars');
+        }
+
         //页码验证
         if (!is_numeric($page) || $page < 1) {
             $this->error('页码错误',url('search/search/searchtag','page=1&tag='.$tag));
@@ -54,10 +59,24 @@ class Search extends Controller
         return $this->fetch();
     }
 
-    public function searchAuthor ($page = 1, $PageSize = 5, $userId = '') {
+    public function searchAuthor ($PageSize = 5, $userId = '') {
+
+        //用户ID类型验证
+        if (!is_numeric($userId)) {
+            $this->error('参数错误');
+        }
+
+        if (empty($page)) {
+            $page = $this->request->get('page', '1', 'htmlspecialchars');
+        }
+
         //页码验证
         if (!is_numeric($page) || $page < 1) {
-            $this->error('页码错误',url('search/search/searchauthor','page=1&userId='.$userId));
+            $this->error('页码错误',url('search/search/searchauthor','page='.$page.'&userId='.$userId));
+        }
+
+        if (empty($page)) {
+            $page = $this->request->get('page', '1', 'htmlspecialchars');
         }
 
         $blogArticle = new BlogArticle();
@@ -97,6 +116,15 @@ class Search extends Controller
     }
 
     public function searchAll ($page = 1, $PageSize = 5, $keyword = '') {
+
+        if (empty($keyword)) {
+            $keyword = $this->request->get('keyword', '', 'htmlspecialchars');
+        }
+
+        if (empty($page)) {
+            $page = $this->request->get('page', '1', 'htmlspecialchars');
+        }
+
         //页码验证
         if (!is_numeric($page) || $page < 1) {
             $this->error('页码错误',url('search/search/searchall','page=1&keyword='.$keyword));
@@ -110,7 +138,7 @@ class Search extends Controller
                                    ->count();
         $PageCount   = ceil($resultCount / $PageSize);
 
-        if ($page > $PageCount) {
+        if ($page > $PageCount && $page != 1) {
             $this->error('超出范围',url('search/search/searchall','page=1&keyword='.$keyword));
         }
 

@@ -47,10 +47,9 @@
 		<div class="content_resize">
 			<div class="mainbar">
 				<input type='image' src='__STATIC__/images/backtop.gif' id='backtop'>
-				<div id="add_article">
-					<a href={:url('index/index/addarticle')}>发表博客</a>
-				</div>
 				<h1>搜索的关键词是:<span style='background:yellow'>{$keyword}</span></h1>
+				<!--判断结果是否为空-->
+				{notempty name='article_list'}
 				<p class="pages">
 					<small>
 					Page {$pagenow} of {$pagecount}&nbsp;&nbsp;&nbsp;
@@ -64,7 +63,7 @@
 					<input type='image' src='__STATIC__/images/go_jump.png' title='跳转'>
 					</form>
 				</div>
-				<!--提取文章数据-->	
+				<!--提取文章数据-->
 				{volist name='article_list' id='article' key='key'}
 				<div class="article">
 					<p class="date">
@@ -143,6 +142,10 @@
 				</small>
 				{$navi}<a href='javascript:void(0)' class='jump'>跳转</a>
 				</p>
+				{else /}
+				<h3>没有结果</h3>
+				{/notempty}
+				<!--判断结果是否为空End-->
 			</div>
 			<div class="sidebar">	
 				<!--搜索栏-->

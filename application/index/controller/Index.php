@@ -17,22 +17,28 @@ use think\View;
 class Index extends Controller
 {
 
-    public function showArticle($page = 1,$PageSize = 5){
+    public function showArticle($PageSize = 5){
 
-
-        //dump($this->request->param());exit;
+        if (empty($page)) {
+            $page = $this->request->get('page', '1', 'htmlspecialchars');
+        }
 
         //页码验证
         if (!is_numeric($page) || $page < 1) {
-            $this->error('页码错误',url('index/index/showarticle?page=1'));
+            $this->error('页码错误',url('index/index/showarticle','page=1'));
         }
 
         $blogArticle = new BlogArticle();
         //分页处理
         $article_count = $blogArticle->count();
+
+        if ($article_count == 0) {
+            return $this->fetch();
+        }
+
         $PageCount     = ceil($article_count/$PageSize);
 
-        if ($page > $PageCount && $page != 1) {
+        if ($page > $PageCount) {
             $this->error('页码错误',url('index/index/showarticle?page=1'));
         }
 
@@ -64,7 +70,11 @@ class Index extends Controller
         return View();
     }
 
-    public function showMessage($page = 1, $PageSize = 5){
+    public function showMessage($PageSize = 5){
+
+        if (empty($page)) {
+            $page = $this->request->get('page', '1', 'htmlspecialchars');
+        }
 
         //页码验证
         if (!is_numeric($page) || $page < 1) {
@@ -74,9 +84,14 @@ class Index extends Controller
         $PageStart    = ($page - 1) * $PageSize;
         $MessageList  = Message::showMessage($PageStart, $PageSize);
         $MessageCount = Message::getMessageCount();
+
+        if ($MessageCount == 0) {
+            return $this->fetch();
+        }
+
         $PageCount    = ceil($MessageCount / $PageSize);
 
-        if ($page > $PageCount && $page !== 1) {
+        if ($page > $PageCount ) {
             $this->error('页码错误',url('index/index/showmessage?page=1'));
         }
 

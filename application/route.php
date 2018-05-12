@@ -19,21 +19,21 @@ return [
     '__pattern__' => [
         'name' => '\w+',
     ],
-    '[hello]'     => [
+   /* '[hello]'     => [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
-    ],
+    ],*/
 	//使用方法:使用自定义名称对控制器的长url进行替换例如:定义'hehan'来替换控制器的长url'index/hello_world/admintest'
 	//[]是可选变量,[]内的:admin表示传递的参数名为admin,如需多参数设置,参考上面的配置
 	//method表示参数传递的方法,可以为POST,GET等
 	//ext表示文件的扩展名
 	//如需更多设置,参考使用手册                                                                    /*这里可以对参数进行匹配*/
-	'hehan/[:admintest]' => ['index/hello_world/admintest',['method' => 'get', 'ext' => 'html'],['admintest' => '\w+']],
+	/*'hehan/[:admintest]' => ['index/hello_world/admintest',['method' => 'get', 'ext' => 'html'],['admintest' => '\w+']],
 
-	'today/:year/:month'  => ['index/hello_world/today', ['method' => 'get'], ['year'  => '\d{4}', 'month' => '\d{2}']],
+	'today/:year/:month'  => ['index/hello_world/today', ['method' => 'get'], ['year'  => '\d{4}', 'month' => '\d{2}']],*/
 
     //index
-    'index/[:page]'    => ['index/index/showarticle', ['method' => 'get'],['page' => '\d+']],
+    'index/[:page]'    => ['index/index/showarticle', ['method' => 'get|post'],['page' => '\d+']],
 	'loginPage'        => ['index/index/login',       ['method' => 'get']],
 	'registerPage'     => ['index/index/register',    ['method' => 'get']],
 	'message/[:page]'  => ['index/index/showmessage', ['method' => 'get'],['page' => '\d+']],
@@ -56,7 +56,7 @@ return [
     'updatereply' => ['article/reply/updatereply', ['method' => 'post']],
     'editreply/:replyId' => ['article/reply/editreply', ['method' => 'get'],['replyId' => '\d+']],
     //message
-    'addmessage'    => ['message/message/addmessage',    ['method' => 'get']],
+    'insertmessage'    => ['message/message/addmessage',    ['method' => 'get']],
     'updatemessage' => ['message/message/updatemessage', ['method' => 'post']],
     'editmessage/:messageId/:pageNow' => ['message/message/editmessage', ['method' => 'get'],['messageId' => '\d+' ,'pageNow' => '\d+']],
     //user
@@ -83,7 +83,7 @@ return [
     //search
     'searchtag/:tag/[:page]'       => ['search/search/searchtag',    ['method' => 'get'],['page' => '\d+', 'tag' => '\w+']],
     'searchauthor/:userId/[:page]' => ['search/search/searchauthor', ['method' => 'get'],['page' => '\d+', 'userId' => '\d+']],
-    'searchall' => ['search/search/searchall', ['method' => 'get']],
+    'searchall/[:keyword]' => ['search/search/searchall', ['method' => 'get|post']],
 
 
 ];
