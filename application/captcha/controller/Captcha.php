@@ -15,7 +15,7 @@ class Captcha extends Controller
 {
     public static function check($code = '', $id = '', $reset = []) {
         if (empty($code)) {
-            $data  = (new self())->request->param('', '', 'htmlspecialchars');
+            $data  = (new self())->request->post('', '', 'htmlspecialchars');
             $code  = $data['authcode'];
             $id    = $data['id'];
             $reset = ['reset' => false];

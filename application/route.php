@@ -56,7 +56,7 @@ return [
     'updatereply' => ['article/reply/updatereply', ['method' => 'post']],
     'editreply/:replyId' => ['article/reply/editreply', ['method' => 'get'],['replyId' => '\d+']],
     //message
-    'insertmessage'    => ['message/message/addmessage',    ['method' => 'get']],
+    'insertmessage' => ['message/message/addmessage',    ['method' => 'get']],
     'updatemessage' => ['message/message/updatemessage', ['method' => 'post']],
     'editmessage/:messageId/:pageNow' => ['message/message/editmessage', ['method' => 'get'],['messageId' => '\d+' ,'pageNow' => '\d+']],
     //user
@@ -68,22 +68,24 @@ return [
     'commentlist/[:page]' => ['user/user/commentlist', ['method' => 'get'],['page' => '\d+']],
     'replyist/[:page]'    => ['user/user/replylist',   ['method' => 'get'],['page' => '\d+']],
     'messagelist/[:page]' => ['user/user/messagelist', ['method' => 'get'],['page' => '\d+']],
-    'favorite/[:page]'  => ['user/user/favorite', ['method' => 'get'],['page' => '\d+']],
-    'history/[:page]'   => ['user/user/history',  ['method' => 'get'],['page' => '\d+']],
+    'favorite/[:page]'    => ['user/user/favorite', ['method' => 'get'],['page' => '\d+']],
+    'history/[:page]'     => ['user/user/history',  ['method' => 'get'],['page' => '\d+']],
     'hasemail'    => ['user/user/hasemail',    ['method' => 'post', 'ajax' => true],['email'    => '\w+']],
     'hasusername' => ['user/user/hasusername', ['method' => 'post', 'ajax' => true],['username' => '\w+']],
     //favorite
     'addfavorite/:articleId'  => ['favorite/favorite/addfavorite', ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],
     'isfavorite/:articleId'   => ['favorite/favorite/isfavorite',  ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],
     //captcha
-    'check' => ['captcha/captcha/check',  ['method' => 'post', 'ajax' => true],['code' => '\d+']],
+    'check/[:code]/[:id]' => ['captcha/captcha/check',  ['method' => 'post', 'ajax' => true],['code' => '\d+', 'id' => '\w+']],
     //remind
     'isremind/:id' => ['remind/remind/isremind',     ['method' => 'get'],['id' => '\d+']],
     'allisremind'  => ['remind/remind/allisremind',  ['method' => 'get']],
     //search
     'searchtag/:tag/[:page]'       => ['search/search/searchtag',    ['method' => 'get'],['page' => '\d+', 'tag' => '\w+']],
     'searchauthor/:userId/[:page]' => ['search/search/searchauthor', ['method' => 'get'],['page' => '\d+', 'userId' => '\d+']],
-    'searchall/[:keyword]' => ['search/search/searchall', ['method' => 'get|post']],
+    'searchall/[:keyword]' => ['search/search/searchall', ['method' => 'get']],
+    //miss
+    '__miss__' => ['error/error/miss'],
 
 
 ];

@@ -28,7 +28,7 @@ $(document).ready(function(){
                     switch(data){
                         case '1':
                             $('#authcode_reply_error').text('');
-                            $('#authcode_reply_error').append("<img src='/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
+                            $('#authcode_reply_error').append("<img src='/public/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
                             break;
                         case '0':
                             $('#authcode_reply_error').text('验证码错误');
@@ -65,7 +65,7 @@ $(document).ready(function(){
                     switch(data){
                         case '1':
                             $('#authcode_reply_error').text('');
-                            $('#authcode_reply_error').append("<img src='/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
+                            $('#authcode_reply_error').append("<img src='/public/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
                             authcode_reply = true;
                             break;
                         case '0':

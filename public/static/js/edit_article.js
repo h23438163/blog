@@ -55,7 +55,7 @@ $(document).ready(function(){
 						switch(data){
 							case '1':
 								$('#authcode_error').text('');
-								$('#authcode_error').append("<img src='/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
+								$('#authcode_error').append("<img src='/public/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
 								break;
 							case '0':
 								$('#authcode_error').text('验证码错误');
@@ -111,7 +111,7 @@ $(document).ready(function(){
 						switch(data){
 							case '1':
 								$('#authcode_error').text('');
-								$('#authcode_error').append("<img src='/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
+								$('#authcode_error').append("<img src='/public/static/images/check_right.gif' style='border:0px;margin-top:-5px;'>");
 								authcode = true;
 								break;
 							case '0':
