@@ -15,7 +15,7 @@ use think\Controller;
 
 class Search extends Controller
 {
-    public function searchTag ($PageSize = 5, $tag = '') {
+    public function searchTag ($page = '', $PageSize = 5, $tag = '') {
 
         if (empty($page)) {
             $page = $this->request->get('page', '1', 'htmlspecialchars');
@@ -64,7 +64,7 @@ class Search extends Controller
         return $this->fetch();
     }
 
-    public function searchAuthor ($PageSize = 5, $userId = '') {
+    public function searchAuthor ($page = '', $PageSize = 5, $userId = '') {
 
         if (empty($page)) {
             $page = $this->request->get('page', '1', 'htmlspecialchars');
@@ -125,7 +125,7 @@ class Search extends Controller
         return $this->fetch();
     }
 
-    public function searchAll ($PageSize = 5, $keyword = '') {
+    public function searchAll ($page = '', $PageSize = 5, $keyword = '') {
 
         if (empty($keyword)) {
             $keyword = $this->request->get('keyword', '', 'htmlspecialchars');
