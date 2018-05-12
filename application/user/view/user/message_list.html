@@ -62,7 +62,7 @@
 			</div>
 			{volist name='messagelist' id='message' key='key'}
 			<div class='message'>
-				<h3 id="{$message.message_id}">#{$key}</h3>
+				<h3 id="{$message.message_id}">#{$PageStart+$key}</h3>
 				<div class='message_info'>
 					<a href='javascript:void(0)'><img src='__STATIC__{$message.head_img}' title='#'></a><br>
 					<span class='message_name'>

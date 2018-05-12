@@ -296,6 +296,7 @@ class User extends Controller
         $Navi = Navi($page, $PageCount,'user/user/messagelist');
 
         $this->assign('messagelist', $messageLIst);
+        $this->assign('PageStart', $PageStart);
         $this->assign('Navi', $Navi);
         $this->assign('pagenow', $page);
         return $this->fetch();
