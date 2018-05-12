@@ -19,6 +19,9 @@ class Index extends Controller
 
     public function showArticle($page = 1,$PageSize = 5){
 
+
+        //dump($this->request->param());exit;
+
         //页码验证
         if (!is_numeric($page) || $page < 1) {
             $this->error('页码错误',url('index/index/showarticle?page=1'));
@@ -29,7 +32,7 @@ class Index extends Controller
         $article_count = $blogArticle->count();
         $PageCount     = ceil($article_count/$PageSize);
 
-        if ($page > $PageCount && $page !== 1) {
+        if ($page > $PageCount && $page != 1) {
             $this->error('页码错误',url('index/index/showarticle?page=1'));
         }
 
