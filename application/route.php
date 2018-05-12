@@ -33,11 +33,14 @@ return [
 	'today/:year/:month'  => ['index/hello_world/today', ['method' => 'get'], ['year'  => '\d{4}', 'month' => '\d{2}']],*/
 
     //index
-    'index/[:page]'    => ['index/index/showarticle', ['method' => 'get|post'],['page' => '\d+']],
-	'loginPage'        => ['index/index/login',       ['method' => 'get']],
-	'registerPage'     => ['index/index/register',    ['method' => 'get']],
-	'message/[:page]'  => ['index/index/showmessage', ['method' => 'get'],['page' => '\d+']],
-	'about'            => ['index/index/showabout',   ['method' => 'get']],
+    'index/:page' => ['index/index/showarticle', ['method' => 'get'],['page' => '\d+']],
+    'index'       => ['index/index/showarticle', ['method' => 'get']],
+    '/'           => ['index/index/showarticle', ['method' => 'get']],
+	'loginPage'       => ['index/index/login',       ['method' => 'get']],
+	'registerPage'    => ['index/index/register',    ['method' => 'get']],
+    'message/[:page]' => ['index/index/showmessage', ['method' => 'get'],['page' => '\d+']],
+    'message'         => ['index/index/showmessage', ['method' => 'get']],
+	'about'           => ['index/index/showabout',   ['method' => 'get']],
 	'addarticle' => ['index/index/addarticle', ['method' => 'get']],
 	'addmessage' => ['index/index/addmessage', ['method' => 'get']],
 	'download'   => ['index/index/download', ['method' => 'get']],
@@ -76,16 +79,17 @@ return [
     'addfavorite/:articleId'  => ['favorite/favorite/addfavorite', ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],
     'isfavorite/:articleId'   => ['favorite/favorite/isfavorite',  ['method' => 'get', 'ajax' => true],['articleId' => '\d+']],
     //captcha
-    'check/[:code]/[:id]' => ['captcha/captcha/check',  ['method' => 'post', 'ajax' => true],['code' => '\d+', 'id' => '\w+']],
+    'check/:code/[:id]' => ['captcha/captcha/check',  ['method' => 'post', 'ajax' => true],['code' => '\d+', 'id' => '\w+']],
+    'check'               => ['captcha/captcha/check',  ['method' => 'post', 'ajax' => true],['code' => '\d+', 'id' => '\w+']],
     //remind
     'isremind/:id' => ['remind/remind/isremind',     ['method' => 'get'],['id' => '\d+']],
     'allisremind'  => ['remind/remind/allisremind',  ['method' => 'get']],
     //search
     'searchtag/:tag/[:page]'       => ['search/search/searchtag',    ['method' => 'get'],['page' => '\d+', 'tag' => '\w+']],
     'searchauthor/:userId/[:page]' => ['search/search/searchauthor', ['method' => 'get'],['page' => '\d+', 'userId' => '\d+']],
-    'searchall/[:keyword]' => ['search/search/searchall', ['method' => 'get']],
+    'searchall/[:keyword]/[:page]'   => ['search/search/searchall', ['method' => 'get']],
     //miss
-    '__miss__' => ['error/error/miss'],
+    '__miss__' => 'error/error/miss',
 
 
 ];

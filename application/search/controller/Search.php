@@ -29,6 +29,11 @@ class Search extends Controller
         $blogArticle = new BlogArticle();
         //分页处理
         $article_count = $blogArticle->whereLike('concat(article_tag1,article_tag2,article_tag3)', '%'.$tag.'%')->count();
+
+        if ($article_count == 0) {
+            return $this->fetch();
+        }
+
         $PageCount     = ceil($article_count/$PageSize);
 
         if ($page > $PageCount) {
@@ -61,13 +66,13 @@ class Search extends Controller
 
     public function searchAuthor ($PageSize = 5, $userId = '') {
 
+        if (empty($page)) {
+            $page = $this->request->get('page', '1', 'htmlspecialchars');
+        }
+
         //用户ID类型验证
         if (!is_numeric($userId)) {
             $this->error('参数错误');
-        }
-
-        if (empty($page)) {
-            $page = $this->request->get('page', '1', 'htmlspecialchars');
         }
 
         //页码验证
@@ -82,6 +87,11 @@ class Search extends Controller
         $blogArticle = new BlogArticle();
         //分页处理
         $article_count = $blogArticle->where('user_id', '=', $userId)->count();
+
+        if ($article_count == 0) {
+            return $this->fetch();
+        }
+
         $PageCount     = ceil($article_count/$PageSize);
 
         if ($page > $PageCount) {
@@ -115,7 +125,7 @@ class Search extends Controller
         return $this->fetch();
     }
 
-    public function searchAll ($page = 1, $PageSize = 5, $keyword = '') {
+    public function searchAll ($PageSize = 5, $keyword = '') {
 
         if (empty($keyword)) {
             $keyword = $this->request->get('keyword', '', 'htmlspecialchars');
@@ -136,6 +146,11 @@ class Search extends Controller
                                    ->join('user u','u.user_id = b.user_id')
                                    ->whereLike('concat(article_title,article_tag1,article_tag2,article_tag3,content,u.username)', '%'.$keyword.'%')
                                    ->count();
+
+        if ($resultCount == 0) {
+            return $this->fetch();
+        }
+
         $PageCount   = ceil($resultCount / $PageSize);
 
         if ($page > $PageCount && $page != 1) {

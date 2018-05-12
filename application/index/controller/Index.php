@@ -17,11 +17,7 @@ use think\View;
 class Index extends Controller
 {
 
-    public function showArticle($PageSize = 5){
-
-        if (empty($page)) {
-            $page = $this->request->get('page', '1', 'htmlspecialchars');
-        }
+    public function showArticle($page = 1, $PageSize = 5){
 
         //页码验证
         if (!is_numeric($page) || $page < 1) {
@@ -70,11 +66,7 @@ class Index extends Controller
         return View();
     }
 
-    public function showMessage($PageSize = 5){
-
-        if (empty($page)) {
-            $page = $this->request->get('page', '1', 'htmlspecialchars');
-        }
+    public function showMessage($page= 1, $PageSize = 5){
 
         //页码验证
         if (!is_numeric($page) || $page < 1) {
